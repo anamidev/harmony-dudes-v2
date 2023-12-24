@@ -35,9 +35,7 @@ export const mentors: IMentor[] = [
             'Rick and Morty, Carmen Sandiego, Dawn of the Croods, Snoopy in Space, My Little Pony',
         contacts: [{ id: 1, href: 'https://t.me/Igs40' }],
         advices: [
-            { name: 'Harmony Animation: Rig', href: 'harmony-rig' },
-            { name: 'Harmony Animation: Paperless', href: 'harmony-paperless' },
-            { name: 'Flash Animation', href: 'flash' },
+            { name: 'Animation foundations', href: 'harmony-foundations' },
         ],
     },
     {
@@ -73,11 +71,7 @@ export const mentors: IMentor[] = [
         currentStudio: 'Homerun Story',
         projectsWorkedOn: 'Animation Dance Party, Walking Battle Terem',
         contacts: [{ id: 1, href: 'https://t.me/Power_Up' }],
-        advices: [
-            { name: 'Action Storyboard', href: 'action-storyboard' },
-            { name: 'Feature Storyboard', href: 'feature-storyboard' },
-            { name: 'Project Pitch', href: 'project-pitch' },
-        ],
+        advices: [{ name: 'Action Storyboard', href: 'action-storyboard' }],
     },
     {
         id: 4,

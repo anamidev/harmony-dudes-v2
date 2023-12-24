@@ -65,7 +65,7 @@ export default function Workshops() {
             </ul>
 
             <div className="text-center">
-                <button className="rounded-lg bg-orange-500/[0.5] px-8 py-4">Start workshop</button>
+                <button className="button-lg-orange">Start workshop</button>
             </div>
         </section>
     );

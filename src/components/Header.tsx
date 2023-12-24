@@ -21,13 +21,13 @@ export default function Header() {
             <nav className="flex h-16 grow pr-32">
                 <ul className="flex w-full items-center justify-center gap-12">
                     <li>
-                        <Link href={'/'}>About</Link>
+                        <Link href={'/'} className='link text-lg'>About</Link>
                     </li>
                     <li>
-                        <Link href={'/mentorship'}>Mentorship</Link>
+                        <Link href={'/mentorship'} className='link text-lg'>Mentorship</Link>
                     </li>
                     <li>
-                        <Link href={'/workshops'}>Workshops</Link>
+                        <Link href={'/workshops'} className='link text-lg'>Workshops</Link>
                     </li>
                 </ul>
             </nav>

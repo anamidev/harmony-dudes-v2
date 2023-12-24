@@ -13,14 +13,14 @@ export const mentorship: IMentorship[] = [
         category: 'Animation',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo. Nulla at aliquet felis. Maecenas consectetur vitae leo porttitor hendrerit. Nunc pretium augue quis viverra interdum. Mauris auctor pulvinar ligula.',
-        advices: [list['harmony-rig'], list['harmony-paperless'], list['flash'], list['ai']],
+        advices: [list['harmony-foundations'], list['ai']],
     },
     {
         id: 2,
         category: 'Story',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo. Nulla at aliquet felis. Maecenas consectetur vitae leo porttitor hendrerit. Nunc pretium augue quis viverra interdum. Mauris auctor pulvinar ligula.',
-        advices: [list['action-storyboard'], list['feature-storyboard'], list['project-pitch']],
+        advices: [list['action-storyboard']],
     },
     {
         id: 3,
