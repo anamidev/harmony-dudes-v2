@@ -16,23 +16,27 @@
         @apply text-center text-2xl;
         font-family: 'Rubik Dirt', Arial, Helvetica, sans-serif;
     }
-    
+
     .link {
-        @apply cursor-pointer hover:text-[#ffad00] hover:underline transition-all;
+        @apply cursor-pointer transition-all hover:text-[#ffad00];
+    }
+
+    .link-purple {
+        @apply cursor-pointer transition-all hover:text-[#f261ff];
     }
 
     .button-sm-purple {
-        @apply cursor-pointer rounded-lg bg-[#ac46b6]/[0.7] px-4 py-2 hover:bg-[#ac46b6]/[1] transition;
+        @apply cursor-pointer rounded-lg bg-[#ac46b6]/[0.7] px-4 py-2 transition hover:bg-[#ac46b6]/[1];
     }
     .button-sm-orange {
-        @apply cursor-pointer rounded-lg bg-[#ca8a04]/[0.7] px-4 py-2 hover:bg-[#ca8a04]/[1] transition;
+        @apply cursor-pointer rounded-lg bg-[#ca8a04]/[0.7] px-4 py-2 transition hover:bg-[#ca8a04]/[1];
     }
 
     .button-lg-purple {
-        @apply cursor-pointer rounded-lg bg-[#ac46b6]/[0.7] px-8 py-4 hover:bg-[#ac46b6]/[1] transition;
+        @apply cursor-pointer rounded-lg bg-[#ac46b6]/[0.7] px-8 py-4 transition hover:bg-[#ac46b6]/[1];
     }
     .button-lg-orange {
-        @apply cursor-pointer rounded-lg bg-[#ca8a04]/[0.7] px-8 py-4 hover:bg-[#ca8a04]/[1] transition;
+        @apply cursor-pointer rounded-lg bg-[#ca8a04]/[0.7] px-8 py-4 transition hover:bg-[#ca8a04]/[1];
     }
 }
 

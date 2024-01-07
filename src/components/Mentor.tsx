@@ -37,10 +37,9 @@ export default function Mentor({ mentor }: { mentor: IMentor }) {
                     ))}
                 </ul>
                 <div className="flex grow items-end justify-center pt-2">
-                    <Link href={mentor.href}>
+                    <Link href={'/mentor/' + mentor.href}>
                         <button
                             className="button-lg-orange"
-                            disabled={true}
                         >
                             Read more
                         </button>

@@ -37,7 +37,7 @@ export default function Workshops() {
             </ul>
 
             <h2 className="page-header">Testimonials</h2>
-            <ul className="mx-auto grid w-full max-w-5xl grid-cols-3 gap-5">
+            <ul className="grid grid-cols-3 gap-5">
                 <li className="mx-auto flex flex-col items-center gap-3">
                     <div className="h-32 w-32 rounded-full bg-white/[0.1]"></div>
                     <h3>Aleksandra</h3>
@@ -56,7 +56,7 @@ export default function Workshops() {
                 </li>
                 <li className="mx-auto flex flex-col items-center gap-3">
                     <div className="h-32 w-32 rounded-full bg-white/[0.1]"></div>
-                    <h3>Aleksandra</h3>
+                    <h3>Aleksei</h3>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua!

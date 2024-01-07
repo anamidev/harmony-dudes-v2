@@ -7,7 +7,7 @@ export default function Advice({ advice }: { advice: IAdvice }) {
     return (
         <div className="relative flex h-full flex-col rounded-2xl bg-emerald-500/[0.15]">
             {/* badge */}
-            <Badge isVisible={advice.isOpen} />
+            <Badge isVisible={advice.isOpen ?? false} />
 
             {/* image */}
             <div className="relative h-52 w-full rounded-tl-2xl rounded-tr-2xl bg-white/[0.1]">

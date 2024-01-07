@@ -16,7 +16,7 @@ export default function Advice({ params }: { params: { advice: string } }) {
     const currentAdvice = advices[advicePath];
 
     return !currentAdvice ? (
-        <section className="flex min-h-[calc(100vh-209px)] flex-col items-center justify-center">
+        <section className="flex min-h-[calc(100vh-209px)] flex-col items-center justify-center gap-3">
             <p>Sorry, there is no such mentorship :( </p>
             <Link
                 href={'/mentorship'}
@@ -36,14 +36,14 @@ export default function Advice({ params }: { params: { advice: string } }) {
             <p className="mx-auto max-w-5xl">{currentAdvice.description}</p>
 
             {/* short info */}
-            <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-5 rounded-2xl bg-emerald-500/[0.2] p-10">
+            <div className="flex flex-col items-center gap-5 rounded-2xl bg-emerald-500/[0.2] p-10">
                 {currentAdvice.isOpen ? (
                     <div className="rounded-2xl bg-emerald-500 px-4 py-2 uppercase">
                         Open to start
                     </div>
                 ) : null}
 
-                <div className="flex justify-center gap-x-10">
+                <div className="flex justify-center gap-10">
                     <div>
                         <h2 className="text-lg">Duration</h2>
                         <p className="">{currentAdvice.duration}</p>
@@ -63,9 +63,7 @@ export default function Advice({ params }: { params: { advice: string } }) {
                 </div>
 
                 <div className="text-center">
-                    <button className="button-lg-orange">
-                        Start mentorship
-                    </button>
+                    <button className="button-lg-orange">Start mentorship</button>
                 </div>
             </div>
 
@@ -111,7 +109,7 @@ export default function Advice({ params }: { params: { advice: string } }) {
             )}
 
             {/* result */}
-            <h2 className="page-header">What you will get</h2>
+            <h2 className="page-header">Why to take this course?</h2>
             {currentAdvice.result.description ? (
                 <p className="mx-auto max-w-5xl whitespace-pre-line">
                     {currentAdvice.result.description}
@@ -137,7 +135,7 @@ export default function Advice({ params }: { params: { advice: string } }) {
             </p>
             <div className="text-center text-lg">
                 {/* harmonydudes@gmail.com */}
-                <EmailToClipboard email="harmonydudes@gmail.com" />
+                <EmailToClipboard email="harmonydudes@gmail.com" classStyle='link-purple' />
             </div>
         </section>
     );

@@ -82,7 +82,7 @@ export const advices: IList = {
         },
         paymentMethods: ['PayPal', 'Direct Bank Card Payment'],
     },
-    ai: {
+    'ai': {
         cover: harmonyImage,
         href: 'ai',
         name: 'AI Animation',

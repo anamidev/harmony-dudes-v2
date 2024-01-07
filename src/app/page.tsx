@@ -1,4 +1,4 @@
-import { mentors, type IMentor } from '@/lib/data/mentors';
+import { mentorsList } from '@/lib/data/mentors';
 import Mentor from '@/components/Mentor';
 import EmailToClipboard from '@/components/EmailToClipboard';
 
@@ -19,9 +19,9 @@ export default function About() {
             {/* mentors */}
             <h2 className="page-header">Our mentors</h2>
             <ul className="grid grid-cols-2 gap-12">
-                {mentors.map((mentor: IMentor) => (
-                    <li key={mentor.id}>
-                        <Mentor mentor={mentor} />
+                {mentorsList.map((item) => (
+                    <li key={item.id}>
+                        <Mentor mentor={item.info} />
                     </li>
                 ))}
             </ul>
@@ -36,7 +36,10 @@ export default function About() {
             </p>
             <div className="text-center text-lg">
                 {/* harmonydudes@gmail.com */}
-                <EmailToClipboard email='harmonydudes@gmail.com'/>
+                <EmailToClipboard
+                    email="harmonydudes@gmail.com"
+                    classStyle="link-purple"
+                />
             </div>
         </section>
     );
