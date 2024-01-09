@@ -28,10 +28,10 @@ export default function Advice({ params }: { params: { advice: string } }) {
     ) : (
         <section className="page-layout">
             {/* cover */}
-            <div className="max-h-lg h-96 w-full bg-white/[0.1]"></div>
+            <div className="mx-auto h-60 w-full max-w-[480px] bg-white/[0.1] md:h-96 md:max-w-full"></div>
 
             {/* name */}
-            <h1 className={"text-center font-['Rubik_Dirt'] text-4xl"}>{currentAdvice.name}</h1>
+            <h1 className={"text-center font-['Rubik_Dirt'] text-2xl md:text-4xl"}>{currentAdvice.name}</h1>
             <h2 className={'page-header'}>Mentor: {currentAdvice.mentor.name}</h2>
             <p className="mx-auto max-w-5xl">{currentAdvice.description}</p>
 
@@ -43,7 +43,7 @@ export default function Advice({ params }: { params: { advice: string } }) {
                     </div>
                 ) : null}
 
-                <div className="flex justify-center gap-10">
+                <div className="flex flex-col md:flex-row justify-center gap-10">
                     <div>
                         <h2 className="text-lg">Duration</h2>
                         <p className="">{currentAdvice.duration}</p>
@@ -135,7 +135,10 @@ export default function Advice({ params }: { params: { advice: string } }) {
             </p>
             <div className="text-center text-lg">
                 {/* harmonydudes@gmail.com */}
-                <EmailToClipboard email="harmonydudes@gmail.com" classStyle='link-purple' />
+                <EmailToClipboard
+                    email="harmonydudes@gmail.com"
+                    classStyle="link-purple"
+                />
             </div>
         </section>
     );

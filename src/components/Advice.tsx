@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Advice({ advice }: { advice: IAdvice }) {
     return (
-        <div className="relative flex h-full flex-col rounded-2xl bg-emerald-500/[0.15]">
+        <div className="relative mx-auto flex h-full w-full max-w-[309px] flex-col rounded-2xl bg-emerald-500/[0.15]">
             {/* badge */}
             <Badge isVisible={advice.isOpen ?? false} />
 
@@ -26,18 +26,16 @@ export default function Advice({ advice }: { advice: IAdvice }) {
                 <div className="justify-self-end">
                     <div className="grid grid-cols-2 pb-4">
                         <div>
-                            <h5 className='text-lg'>Duration</h5>
+                            <h5 className="text-lg">Duration</h5>
                             <p>{advice.duration}</p>
                         </div>
                         <div>
-                            <h5 className='text-lg'>Price</h5>
+                            <h5 className="text-lg">Price</h5>
                             <p>{advice.price}</p>
                         </div>
                     </div>
                     <Link href={'/mentorship/' + advice.href}>
-                        <div className="button-lg-orange text-center">
-                            Learn more
-                        </div>
+                        <div className="button-lg-orange text-center">Learn more</div>
                     </Link>
                 </div>
             </div>

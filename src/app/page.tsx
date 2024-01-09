@@ -18,7 +18,7 @@ export default function About() {
 
             {/* mentors */}
             <h2 className="page-header">Our mentors</h2>
-            <ul className="grid grid-cols-2 gap-12">
+            <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-12">
                 {mentorsList.map((item) => (
                     <li key={item.id}>
                         <Mentor mentor={item.info} />

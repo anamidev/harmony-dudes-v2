@@ -4,9 +4,9 @@ import { type IMentor } from '@/lib/data/mentors';
 
 export default function Mentor({ mentor }: { mentor: IMentor }) {
     return (
-        <div className="h-full rounded-2xl bg-emerald-500/[0.15] p-6">
+        <div className="mx-auto h-full max-w-md rounded-2xl bg-emerald-500/[0.15] p-6">
             <div className="mx-auto flex h-full max-w-lg flex-col gap-1">
-                <div className="h-48 w-48 self-center">
+                <div className="h-40 w-40 self-center md:h-48 md:w-48">
                     <Image
                         src={mentor.photo}
                         alt={mentor.name + ' photo'}
@@ -38,11 +38,7 @@ export default function Mentor({ mentor }: { mentor: IMentor }) {
                 </ul>
                 <div className="flex grow items-end justify-center pt-2">
                     <Link href={'/mentor/' + mentor.href}>
-                        <button
-                            className="button-lg-orange"
-                        >
-                            Read more
-                        </button>
+                        <button className="button-lg-orange">Read more</button>
                     </Link>
                 </div>
             </div>

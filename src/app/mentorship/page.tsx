@@ -5,7 +5,7 @@ import Advice from '@/components/Advice';
 
 export default function Mentorship() {
     return (
-        <section className="page-layout snap-y scroll-mt-10 snap-y">
+        <section className="page-layout snap-y snap-y scroll-mt-10">
             {/* intro */}
             <h1 className="page-header">Our mentorship</h1>
             <p>
@@ -34,13 +34,13 @@ export default function Mentorship() {
                     className="grid grid-cols-1 gap-6"
                 >
                     <h3
-                        className="font-['Rubik_Dirt'] text-2xl scroll-mt-24 snap-start"
+                        className="snap-start scroll-mt-24 font-['Rubik_Dirt'] text-2xl"
                         id={mtshp.category}
                     >
                         {mtshp.category}
                     </h3>
                     <p>{mtshp.description}</p>
-                    <ul className="grid grid-cols-3 gap-6">
+                    <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                         {mtshp.advices.map((advice: IAdvice) => (
                             <li key={advice.name}>
                                 <Advice advice={advice} />

@@ -2,7 +2,7 @@ export default function Workshops() {
     return (
         <section className="page-layout">
             <h1 className="page-header">Workshops</h1>
-            <div className="mx-auto h-96 w-full max-w-3xl bg-white/[0.1]"></div>
+            <div className="mx-auto h-60 max-w-[480px] w-full bg-white/[0.1] md:h-96 md:max-w-3xl"></div>
             <p className="mx-auto max-w-5xl">
                 We help train your team. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -37,11 +37,11 @@ export default function Workshops() {
             </ul>
 
             <h2 className="page-header">Testimonials</h2>
-            <ul className="grid grid-cols-3 gap-5">
+            <ul className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
                 <li className="mx-auto flex flex-col items-center gap-3">
                     <div className="h-32 w-32 rounded-full bg-white/[0.1]"></div>
                     <h3>Aleksandra</h3>
-                    <p>
+                    <p className="mx-auto max-w-md">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua!
                     </p>
@@ -49,7 +49,7 @@ export default function Workshops() {
                 <li className="mx-auto flex flex-col items-center gap-3">
                     <div className="h-32 w-32 rounded-full bg-white/[0.1]"></div>
                     <h3>Petr</h3>
-                    <p>
+                    <p className="mx-auto max-w-md">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua!
                     </p>
@@ -57,7 +57,7 @@ export default function Workshops() {
                 <li className="mx-auto flex flex-col items-center gap-3">
                     <div className="h-32 w-32 rounded-full bg-white/[0.1]"></div>
                     <h3>Aleksei</h3>
-                    <p>
+                    <p className="mx-auto max-w-md">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua!
                     </p>

@@ -2,7 +2,6 @@ import { mentors } from '@/lib/data/mentors';
 import { advices } from '@/lib/data/advices';
 import Link from 'next/link';
 import Image from 'next/image';
-import EmailToClipboard from '@/components/EmailToClipboard';
 import Advice from '@/components/Advice';
 import MentorContact from '@/components/MentorContact';
 
@@ -32,10 +31,10 @@ export default function Mentor({ params }: { params: { mentor: string } }) {
     ) : (
         <section className="page-layout">
             {/* name & job title */}
-            <div className="mx-auto flex items-center gap-6">
+            <div className="mx-auto flex flex-col items-center gap-6 md:flex-row">
                 <div>
                     {/* photo */}
-                    <div className="mx-auto h-48 w-48 self-center">
+                    <div className="mx-auto h-40 w-40 self-center md:h-48 md:w-48">
                         <Image
                             src={currentMentor.photo}
                             alt={currentMentor.name + ' photo'}
@@ -44,13 +43,13 @@ export default function Mentor({ params }: { params: { mentor: string } }) {
                     </div>
                 </div>
                 <div>
-                    <h1 className={'text-center font-["Rubik_Dirt"] text-4xl'}>
+                    <h1 className={'text-center font-["Rubik_Dirt"] text-2xl md:text-4xl'}>
                         {currentMentor.name}
                     </h1>
-                    <h2 className={'text-center text-2xl'}>{currentMentor.jobTitle}</h2>
+                    <h2 className={'text-center text-xl md:text-2xl'}>{currentMentor.jobTitle}</h2>
                 </div>
                 {/* character image */}
-                <div className="h-48 w-48 rounded-full bg-white/[0.1]"></div>
+                <div className="hidden h-48 w-48 rounded-full bg-white/[0.1] md:block"></div>
             </div>
 
             {/* short info */}
@@ -71,7 +70,7 @@ export default function Mentor({ params }: { params: { mentor: string } }) {
                     <ul className="flex items-center gap-3">
                         {currentMentor.contacts.map((contact) => (
                             <li key={contact.id}>
-                                <MentorContact contact={contact}/>
+                                <MentorContact contact={contact} />
                             </li>
                         ))}
                     </ul>
@@ -79,10 +78,10 @@ export default function Mentor({ params }: { params: { mentor: string } }) {
             </div>
 
             {/* introduction video */}
-            <div className="max-h-lg mx-auto h-96 w-[720px] bg-white/[0.1]"></div>
+            <div className="mx-auto h-60 w-full max-w-[480px] bg-white/[0.1] md:h-96 md:w-full md:max-w-[720px]"></div>
 
             <h3 className="page-header">Mentor's advices</h3>
-            <ul className="grid grid-cols-3 gap-6">
+            <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {currentMentor.advices.map((advice) => (
                     <li key={advice.name}>
                         <Advice advice={advices[advice.href]} />
@@ -91,27 +90,27 @@ export default function Mentor({ params }: { params: { mentor: string } }) {
             </ul>
 
             <h3 className="page-header">Mentor's work</h3>
-            <ul className="grid grid-cols-3 gap-5">
-                <li className="h-52 w-full rounded-2xl bg-white/[0.1]"></li>
-                <li className="h-52 w-full rounded-2xl bg-white/[0.1]"></li>
-                <li className="h-52 w-full rounded-2xl bg-white/[0.1]"></li>
-                <li className="h-52 w-full rounded-2xl bg-white/[0.1]"></li>
-                <li className="h-52 w-full rounded-2xl bg-white/[0.1]"></li>
+            <ul className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+                <li className="mx-auto h-52 w-full max-w-[312px] rounded-2xl bg-white/[0.1]"></li>
+                <li className="mx-auto h-52 w-full max-w-[312px] rounded-2xl bg-white/[0.1]"></li>
+                <li className="mx-auto h-52 w-full max-w-[312px] rounded-2xl bg-white/[0.1]"></li>
+                <li className="mx-auto h-52 w-full max-w-[312px] rounded-2xl bg-white/[0.1]"></li>
+                <li className="mx-auto h-52 w-full max-w-[312px] rounded-2xl bg-white/[0.1]"></li>
             </ul>
 
             <h3 className="page-header">Students' work</h3>
-            <ul className="grid grid-cols-3 gap-5">
-                <li className="h-52 w-full rounded-2xl bg-white/[0.1]"></li>
-                <li className="h-52 w-full rounded-2xl bg-white/[0.1]"></li>
-                <li className="h-52 w-full rounded-2xl bg-white/[0.1]"></li>
+            <ul className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+                <li className="mx-auto h-52 w-full max-w-[312px] rounded-2xl bg-white/[0.1]"></li>
+                <li className="mx-auto h-52 w-full max-w-[312px] rounded-2xl bg-white/[0.1]"></li>
+                <li className="mx-auto h-52 w-full max-w-[312px] rounded-2xl bg-white/[0.1]"></li>
             </ul>
 
             <h3 className="page-header">Testimonials</h3>
-            <ul className="grid grid-cols-3 gap-5">
+            <ul className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
                 <li className="mx-auto flex flex-col items-center gap-3">
                     <div className="h-32 w-32 rounded-full bg-white/[0.1]"></div>
                     <h3>Aleksandra</h3>
-                    <p>
+                    <p className="mx-auto max-w-md">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua!
                     </p>
@@ -119,7 +118,7 @@ export default function Mentor({ params }: { params: { mentor: string } }) {
                 <li className="mx-auto flex flex-col items-center gap-3">
                     <div className="h-32 w-32 rounded-full bg-white/[0.1]"></div>
                     <h3>Petr</h3>
-                    <p>
+                    <p className="mx-auto max-w-md">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua!
                     </p>
@@ -127,7 +126,7 @@ export default function Mentor({ params }: { params: { mentor: string } }) {
                 <li className="mx-auto flex flex-col items-center gap-3">
                     <div className="h-32 w-32 rounded-full bg-white/[0.1]"></div>
                     <h3>Aleksei</h3>
-                    <p>
+                    <p className="mx-auto max-w-md">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua!
                     </p>
