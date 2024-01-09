@@ -30,7 +30,7 @@ export interface IAdvice {
         description: string | null;
         data: string[] | never[];
     };
-    paymentMethods: string[],
+    paymentMethods: string[];
 }
 
 export const advices: IList = {
@@ -39,7 +39,7 @@ export const advices: IList = {
         href: 'harmony-foundations',
         name: '2.5D Toon Boom Harmony. Animation foundations',
         description:
-            "Progress faster with expert career advisory and mentorship!\nDiscover what it takes to become a professional 2D animator! In this comprehensive 2.5D animation course, you'll learn how to use Toon Boom Harmony to create rigged style character animations from scratch, and be guided step by step by industry professionals who have worked on iconic animated films and TV shows.",
+            "Progress faster with expert career advisory and mentorship!\n\nDiscover what it takes to become a professional 2D animator! In this comprehensive 2.5D animation course, you'll learn how to use Toon Boom Harmony to create rigged style character animations from scratch, and be guided step by step by industry professionals who have worked on iconic animated films and TV shows.",
         duration: '12 weeks',
         price: '19,500 ₽ per month',
         isOpen: false,
@@ -82,7 +82,198 @@ export const advices: IList = {
         },
         paymentMethods: ['PayPal', 'Direct Bank Card Payment'],
     },
-    'ai': {
+    ai: {
+        cover: harmonyImage,
+        href: 'ai',
+        name: 'AI Animation',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo.',
+        duration: '8 weeks',
+        price: '$50/week',
+        isOpen: false,
+        mentor: {
+            name: 'Lorem Ipsum',
+            href: 'lorem-ipsum',
+        },
+        weeks: {
+            description: null,
+            data: [],
+        },
+        software: 'Toon Boom Harmony 20 or above',
+        requirements: {
+            description: null,
+            data: [],
+        },
+        result: {
+            description: null,
+            data: [],
+        },
+        paymentMethods: ['Direct Bank Card Payment'],
+    },
+    'action-storyboard': {
+        cover: harmonyImage,
+        href: 'action-storyboard',
+        name: 'Action Storyboard',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo.',
+        duration: '8 weeks',
+        price: '$50/week',
+        isOpen: true,
+        mentor: {
+            name: 'Pasha Potekhin',
+            href: 'pasha-potekhin',
+        },
+        weeks: {
+            description: null,
+            data: [],
+        },
+        software: 'Toon Boom Storyboard 20 or above',
+        requirements: {
+            description: null,
+            data: [],
+        },
+        result: {
+            description: null,
+            data: [],
+        },
+        paymentMethods: ['Direct Bank Card Payment'],
+    },
+    'harmony-design': {
+        cover: harmonyImage,
+        href: 'harmony-design',
+        name: 'Harmony Design',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo.',
+        duration: '8 weeks',
+        price: '$50/week',
+        isOpen: false,
+        mentor: {
+            name: 'Lorem Ipsum',
+            href: 'lorem-ipsum',
+        },
+        weeks: {
+            description: null,
+            data: [],
+        },
+        software: 'Toon Boom Harmony 20 or above',
+        requirements: {
+            description: null,
+            data: [],
+        },
+        result: {
+            description: null,
+            data: [],
+        },
+        paymentMethods: ['Direct Bank Card Payment'],
+    },
+    'harmony-rigging': {
+        cover: harmonyImage,
+        href: 'harmony-rigging',
+        name: 'Harmony Rigging',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo.',
+        duration: '8 weeks',
+        price: '$50/week',
+        isOpen: false,
+        mentor: {
+            name: 'Lorem Ipsum',
+            href: 'lorem-ipsum',
+        },
+        weeks: {
+            description: null,
+            data: [],
+        },
+        software: 'Toon Boom Harmony 20 or above',
+        requirements: {
+            description: null,
+            data: [],
+        },
+        result: {
+            description: null,
+            data: [],
+        },
+        paymentMethods: ['Direct Bank Card Payment'],
+    },
+    'harmony-compositing': {
+        cover: harmonyImage,
+        href: 'harmony-compositing',
+        name: 'Harmony Compositing',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo.',
+        duration: '8 weeks',
+        price: '$50/week',
+        isOpen: false,
+        mentor: {
+            name: 'Lorem Ipsum',
+            href: 'lorem-ipsum',
+        },
+        weeks: {
+            description: null,
+            data: [],
+        },
+        software: 'Toon Boom Harmony 20 or above',
+        requirements: {
+            description: null,
+            data: [],
+        },
+        result: {
+            description: null,
+            data: [],
+        },
+        paymentMethods: ['Direct Bank Card Payment'],
+    },
+};
+
+export const advices_ru: IList = {
+    'harmony-foundations': {
+        cover: harmonyImage,
+        href: 'harmony-foundations',
+        name: '2.5D Toon Boom Harmony. Основы анимации',
+        description:
+            'Развивайтесь быстрее благодаря экспертным карьерным консультациям и наставничеству!\n\nУзнайте, что нужно, чтобы стать профессиональным 2D-аниматором! В этом комплексном курсе по 2.5D-анимации вы узнаете, как использовать Toon Boom Harmony для создания анимации персонажей в строгом стиле с нуля, и будете шаг за шагом получать руководство от профессионалов отрасли, которые работали над культовыми анимационными фильмами и телешоу.',
+        duration: '12 недель',
+        price: '19,500 ₽ в месяц',
+        isOpen: false,
+        mentor: {
+            name: 'Ирина Голина',
+            href: 'irina-golina',
+        },
+        weeks: {
+            description:
+                'Одобренная отраслью учебная программа поможет вам начать работу в захватывающем мире анимации.\n\nДобро пожаловать на курс «Анимация — уровень 1», разработанный специально для новичков или тех, кто нуждается в повышении квалификации в области программного обеспечения. Этот курс, включающий в общей сложности 12 видеоуроков и 12 интерактивных встреч, дает всестороннее введение в программное обеспечение и научит вас эффективно использовать его основные инструменты. Мало того, вы также погрузитесь в захватывающий мир анимации фальсифицированных персонажей.\n\nК концу курса вы приобретете навыки и знания, необходимые для создания впечатляющих демонстрационных роликов. Это отличная возможность продемонстрировать свои новые способности и талант в анимации. Независимо от того, являетесь ли вы новичком в программном обеспечении или просто хотите освежить свои навыки, этот курс — идеальный выбор для вас.',
+            data: [
+                'Интерфейс',
+                'Инструменты',
+                'Покадровая анимация в Harmony\nМы знакомимся с программным обеспечением и узнаем, что нам нужно знать как аниматору. Мы применяем принципы анимации, используя как новейшие инструменты Harmony, так и старомодные методы, и практикуемся в получении контроля над нашими ключевыми кадрами, прежде чем создавать покадровую анимацию.',
+                'Модельный лист для Harmony и способы очистки эффектов',
+                'Введение в сборку. Подготовьте билд персонажа. Простой вид сбоку для цикла обхода Cut Out',
+                'Введение в Cut out анимацию. Анимируем ходьбу',
+                'Знакомство с деформаторами. Анимация хвоста.\nПеренесет вас в чудесный мир деформаторов, используя немного более сложные методы, такие как перекрытие и продолжение. Мы узнаем основы сборки персонажа, использования камеры, создания анимированных циклов, работы в космосе и многого другого!',
+                'Морф раф',
+                'Фоны в Harmony',
+                'Морф билд',
+                "Морф-анимация и организация проекта\nМы начинаем применять все, что мы узнали до сих пор, для создания функционального персонажа. Здесь мы концентрируемся на качественном применении принципов, таких как сильная поза, исполнение, тайминг и все, что между ними! Мы также углубимся в часто упускаемое из виду искусство использования референсов.\nТеперь мы познакомимся с ригом для всего тела, чтобы проверить ваши навыки анимации действий! Мы определяем последовательность движений и изучаем несколько различных способов перехода от клавиш к полностью промежуточной анимации. Мы также становимся опытными пользователями временной шкалы и осваиваем ярлыки. Вы можете работать с 1 или 2 персонажами (установки предоставляются, но вы можете построить свои собственные)",
+                "Шоурил\nТеперь мы отточим вашу анимацию, разовьем вашу способность направлять взгляд, поставим игру в «два кадра» и добавим последние штрихи. Мы также даем советы по шоурилам, эффективному использованию референсов и тому, как работать в студии.",
+            ],
+        },
+        software: 'Toon Boom Harmony 17 или новее',
+        requirements: {
+            description: null,
+            data: [],
+        },
+        result: {
+            description:
+                "Этот курс 2D-анимации для начинающих — отличный способ начать карьеру аниматора! Начиная с основ анимации и заканчивая гораздо более сложными проектами, ваш наставник проведет вас через забавные упражнения, поделится современными методами анимации и предоставит ценные отзывы о вашей работе, кадр за кадром, чтобы помочь вам быстрее прогрессировать в качестве аниматора. художник.\n\nВас будут лично обучать бывшие художники Netflix, Hasbro, Adult Swim и DreamWorks с многолетним опытом работы над телешоу.",
+            data: [
+                'Научитесь ригговой анимации персонажа',
+                'Обучайтесь на Toon Boom Harmony - ПО стандарта индустрии',
+                'Получите менторство от аниматора мирового класса',
+                'Гибкие возможности обучения и оплаты',
+            ],
+        },
+        paymentMethods: ['PayPal', 'Банковский перевод'],
+    },
+    ai: {
         cover: harmonyImage,
         href: 'ai',
         name: 'AI Animation',

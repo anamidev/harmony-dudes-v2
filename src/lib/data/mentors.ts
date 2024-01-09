@@ -132,3 +132,94 @@ export const mentorsList: IMentorsList[] = [
     { id: 4, info: mentors['marina-ipatova'] },
     { id: 5, info: mentors['tatiana-simonova'] },
 ];
+
+export const mentors_ru: IList = {
+    'irina-golina': {
+        photo: irinaGolina,
+        href: 'irina-golina',
+        name: 'Ирина Голина',
+        jobTitle: 'Арт-Директор',
+        introVideo: null,
+        description:
+            'Профессионал с огромным опытом в создании paperless и гибридной 2Д анимации в Toon Boom Harmony. Обладатель премий за достижения в области анимации и дизайна фонов, в том числе Annie, Ammy, и Leo Awards',
+        currentStudio: 'Wildbrain',
+        projectsWorkedOn:
+            'Rick and Morty, Carmen Sandiego, Dawn of the Croods, Snoopy in Space, My Little Pony',
+        contacts: [{ id: 1, href: 'https://t.me/Igs40', type: ContactType.telegram }],
+        advices: [{ name: 'Основы анимации', href: 'harmony-foundations' }],
+    },
+    'svetlana-cherepanova': {
+        photo: svetlanaCherepanova,
+        href: 'svetlana-cherepanova',
+        name: 'Светлана Черепанова',
+        jobTitle: 'Синьор Риггер',
+        introVideo: null,
+        description:
+            'Супервайзер отдела риггинга, специалист по композу в Toon Boom Harmony, 2D аниматор',
+        currentStudio: 'Toonbox, Riki, Melnitsa',
+        projectsWorkedOn: 'Take My Muffin',
+        contacts: [
+            {
+                id: 1,
+                href: 'https://t.me/penguin_rig',
+                type: ContactType.telegram,
+            },
+            {
+                id: 2,
+                href: 'https://www.linkedin.com/in/svetlana-cherepanova-123965200/',
+                type: ContactType.linkedin,
+            },
+        ],
+        advices: [{ name: 'Риггинг в Harmony', href: 'harmony-rigging' }],
+    },
+    'pasha-potekhin': {
+        photo: pashaPotekhin,
+        href: 'pasha-potekhin',
+        name: 'Паша Потехин',
+        jobTitle: 'Стори Артист',
+        introVideo: null,
+        description:
+            'Сертифицированный специалист по сторибордам в Storyboard Pro, имеющий опыт работы с полнометражными фильмами, телевидением, играми и анимацией музыкальных клипов. Создатель Animon Fest - фестиваля и платформы для инди-проектов',
+        currentStudio: 'Homerun Story',
+        projectsWorkedOn: 'Animation Dance Party, Ходячий Боевой Терем',
+        contacts: [{ id: 1, href: 'https://t.me/Power_Up', type: ContactType.telegram }],
+        advices: [{ name: 'Экшн Сториборд', href: 'action-storyboard' }],
+    },
+    'marina-ipatova': {
+        photo: marinaIpatova,
+        href: 'marina-ipatova',
+        name: 'Марина Ипатова',
+        jobTitle: 'Композитинг Артист',
+        introVideo: null,
+        description:
+            'Синьор аниматор гибридной 2Д анимации в Toon Boom Harmony. Риггер по персонажам и пропсам',
+        currentStudio: 'Toonbox',
+        projectsWorkedOn: 'Take my muffin',
+        contacts: [
+            { id: 1, href: 'https://t.me/Mip888art', type: ContactType.telegram },
+            { id: 2, href: 'mip888art@gmail.com', type: ContactType.email },
+        ],
+        advices: [{ name: 'Композитинг в Harmony', href: 'harmony-compositing' }],
+    },
+    'tatiana-simonova': {
+        photo: tatianaSimonova,
+        href: 'tatiana-simonova',
+        name: 'Татьяна Симонова',
+        jobTitle: 'Риггер',
+        introVideo: null,
+        description:
+            'Риггер и лэйаут-специалист Toon Boom Harmony. Создатель анимации с помощью Stable Diffusion',
+        currentStudio: 'Toonbox',
+        projectsWorkedOn: 'Take my muffin',
+        contacts: [{ id: 51, href: 'https://t.me/tane4kasim', type: ContactType.telegram }],
+        advices: [{ name: 'ИИ анимация', href: 'ai' }],
+    },
+};
+
+export const mentorsList_ru: IMentorsList[] = [
+    { id: 1, info: mentors_ru['irina-golina'] },
+    { id: 2, info: mentors_ru['svetlana-cherepanova'] },
+    { id: 3, info: mentors_ru['pasha-potekhin'] },
+    { id: 4, info: mentors_ru['marina-ipatova'] },
+    { id: 5, info: mentors_ru['tatiana-simonova'] },
+];

@@ -14,11 +14,11 @@ export default function Header() {
             {/* desktop */}
             <header className="sticky top-0 z-10 flex hidden border-b border-b-emerald-900 bg-header bg-[length:4px_4px] px-4 py-2 backdrop-blur-sm backdrop-saturate-50 md:flex">
                 {/* Logo */}
-                <Link href={'/'}>
+                <Link href={'/ru'}>
                     <div className="relative h-16 w-32">
                         <Image
                             src={hdLogo}
-                            alt="Harmony Dudes home page"
+                            alt="Harmony Dudes домашняя страница"
                             fill
                             className="object-contain"
                         />
@@ -30,26 +30,26 @@ export default function Header() {
                     <ul className="flex w-full items-center justify-center gap-12">
                         <li>
                             <Link
-                                href={'/'}
+                                href={'/ru'}
                                 className="link text-lg"
                             >
-                                About
+                                О нас
                             </Link>
                         </li>
                         <li>
                             <Link
-                                href={'/mentorship'}
+                                href={'/ru/mentorship'}
                                 className="link text-lg"
                             >
-                                Mentorship
+                                Менторство
                             </Link>
                         </li>
                         <li>
                             <Link
-                                href={'/workshops'}
+                                href={'/ru/workshops'}
                                 className="link text-lg"
                             >
-                                Workshops
+                                Мастер классы
                             </Link>
                         </li>
                     </ul>
@@ -66,11 +66,11 @@ export default function Header() {
             >
                 <div className="flex justify-between">
                     {/* Logo */}
-                    <Link href={'/'}>
+                    <Link href={'/ru'}>
                         <div className="relative h-16 w-32">
                             <Image
                                 src={hdLogo}
-                                alt="Harmony Dudes home page"
+                                alt="Harmony Dudes домашняя страница"
                                 fill
                                 className="object-contain"
                             />
@@ -93,29 +93,29 @@ export default function Header() {
                     >
                         <li>
                             <Link
-                                href={'/'}
+                                href={'/ru'}
                                 className="link text-lg"
                                 onClick={() => setIsOpen(false)}
                             >
-                                About
+                                О нас
                             </Link>
                         </li>
                         <li>
                             <Link
-                                href={'/mentorship'}
+                                href={'/ru/mentorship'}
                                 className="link text-lg"
                                 onClick={() => setIsOpen(false)}
                             >
-                                Mentorship
+                                Менторство
                             </Link>
                         </li>
                         <li>
                             <Link
-                                href={'/workshops'}
+                                href={'/ru/workshops'}
                                 className="link text-lg"
                                 onClick={() => setIsOpen(false)}
                             >
-                                Workshops
+                                Мастер классы
                             </Link>
                         </li>
                     </ul>

@@ -33,7 +33,7 @@ export default function Advice({ params }: { params: { advice: string } }) {
             {/* name */}
             <h1 className={"text-center font-['Rubik_Dirt'] text-2xl md:text-4xl"}>{currentAdvice.name}</h1>
             <h2 className={'page-header'}>Mentor: {currentAdvice.mentor.name}</h2>
-            <p className="mx-auto max-w-5xl">{currentAdvice.description}</p>
+            <p className="mx-auto max-w-5xl whitespace-pre-line">{currentAdvice.description}</p>
 
             {/* short info */}
             <div className="flex flex-col items-center gap-5 rounded-2xl bg-emerald-500/[0.2] p-10">
