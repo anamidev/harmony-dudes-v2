@@ -5,6 +5,7 @@ import hdLogo from '@/assets/svg/logo/Harmony_Dudes_full_light.svg';
 import Link from 'next/link';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { useState } from 'react';
+import Language from './Language';
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +27,7 @@ export default function Header() {
                 </Link>
 
                 {/* Navigation */}
-                <nav className="flex h-16 grow pr-32">
+                <nav className="flex h-16 grow">
                     <ul className="flex w-full items-center justify-center gap-12">
                         <li>
                             <Link
@@ -54,6 +55,8 @@ export default function Header() {
                         </li>
                     </ul>
                 </nav>
+
+                <Language />
             </header>
 
             {/* mobile */}
@@ -91,6 +94,7 @@ export default function Header() {
                             isOpen ? 'flex' : 'hidden'
                         }`}
                     >
+                        <Language />
                         <li>
                             <Link
                                 href={'/'}

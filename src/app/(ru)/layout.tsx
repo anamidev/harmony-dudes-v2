@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import ToTop from '@/components/ToTop';
 
 export const metadata: Metadata = {
+    metadataBase: new URL('https://harmonydudes.com/ru'),
     title: 'Harmony Dudes',
     description:
         'Мастер-классы, стримы и консультации от профессионалов анимационной индустрии',
