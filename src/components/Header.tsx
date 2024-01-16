@@ -6,57 +6,69 @@ import Link from 'next/link';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { useState } from 'react';
 import Language from './Language';
+import RunningText from './RunningText';
+import { ECategory } from '@/lib/data/courses';
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
+    const [openCourses] = useState<{ name: string; category: ECategory }[]>([
+        { name: 'Animation Foundations', category: ECategory.animation },
+    ]);
 
     return (
         <>
             {/* desktop */}
-            <header className="sticky top-0 z-10 flex hidden border-b border-b-emerald-900 bg-header bg-[length:4px_4px] px-4 py-2 backdrop-blur-sm backdrop-saturate-50 md:flex">
-                {/* Logo */}
-                <Link href={'/'}>
-                    <div className="relative h-16 w-32">
-                        <Image
-                            src={hdLogo}
-                            alt="Harmony Dudes home page"
-                            fill
-                            className="object-contain"
-                        />
-                    </div>
-                </Link>
+            <header className="sticky top-0 z-10 hidden overflow-hidden border-b border-b-emerald-900 bg-header bg-[length:4px_4px] px-4 py-2 backdrop-blur-sm backdrop-saturate-50 md:block">
+                <div className="flex w-full">
+                    {/* Logo */}
+                    <Link href={'/'}>
+                        <div className="relative h-16 w-32">
+                            <Image
+                                src={hdLogo}
+                                alt="Harmony Dudes home page"
+                                fill
+                                className="object-contain"
+                            />
+                        </div>
+                    </Link>
 
-                {/* Navigation */}
-                <nav className="flex h-16 grow">
-                    <ul className="flex w-full items-center justify-center gap-12">
-                        <li>
-                            <Link
-                                href={'/'}
-                                className="link text-lg"
-                            >
-                                About
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href={'/mentorship'}
-                                className="link text-lg"
-                            >
-                                Mentorship
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href={'/workshops'}
-                                className="link text-lg"
-                            >
-                                Workshops
-                            </Link>
-                        </li>
-                    </ul>
-                </nav>
+                    {/* Navigation */}
+                    <nav className="flex h-16 grow">
+                        <ul className="flex w-full items-center justify-center gap-12">
+                            <li>
+                                <Link
+                                    href={'/'}
+                                    className="link text-lg"
+                                >
+                                    About
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href={'/mentorship'}
+                                    className="link text-lg"
+                                >
+                                    Mentorship
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href={'/workshops'}
+                                    className="link text-lg"
+                                >
+                                    Workshops
+                                </Link>
+                            </li>
+                        </ul>
+                    </nav>
 
-                <Language />
+                    <Language />
+                </div>
+
+                <RunningText
+                    openCourses={openCourses}
+                    isAnimated={true}
+                />
             </header>
 
             {/* mobile */}
@@ -121,6 +133,9 @@ export default function Header() {
                             >
                                 Workshops
                             </Link>
+                        </li>
+                        <li className="w-full">
+                            <RunningText openCourses={openCourses} />
                         </li>
                     </ul>
                 </nav>

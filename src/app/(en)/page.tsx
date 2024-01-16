@@ -34,7 +34,7 @@ export default function About() {
                     className="grid grid-cols-1 gap-6"
                 >
                     <h3
-                        className="snap-start scroll-mt-24 font-['Rubik_Dirt'] text-2xl"
+                        className="snap-start scroll-mt-32 font-['Rubik_Dirt'] text-2xl"
                         id={mtshp.category}
                     >
                         {mtshp.category}
