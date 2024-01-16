@@ -1,12 +1,11 @@
-import { mentorship, type IMentorship } from '@/lib/data/mentorship';
-import { type IAdvice } from '@/lib/data/advices';
-import Link from 'next/link';
-import Advice from '@/components/Advice';
+import { mentorsList } from '@/lib/data/mentors';
+import Mentor from '@/components/Mentor';
+import EmailToClipboard from '@/components/EmailToClipboard';
 
 export default function Mentorship() {
     return (
-        <section className="page-layout snap-y snap-y scroll-mt-10">
-            {/* intro */}
+        <section className="page-layout">
+            {/* about */}
             <h1 className="page-header">Our mentorship</h1>
             <p>
                 Choose your personalized pathway to mastering animation! Our experienced mentors
@@ -16,39 +15,31 @@ export default function Mentorship() {
                 of animation!
             </p>
 
-            {/* categories */}
-            <h2 className="page-header">Categories</h2>
-            <ul className="flex flex-wrap justify-center gap-5">
-                {mentorship.map((mtshp) => (
-                    <li
-                        key={mtshp.id}
-                        className="button-sm-orange"
-                    >
-                        <Link href={'#' + mtshp.category}>{mtshp.category}</Link>
+            {/* mentors */}
+            <h2 className="page-header">Our mentors</h2>
+            <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
+                {mentorsList.map((item) => (
+                    <li key={item.id}>
+                        <Mentor mentor={item.info} />
                     </li>
                 ))}
             </ul>
-            {mentorship.map((mtshp: IMentorship) => (
-                <div
-                    key={mtshp.id}
-                    className="grid grid-cols-1 gap-6"
-                >
-                    <h3
-                        className="snap-start scroll-mt-24 font-['Rubik_Dirt'] text-2xl"
-                        id={mtshp.category}
-                    >
-                        {mtshp.category}
-                    </h3>
-                    <p>{mtshp.description}</p>
-                    <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-                        {mtshp.advices.map((advice: IAdvice) => (
-                            <li key={advice.name}>
-                                <Advice advice={advice} />
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            ))}
+
+            {/* contacts */}
+            <h2 className="page-header">Contacts</h2>
+            <p>
+                If you have any questions about our workshops, schedules, or any other aspects,
+                don't hesitate to reach out. Simply drop us an email with your questions and we will
+                be delighted to provide you with all the information you need to embark on your
+                exciting animation learning journey.
+            </p>
+            <div className="text-center text-lg">
+                {/* harmonydudes@gmail.com */}
+                <EmailToClipboard
+                    email="harmonydudes@gmail.com"
+                    classStyle="link-purple"
+                />
+            </div>
         </section>
     );
 }

@@ -1,23 +1,23 @@
-import { advices_ru } from '@/lib/data/advices';
+import { classes_ru } from '@/lib/data/courses';
 import Link from 'next/link';
 import EmailToClipboard_ru from '@/components/EmailToClipboard_ru';
 
 export async function generateStaticParams() {
-    const paths: { advice: string }[] = [];
-    for (let key in advices_ru) {
-        paths.push({ advice: key });
+    const paths: { course: string }[] = [];
+    for (let key in classes_ru) {
+        paths.push({ course: key });
     }
 
     return paths;
 }
 
-export default function Advice({ params }: { params: { advice: string } }) {
-    const { advice: advicePath } = params;
-    const currentAdvice = advices_ru[advicePath];
+export default function Course_ru({ params }: { params: { course: string } }) {
+    const { course: coursePath } = params;
+    const currentClass = classes_ru[coursePath];
 
-    return !currentAdvice ? (
+    return !currentClass ? (
         <section className="flex min-h-[calc(100vh-209px)] flex-col items-center justify-center gap-3">
-            <p>Такой адвайс не найден :( </p>
+            <p>Такой курс не найден :( </p>
             <Link
                 href={'/mentorship'}
                 className="button-sm-orange"
@@ -32,14 +32,14 @@ export default function Advice({ params }: { params: { advice: string } }) {
 
             {/* name */}
             <h1 className={"text-center font-['Rubik_Dirt'] text-2xl md:text-4xl"}>
-                {currentAdvice.name}
+                {currentClass.name}
             </h1>
-            <h2 className={'page-header'}>Ментор: {currentAdvice.mentor.name}</h2>
-            <p className="mx-auto max-w-5xl whitespace-pre-line">{currentAdvice.description}</p>
+            <h2 className={'page-header'}>Ментор: {currentClass.mentor.name}</h2>
+            <p className="mx-auto max-w-5xl whitespace-pre-line">{currentClass.description}</p>
 
             {/* short info */}
             <div className="flex flex-col items-center gap-5 rounded-2xl bg-emerald-500/[0.2] p-10">
-                {currentAdvice.isOpen ? (
+                {currentClass.isOpen ? (
                     <div className="rounded-2xl bg-emerald-500 px-4 py-2 uppercase">
                         Открыт набор
                     </div>
@@ -48,54 +48,55 @@ export default function Advice({ params }: { params: { advice: string } }) {
                 <div className="flex flex-col justify-center gap-10 md:flex-row">
                     <div>
                         <h2 className="text-lg">Длительность</h2>
-                        <p className="">{currentAdvice.duration}</p>
+                        <p className="">{currentClass.duration}</p>
                     </div>
                     <div>
                         <h2 className="text-lg">Цена</h2>
-                        <p className="">{currentAdvice.price}</p>
+                        <p className="">{currentClass.price}</p>
                     </div>
                     <div>
                         <h2 className="text-lg">Способы оплаты</h2>
-                        <p className="">{currentAdvice.paymentMethods.join(', ')}</p>
+                        <p className="">{currentClass.paymentMethods.join(', ')}</p>
                     </div>
                     <div>
                         <h2 className="text-lg">Софт</h2>
-                        <p className="">{currentAdvice.software}</p>
+                        <p className="">{currentClass.software}</p>
                     </div>
                 </div>
 
-                <div className="text-center">
-                    <button className="button-lg-orange">Подать заявку</button>
+                <div className="flex flex-col gap-5 md:w-full md:flex-row md:justify-around">
+                    <button className="button-lg-orange">Частный курс</button>
+                    <button className="button-lg-orange">Групповой курс</button>
                 </div>
             </div>
 
             {/* requirements */}
             <h2 className={'page-header'}>Требования</h2>
-            {currentAdvice.requirements.description ? (
+            {currentClass.requirements.description ? (
                 <p className="mx-auto max-w-5xl whitespace-pre-line">
-                    {currentAdvice.requirements.description}
+                    {currentClass.requirements.description}
                 </p>
             ) : null}
-            {currentAdvice.requirements.data.length !== 0 ? (
+            {currentClass.requirements.data.length !== 0 ? (
                 <ul className="mx-auto w-full max-w-5xl list-inside list-disc">
-                    {currentAdvice.requirements.data.map((item) => (
+                    {currentClass.requirements.data.map((item) => (
                         <li key={item}>{item}</li>
                     ))}
                 </ul>
             ) : (
-                <p className="text-center">К этому адвайсу нет требований. Можно сразу начинать!</p>
+                <p className="text-center">К этому курсу нет требований. Можно сразу начинать!</p>
             )}
 
             {/* schedule */}
             <h2 className="page-header">Учебный план</h2>
-            {currentAdvice.weeks.description ? (
+            {currentClass.weeks.description ? (
                 <p className="mx-auto max-w-5xl whitespace-pre-line">
-                    {currentAdvice.weeks.description}
+                    {currentClass.weeks.description}
                 </p>
             ) : null}
-            {currentAdvice.weeks.data.length !== 0 ? (
+            {currentClass.weeks.data.length !== 0 ? (
                 <ul className="mx-auto flex max-w-5xl flex-col gap-5 whitespace-pre-line">
-                    {currentAdvice.weeks.data.map((week, index) => (
+                    {currentClass.weeks.data.map((week, index) => (
                         <li key={week}>
                             <h3 className="text-lg underline decoration-dotted">
                                 Неделя {index + 1}
@@ -109,15 +110,15 @@ export default function Advice({ params }: { params: { advice: string } }) {
             )}
 
             {/* result */}
-            <h2 className="page-header">Почему стоит пройти этот адвайс?</h2>
-            {currentAdvice.result.description ? (
+            <h2 className="page-header">Почему стоит пройти этот курс?</h2>
+            {currentClass.result.description ? (
                 <p className="mx-auto max-w-5xl whitespace-pre-line">
-                    {currentAdvice.result.description}
+                    {currentClass.result.description}
                 </p>
             ) : null}
-            {currentAdvice.result.data.length !== 0 ? (
+            {currentClass.result.data.length !== 0 ? (
                 <ul className="mx-auto w-full max-w-5xl list-inside list-disc">
-                    {currentAdvice.result.data.map((item) => (
+                    {currentClass.result.data.map((item) => (
                         <li key={item}>{item}</li>
                     ))}
                 </ul>
@@ -126,6 +127,21 @@ export default function Advice({ params }: { params: { advice: string } }) {
                     Вы получите глубокие знания и обретете уверенность в себе!
                 </p>
             )}
+
+            <div className="mx-auto flex w-full max-w-2xl flex-col items-center gap-5 rounded-2xl bg-emerald-500/[0.2] p-10">
+                {currentClass.isOpen ? (
+                    <div className="rounded-2xl bg-emerald-500 px-4 py-2 uppercase">
+                        Открыт набор
+                    </div>
+                ) : null}
+
+                <p className='text-xl'>Отправьте заявку и начните курс</p>
+
+                <div className="flex flex-col gap-5 md:w-full md:flex-row md:justify-around">
+                    <button className="button-lg-orange">Частный курс</button>
+                    <button className="button-lg-orange">Групповой курс</button>
+                </div>
+            </div>
 
             {/* help section */}
             <h2 className="page-header">Нужна помощь?</h2>

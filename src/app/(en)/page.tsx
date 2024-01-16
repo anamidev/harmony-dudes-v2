@@ -1,12 +1,12 @@
-import { mentorsList } from '@/lib/data/mentors';
-import Mentor from '@/components/Mentor';
-import EmailToClipboard from '@/components/EmailToClipboard';
+import { categories, type ICategory, type ICourse } from '@/lib/data/courses';
+import Link from 'next/link';
+import Course from '@/components/Course';
 
 export default function About() {
     return (
-        <section className="page-layout">
-            {/* about */}
-            <h1 className="page-header">Who are we?</h1>
+        <section className="page-layout snap-y snap-y scroll-mt-10">
+            {/* intro */}
+            <h1 className="page-header">About</h1>
             <p>
                 Hi Dudes! We are Toon Boom Harmony pros and true fans of animation! The art of
                 bringing characters to life and crafting stories profoundly inspires us. Our
@@ -16,31 +16,39 @@ export default function About() {
                 creative opportunities!
             </p>
 
-            {/* mentors */}
-            <h2 className="page-header">Our mentors</h2>
-            <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-12">
-                {mentorsList.map((item) => (
-                    <li key={item.id}>
-                        <Mentor mentor={item.info} />
+            {/* categories */}
+            <h2 className="page-header">Categories</h2>
+            <ul className="flex flex-wrap justify-center gap-5">
+                {categories.map((mtshp) => (
+                    <li
+                        key={mtshp.id}
+                        className="button-sm-orange"
+                    >
+                        <Link href={'#' + mtshp.category}>{mtshp.category}</Link>
                     </li>
                 ))}
             </ul>
-
-            {/* contacts */}
-            <h2 className="page-header">Contacts</h2>
-            <p>
-                If you have any questions about our workshops, schedules, or any other aspects,
-                don't hesitate to reach out. Simply drop us an email with your questions and we will
-                be delighted to provide you with all the information you need to embark on your
-                exciting animation learning journey.
-            </p>
-            <div className="text-center text-lg">
-                {/* harmonydudes@gmail.com */}
-                <EmailToClipboard
-                    email="harmonydudes@gmail.com"
-                    classStyle="link-purple"
-                />
-            </div>
+            {categories.map((mtshp: ICategory) => (
+                <div
+                    key={mtshp.id}
+                    className="grid grid-cols-1 gap-6"
+                >
+                    <h3
+                        className="snap-start scroll-mt-24 font-['Rubik_Dirt'] text-2xl"
+                        id={mtshp.category}
+                    >
+                        {mtshp.category}
+                    </h3>
+                    <p>{mtshp.description}</p>
+                    <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                        {mtshp.courses.map((course: ICourse) => (
+                            <li key={course.name}>
+                                <Course course={course} />
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            ))}
         </section>
     );
 }

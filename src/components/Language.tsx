@@ -13,14 +13,15 @@ export default function Language() {
             }
         }
         if (btnLang === 'en') {
+            console.log('en')
             if (pathName.includes('/ru')) {
-                router.push(pathName.slice(3));
+                router.push((pathName.slice(3) ? pathName.slice(3) : '/'));
             }
         }
     };
 
     return (
-        <div className="flex gap-2 self-end md:flex md:w-32 md:items-center md:justify-end md:gap-2">
+        <div className="flex gap-2 self-end md:flex md:w-32 md:self-center md:items-center md:justify-end md:gap-2">
             <button
                 className="link"
                 onClick={() => handleLanguage('ru')}

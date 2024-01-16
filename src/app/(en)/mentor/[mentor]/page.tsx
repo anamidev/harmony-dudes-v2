@@ -1,8 +1,8 @@
 import { mentors } from '@/lib/data/mentors';
-import { advices } from '@/lib/data/advices';
+import { courses } from '@/lib/data/courses';
 import Link from 'next/link';
 import Image from 'next/image';
-import Advice from '@/components/Advice';
+import Course from '@/components/Course';
 import MentorContact from '@/components/MentorContact';
 
 export async function generateStaticParams() {
@@ -22,7 +22,7 @@ export default function Mentor({ params }: { params: { mentor: string } }) {
         <section className="flex min-h-[calc(100vh-209px)] flex-col items-center justify-center gap-3">
             <p>Sorry, there is no such mentor :( </p>
             <Link
-                href={'/'}
+                href={'/mentorship'}
                 className="button-sm-orange"
             >
                 Back to main
@@ -82,9 +82,9 @@ export default function Mentor({ params }: { params: { mentor: string } }) {
 
             <h3 className="page-header">Mentor's advices</h3>
             <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {currentMentor.advices.map((advice) => (
-                    <li key={advice.name}>
-                        <Advice advice={advices[advice.href]} />
+                {currentMentor.courses.map((course) => (
+                    <li key={course.name}>
+                        <Course course={courses[course.propName]} />
                     </li>
                 ))}
             </ul>

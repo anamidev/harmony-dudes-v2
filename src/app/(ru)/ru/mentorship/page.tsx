@@ -1,13 +1,12 @@
-import { mentorship_ru, type IMentorship } from '@/lib/data/mentorship';
-import { type IAdvice } from '@/lib/data/advices';
-import Link from 'next/link';
-import Advice_ru from '@/components/Advice_ru';
+import { mentorsList_ru } from '@/lib/data/mentors';
+import Mentor_ru from '@/components/Mentor_ru';
+import EmailToClipboard_ru from '@/components/EmailToClipboard_ru';
 
-export default function Mentorship() {
+export default function About() {
     return (
-        <section className="page-layout snap-y snap-y scroll-mt-10">
-            {/* intro */}
-            <h1 className="page-header">Наше менторство</h1>
+        <section className="page-layout">
+            {/* about */}
+            <h1 className="page-header">Наши менторы</h1>
             <p>
                 Выберите свой собственный путь в мире анимации! Наши опытные наставники окажут вам
                 индивидуальное руководство, помогут вам сориентироваться и улучшить техники
@@ -16,39 +15,32 @@ export default function Mentorship() {
                 потенциал на новый уровень в мире анимации.
             </p>
 
-            {/* categories */}
-            <h2 className="page-header">Категории</h2>
-            <ul className="flex flex-wrap justify-center gap-5">
-                {mentorship_ru.map((mtshp) => (
-                    <li
-                        key={mtshp.id}
-                        className="button-sm-orange"
-                    >
-                        <Link href={'#' + mtshp.category}>{mtshp.category}</Link>
+            {/* mentors */}
+            <h2 className="page-header">Наши менторы</h2>
+            <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
+                {mentorsList_ru.map((item) => (
+                    <li key={item.id}>
+                        <Mentor_ru mentor={item.info} />
                     </li>
                 ))}
             </ul>
-            {mentorship_ru.map((mtshp: IMentorship) => (
-                <div
-                    key={mtshp.id}
-                    className="grid grid-cols-1 gap-6"
-                >
-                    <h3
-                        className="snap-start scroll-mt-24 font-['Rubik_Dirt'] text-2xl"
-                        id={mtshp.category}
-                    >
-                        {mtshp.category}
-                    </h3>
-                    <p>{mtshp.description}</p>
-                    <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-                        {mtshp.advices.map((advice: IAdvice) => (
-                            <li key={advice.name}>
-                                <Advice_ru advice={advice} />
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            ))}
+
+            {/* contacts */}
+            <h2 className="page-header">Контакты</h2>
+            <p>
+                Если у вас есть какие-либо вопросы о наших воркшопах, расписании или любых других
+                аспектах, не стесняйтесь обращаться к нам. Просто отправьте нам электронное письмо
+                по адресу harmonydudes@gmail.com, и мы будем рады предоставить вам всю информацию,
+                необходимую для того, чтобы отправиться в увлекательное путешествие по изучению
+                анимации.
+            </p>
+            <div className="text-center text-lg">
+                {/* harmonydudes@gmail.com */}
+                <EmailToClipboard_ru
+                    email="harmonydudes@gmail.com"
+                    classStyle="link-purple"
+                />
+            </div>
         </section>
     );
 }

@@ -1,8 +1,8 @@
 import { mentors_ru } from '@/lib/data/mentors';
-import { advices_ru } from '@/lib/data/advices';
+import { courses_ru } from '@/lib/data/courses';
 import Link from 'next/link';
 import Image from 'next/image';
-import Advice_ru from '@/components/Advice_ru';
+import Course_ru from '@/components/Course_ru';
 import MentorContact_ru from '@/components/MentorContact_ru';
 
 export async function generateStaticParams() {
@@ -22,7 +22,7 @@ export default function Mentor({ params }: { params: { mentor: string } }) {
         <section className="flex min-h-[calc(100vh-209px)] flex-col items-center justify-center gap-3">
             <p>Такой ментор не найден :( </p>
             <Link
-                href={'/'}
+                href={'/mentorship'}
                 className="button-sm-orange"
             >
                 На главную
@@ -82,9 +82,9 @@ export default function Mentor({ params }: { params: { mentor: string } }) {
 
             <h3 className="page-header">Адвайсы ментора</h3>
             <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {currentMentor.advices.map((advice) => (
-                    <li key={advice.name}>
-                        <Advice_ru advice={advices_ru[advice.href]} />
+                {currentMentor.courses.map((course) => (
+                    <li key={course.name}>
+                        <Course_ru course={courses_ru[course.propName]} />
                     </li>
                 ))}
             </ul>
