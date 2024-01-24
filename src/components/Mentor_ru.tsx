@@ -7,7 +7,7 @@ export default function Mentor({ mentor }: { mentor: IMentor }) {
         <div className="mx-auto h-full max-w-md rounded-2xl bg-emerald-500/[0.15] p-6">
             <div className="mx-auto flex h-full max-w-lg flex-col gap-1">
                 <div className="h-40 w-40 self-center md:h-40 md:w-40">
-                    <Link href={'/ru/mentor/' + mentor.href}>
+                    <Link href={'/mentor/' + mentor.href}>
                         <Image
                             src={mentor.photo}
                             alt={mentor.name + ' photo'}
@@ -41,7 +41,7 @@ export default function Mentor({ mentor }: { mentor: IMentor }) {
                             className="button-sm-orange"
                         >
                             <Link
-                                href={'/ru#' + course.category}
+                                href={'/#' + course.category}
                                 className="block"
                             >
                                 {course.name}
@@ -50,7 +50,7 @@ export default function Mentor({ mentor }: { mentor: IMentor }) {
                     ))}
                 </ul>
                 {/* <div className="flex grow items-end justify-center pt-2">
-                    <Link href={'/ru/mentor/' + mentor.href}>
+                    <Link href={'/mentor/' + mentor.href}>
                         <button className="button-lg-orange">Узнать больше</button>
                     </Link>
                 </div> */}

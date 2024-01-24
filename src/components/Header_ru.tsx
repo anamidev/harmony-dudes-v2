@@ -21,7 +21,7 @@ export default function Header() {
             <header className="sticky top-0 z-10 hidden overflow-hidden border-b border-b-emerald-900 bg-header bg-[length:4px_4px] px-4 py-2 backdrop-blur-sm backdrop-saturate-50 md:block">
                 <div className="flex w-full">
                     {/* Logo */}
-                    <Link href={'/ru'}>
+                    <Link href={'/'}>
                         <div className="relative h-16 w-32">
                             <Image
                                 src={hdLogo}
@@ -33,11 +33,11 @@ export default function Header() {
                     </Link>
 
                     {/* Navigation */}
-                    <nav className="flex h-16 grow">
+                    <nav className="flex h-16 grow mr-32">
                         <ul className="flex w-full items-center justify-center gap-12">
                             <li>
                                 <Link
-                                    href={'/ru'}
+                                    href={'/'}
                                     className="link text-lg"
                                 >
                                     О нас
@@ -45,7 +45,7 @@ export default function Header() {
                             </li>
                             <li>
                                 <Link
-                                    href={'/ru/mentorship'}
+                                    href={'/mentorship'}
                                     className="link text-lg"
                                 >
                                     Менторство
@@ -53,7 +53,7 @@ export default function Header() {
                             </li>
                             <li>
                                 <Link
-                                    href={'/ru/workshops'}
+                                    href={'/workshops'}
                                     className="link text-lg"
                                 >
                                     Мастер классы
@@ -62,13 +62,13 @@ export default function Header() {
                         </ul>
                     </nav>
 
-                    <Language />
+                    {/* <Language /> */}
                 </div>
 
-                <RunningText_ru
+                {/* <RunningText_ru
                     openCourses={openCourses}
                     isAnimated={true}
-                />
+                /> */}
             </header>
 
             {/* mobile */}
@@ -81,7 +81,7 @@ export default function Header() {
             >
                 <div className="flex justify-between">
                     {/* Logo */}
-                    <Link href={'/ru'}>
+                    <Link href={'/'}>
                         <div className="relative h-16 w-32">
                             <Image
                                 src={hdLogo}
@@ -106,10 +106,10 @@ export default function Header() {
                             isOpen ? 'flex' : 'hidden'
                         }`}
                     >
-                        <Language />
+                        {/* <Language /> */}
                         <li>
                             <Link
-                                href={'/ru'}
+                                href={'/'}
                                 className="link text-lg"
                                 onClick={() => setIsOpen(false)}
                             >
@@ -118,7 +118,7 @@ export default function Header() {
                         </li>
                         <li>
                             <Link
-                                href={'/ru/mentorship'}
+                                href={'/mentorship'}
                                 className="link text-lg"
                                 onClick={() => setIsOpen(false)}
                             >
@@ -127,16 +127,16 @@ export default function Header() {
                         </li>
                         <li>
                             <Link
-                                href={'/ru/workshops'}
+                                href={'/workshops'}
                                 className="link text-lg"
                                 onClick={() => setIsOpen(false)}
                             >
                                 Мастер классы
                             </Link>
                         </li>
-                        <li className="w-full">
+                        {/* <li className="w-full">
                             <RunningText_ru openCourses={openCourses} />
-                        </li>
+                        </li> */}
                     </ul>
                 </nav>
             </header>

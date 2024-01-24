@@ -22,7 +22,7 @@ export default function RunningText_ru({
                 openCourses.map((course) => (
                     <Link
                         key={course.name}
-                        href={'/ru#' + course.category}
+                        href={'/#' + course.category}
                         className="button-sm-orange"
                     >
                         {course.name}

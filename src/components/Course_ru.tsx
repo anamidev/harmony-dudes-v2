@@ -42,7 +42,7 @@ export default function Advice({ course }: { course: ICourse }) {
                             <p>{course.price}</p>
                         </div>
                     </div>
-                    <Link href={'/ru/course/' + course.href}>
+                    <Link href={'/course/' + course.href}>
                         <div className="button-lg-orange text-center">Узнать больше</div>
                     </Link> */}
                     <ul className='grid grid-cols-3 gap-2'>
@@ -50,7 +50,7 @@ export default function Advice({ course }: { course: ICourse }) {
                             <li key={courseClass.href}>
                                 <Link
                                     className="block cursor-pointer rounded-lg bg-[#ca8a04]/[0.7] px-2 py-2 text-center hover:bg-[#ca8a04]/[1]"
-                                    href={'/ru/course/' + courseClass.href}
+                                    href={'/course/' + courseClass.href}
                                 >
                                     {courseClass.level}
                                 </Link>

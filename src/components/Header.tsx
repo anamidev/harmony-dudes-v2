@@ -21,7 +21,7 @@ export default function Header() {
             <header className="sticky top-0 z-10 hidden overflow-hidden border-b border-b-emerald-900 bg-header bg-[length:4px_4px] px-4 py-2 backdrop-blur-sm backdrop-saturate-50 md:block">
                 <div className="flex w-full">
                     {/* Logo */}
-                    <Link href={'/'}>
+                    <Link href={'/en'}>
                         <div className="relative h-16 w-32">
                             <Image
                                 src={hdLogo}
@@ -37,7 +37,7 @@ export default function Header() {
                         <ul className="flex w-full items-center justify-center gap-12">
                             <li>
                                 <Link
-                                    href={'/'}
+                                    href={'/en'}
                                     className="link text-lg"
                                 >
                                     About
@@ -45,7 +45,7 @@ export default function Header() {
                             </li>
                             <li>
                                 <Link
-                                    href={'/mentorship'}
+                                    href={'/en/mentorship'}
                                     className="link text-lg"
                                 >
                                     Mentorship
@@ -53,7 +53,7 @@ export default function Header() {
                             </li>
                             <li>
                                 <Link
-                                    href={'/workshops'}
+                                    href={'/en/workshops'}
                                     className="link text-lg"
                                 >
                                     Workshops
@@ -81,7 +81,7 @@ export default function Header() {
             >
                 <div className="flex justify-between">
                     {/* Logo */}
-                    <Link href={'/'}>
+                    <Link href={'/en'}>
                         <div className="relative h-16 w-32">
                             <Image
                                 src={hdLogo}
@@ -109,7 +109,7 @@ export default function Header() {
                         <Language />
                         <li>
                             <Link
-                                href={'/'}
+                                href={'/en'}
                                 className="link text-lg"
                                 onClick={() => setIsOpen(false)}
                             >
@@ -118,7 +118,7 @@ export default function Header() {
                         </li>
                         <li>
                             <Link
-                                href={'/mentorship'}
+                                href={'/en/mentorship'}
                                 className="link text-lg"
                                 onClick={() => setIsOpen(false)}
                             >
@@ -127,7 +127,7 @@ export default function Header() {
                         </li>
                         <li>
                             <Link
-                                href={'/workshops'}
+                                href={'/en/workshops'}
                                 className="link text-lg"
                                 onClick={() => setIsOpen(false)}
                             >

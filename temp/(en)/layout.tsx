@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import ToTop from '@/components/ToTop';
 
 export const metadata: Metadata = {
-    metadataBase: new URL('https://harmonydudes.com'),
+    metadataBase: new URL('https://harmonydudes.com/en'),
     title: 'Harmony Dudes',
     description:
         'Workshops, streams and consultations from the professionals of animation industry',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
         title: 'Harmony Dudes',
         description:
             'Workshops, streams and consultations from the professionals of animation industry',
-        url: 'https://harmonydudes.com',
+        url: 'https://harmonydudes.com/en',
     },
 };
 
