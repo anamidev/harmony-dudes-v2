@@ -39,14 +39,19 @@ export default function About() {
                     >
                         {mtshp.category}
                     </h3>
-                    <p>{mtshp.description}</p>
-                    <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-                        {mtshp.courses.map((course: ICourse) => (
-                            <li key={course.name}>
-                                <Course_ru course={course} />
-                            </li>
-                        ))}
-                    </ul>
+                    {mtshp.description ? <p>{mtshp.description}</p> : null}
+
+                    {mtshp.courses.length !== 0 ? (
+                        <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                            {mtshp.courses.map((course: ICourse) => (
+                                <li key={course.name}>
+                                    <Course_ru course={course} />
+                                </li>
+                            ))}
+                        </ul>
+                    ) : (
+                        <p>Скоро здесь появятся новые курсы. Следите за обновлениями!</p>
+                    )}
                 </div>
             ))}
         </section>

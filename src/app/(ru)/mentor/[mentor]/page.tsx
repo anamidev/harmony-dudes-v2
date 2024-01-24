@@ -49,7 +49,7 @@ export default function Mentor({ params }: { params: { mentor: string } }) {
                     <h2 className={'text-center text-xl md:text-2xl'}>{currentMentor.jobTitle}</h2>
                 </div>
                 {/* character image */}
-                <div className="hidden h-48 w-48 rounded-full bg-white/[0.1] md:block"></div>
+                <div className="hidden h-48 w-48 rounded-full md:block"></div>
             </div>
 
             {/* short info */}
@@ -78,34 +78,40 @@ export default function Mentor({ params }: { params: { mentor: string } }) {
             </div>
 
             {/* introduction video */}
-            <div className="mx-auto h-60 w-full max-w-[480px] bg-white/[0.1] md:h-96 md:w-full md:max-w-[720px]"></div>
+            {/* <div className="mx-auto h-60 w-full max-w-[480px] bg-white/[0.1] md:h-96 md:w-full md:max-w-[720px]"></div> */}
 
-            <h3 className="page-header">Адвайсы ментора</h3>
-            <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {currentMentor.courses.map((course) => (
-                    <li key={course.name}>
-                        <Course_ru course={courses_ru[course.propName]} />
-                    </li>
-                ))}
-            </ul>
+            <h3 className="page-header">Курсы ментора</h3>
+            {currentMentor.courses.length !== 0 ? (
+                <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    {currentMentor.courses.map((course) => (
+                        <li key={course.name}>
+                            <Course_ru course={courses_ru[course.propName]} />
+                        </li>
+                    ))}
+                </ul>
+            ) : (
+                <p className="text-center">
+                    Скоро у ментора появятся курсы. Следите за обновлениями!
+                </p>
+            )}
 
-            <h3 className="page-header">Работы ментора</h3>
+            {/* <h3 className="page-header">Работы ментора</h3>
             <ul className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
                 <li className="mx-auto h-52 w-full max-w-[312px] rounded-2xl bg-white/[0.1]"></li>
                 <li className="mx-auto h-52 w-full max-w-[312px] rounded-2xl bg-white/[0.1]"></li>
                 <li className="mx-auto h-52 w-full max-w-[312px] rounded-2xl bg-white/[0.1]"></li>
                 <li className="mx-auto h-52 w-full max-w-[312px] rounded-2xl bg-white/[0.1]"></li>
                 <li className="mx-auto h-52 w-full max-w-[312px] rounded-2xl bg-white/[0.1]"></li>
-            </ul>
+            </ul> */}
 
-            <h3 className="page-header">Работы студентов</h3>
+            {/* <h3 className="page-header">Работы студентов</h3>
             <ul className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
                 <li className="mx-auto h-52 w-full max-w-[312px] rounded-2xl bg-white/[0.1]"></li>
                 <li className="mx-auto h-52 w-full max-w-[312px] rounded-2xl bg-white/[0.1]"></li>
                 <li className="mx-auto h-52 w-full max-w-[312px] rounded-2xl bg-white/[0.1]"></li>
-            </ul>
+            </ul> */}
 
-            <h3 className="page-header">Отзывы</h3>
+            {/* <h3 className="page-header">Отзывы</h3>
             <ul className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
                 <li className="mx-auto flex flex-col items-center gap-3">
                     <div className="h-32 w-32 rounded-full bg-white/[0.1]"></div>
@@ -131,7 +137,7 @@ export default function Mentor({ params }: { params: { mentor: string } }) {
                         tempor incididunt ut labore et dolore magna aliqua!
                     </p>
                 </li>
-            </ul>
+            </ul> */}
         </section>
     );
 }

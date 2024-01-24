@@ -21,7 +21,7 @@ export interface IContact {
     type: ContactType;
 }
 export interface IMentor {
-    categories: string[];
+    categories: string[] | never[];
     photo: StaticImageData;
     href: string;
     name: string;
@@ -31,11 +31,13 @@ export interface IMentor {
     currentStudio: string;
     projectsWorkedOn: string;
     contacts: IContact[];
-    courses: {
-        name: string;
-        propName: string;
-        category: ECategory | ECategory_ru;
-    }[];
+    courses:
+        | {
+              name: string;
+              propName: string;
+              category: ECategory | ECategory_ru;
+          }[]
+        | never[];
 }
 export interface IMentorsList {
     id: number;
@@ -44,7 +46,7 @@ export interface IMentorsList {
 
 export const mentors: IList = {
     'irina-golina': {
-        categories: ['Animation', 'Design'],
+        categories: ['Animation'],
         photo: irinaGolina,
         href: 'irina-golina',
         name: 'Irina Golina',
@@ -65,7 +67,7 @@ export const mentors: IList = {
         ],
     },
     'svetlana-cherepanova': {
-        categories: ['Rigging'],
+        categories: [],
         photo: svetlanaCherepanova,
         href: 'svetlana-cherepanova',
         name: 'Svetlana Cherepanova',
@@ -87,9 +89,7 @@ export const mentors: IList = {
                 type: ContactType.linkedin,
             },
         ],
-        courses: [
-            { name: 'Harmony Rigging', propName: 'harmony-rigging', category: ECategory.rigging },
-        ],
+        courses: [],
     },
     'pasha-potekhin': {
         categories: ['Story'],
@@ -103,12 +103,10 @@ export const mentors: IList = {
         currentStudio: 'Homerun Story',
         projectsWorkedOn: 'Animation Dance Party, Walking Battle Terem',
         contacts: [{ id: 1, href: 'https://t.me/Power_Up', type: ContactType.telegram }],
-        courses: [
-            { name: 'Action Storyboard', propName: 'action-storyboard', category: ECategory.story },
-        ],
+        courses: [],
     },
     'marina-ipatova': {
-        categories: ['Compositing'],
+        categories: [],
         photo: marinaIpatova,
         href: 'marina-ipatova',
         name: 'Marina Ipatova',
@@ -122,13 +120,7 @@ export const mentors: IList = {
             { id: 1, href: 'https://t.me/Mip888art', type: ContactType.telegram },
             { id: 2, href: 'mip888art@gmail.com', type: ContactType.email },
         ],
-        courses: [
-            {
-                name: 'Harmony Compositing',
-                propName: 'harmony-compositing',
-                category: ECategory.compositing,
-            },
-        ],
+        courses: [],
     },
     'tatiana-simonova': {
         categories: ['AI Animation'],
@@ -142,14 +134,12 @@ export const mentors: IList = {
         currentStudio: 'Toonbox',
         projectsWorkedOn: 'Take my muffin',
         contacts: [{ id: 51, href: 'https://t.me/tane4kasim', type: ContactType.telegram }],
-        courses: [
-            { name: 'AI Animation', propName: 'ai-animation', category: ECategory.aiAnimation },
-        ],
+        courses: [],
     },
 };
 export const mentors_ru: IList = {
     'irina-golina': {
-        categories: ['Анимация', 'Дизайн'],
+        categories: ['Анимация'],
         photo: irinaGolina,
         href: 'irina-golina',
         name: 'Ирина Голина',
@@ -170,7 +160,7 @@ export const mentors_ru: IList = {
         ],
     },
     'svetlana-cherepanova': {
-        categories: ['Риггинг'],
+        categories: [],
         photo: svetlanaCherepanova,
         href: 'svetlana-cherepanova',
         name: 'Светлана Черепанова',
@@ -192,13 +182,7 @@ export const mentors_ru: IList = {
                 type: ContactType.linkedin,
             },
         ],
-        courses: [
-            {
-                name: 'Риггинг в Harmony',
-                propName: 'harmony-rigging',
-                category: ECategory_ru.rigging,
-            },
-        ],
+        courses: [],
     },
     'pasha-potekhin': {
         categories: ['Стори'],
@@ -212,12 +196,10 @@ export const mentors_ru: IList = {
         currentStudio: 'Homerun Story',
         projectsWorkedOn: 'Animation Dance Party, Ходячий Боевой Терем',
         contacts: [{ id: 1, href: 'https://t.me/Power_Up', type: ContactType.telegram }],
-        courses: [
-            { name: 'Экшн Сториборд', propName: 'action-storyboard', category: ECategory_ru.story },
-        ],
+        courses: [],
     },
     'marina-ipatova': {
-        categories: ['Композитинг'],
+        categories: [],
         photo: marinaIpatova,
         href: 'marina-ipatova',
         name: 'Марина Ипатова',
@@ -231,13 +213,7 @@ export const mentors_ru: IList = {
             { id: 1, href: 'https://t.me/Mip888art', type: ContactType.telegram },
             { id: 2, href: 'mip888art@gmail.com', type: ContactType.email },
         ],
-        courses: [
-            {
-                name: 'Композитинг в Harmony',
-                propName: 'harmony-compositing',
-                category: ECategory_ru.compositing,
-            },
-        ],
+        courses: [],
     },
     'tatiana-simonova': {
         categories: ['ИИ Анимация'],
@@ -251,9 +227,7 @@ export const mentors_ru: IList = {
         currentStudio: 'Toonbox',
         projectsWorkedOn: 'Take my muffin',
         contacts: [{ id: 51, href: 'https://t.me/tane4kasim', type: ContactType.telegram }],
-        courses: [
-            { name: 'ИИ анимация', propName: 'ai-animation', category: ECategory_ru.aiAnimation },
-        ],
+        courses: [],
     },
 };
 

@@ -22,33 +22,44 @@ export default function Mentor({ mentor }: { mentor: IMentor }) {
                 <p>{mentor.currentStudio}</p>
                 <h5 className="pt-2 text-xl">Проекты</h5>
                 <p>{mentor.projectsWorkedOn}</p>
-                <div className="flex flex-wrap items-center gap-2 pt-2">
-                    <h5 className="text-xl">Направления:</h5>
-                    {mentor.categories.map((cat) => (
-                        <p
-                            key={cat}
-                            className="rounded-lg bg-[#ac46b6]/[0.7] px-4 py-2"
-                        >
-                            {cat}
-                        </p>
-                    ))}
-                </div>
+
+                {mentor.categories.length !== 0 ? (
+                    <>
+                        <h5 className="pt-2 text-xl">Направления</h5>
+                        <div className="flex flex-wrap items-center gap-2">
+                            {mentor.categories.map((cat) => (
+                                <p
+                                    key={cat}
+                                    className="rounded-lg bg-[#ac46b6]/[0.7] px-4 py-2"
+                                >
+                                    {cat}
+                                </p>
+                            ))}
+                        </div>
+                    </>
+                ) : null}
+
                 <h5 className="pt-2 text-xl">Курсы ментора</h5>
-                <ul className="flex flex-wrap gap-2">
-                    {mentor.courses.map((course) => (
-                        <li
-                            key={course.name}
-                            className="button-sm-orange"
-                        >
-                            <Link
-                                href={'/#' + course.category}
-                                className="block"
+                {mentor.courses.length !== 0 ? (
+                    <ul className="flex flex-wrap gap-2">
+                        {mentor.courses.map((course) => (
+                            <li
+                                key={course.name}
+                                className="button-sm-orange"
                             >
-                                {course.name}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
+                                <Link
+                                    href={'/#' + course.category}
+                                    className="block"
+                                >
+                                    {course.name}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                ) : (
+                    <p className="text-[#ffad00]">Скоро откроются</p>
+                )}
+
                 {/* <div className="flex grow items-end justify-center pt-2">
                     <Link href={'/mentor/' + mentor.href}>
                         <button className="button-lg-orange">Узнать больше</button>

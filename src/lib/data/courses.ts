@@ -44,7 +44,7 @@ export interface IClass {
     category: ECategory | ECategory_ru;
     name: string;
     href: string;
-    description: string;
+    description: string | null;
     duration: string;
     price: string;
     isOpen: boolean;
@@ -85,7 +85,7 @@ export interface ICourse {
 export interface ICategory {
     id: number;
     category: string;
-    description: string;
+    description: string | null;
     courses: ICourse[];
 }
 
@@ -140,156 +140,6 @@ export const classes: TClass = {
         },
         paymentMethods: ['PayPal', 'Direct Bank Card Payment'],
     },
-    'ai-animation-basic': {
-        category: ECategory.aiAnimation,
-        cover: harmonyImage,
-        href: 'ai-animation-basic',
-        name: 'AI Animation',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo.',
-        duration: '8 weeks',
-        price: '$50/week',
-        isOpen: false,
-        mentor: {
-            photo: tatianaSimonova,
-            name: 'Tatiana Simonova',
-            href: 'tatiana-simonova',
-        },
-        weeks: {
-            description: null,
-            data: [],
-        },
-        software: 'Toon Boom Harmony 20 or above',
-        requirements: {
-            description: null,
-            data: [],
-        },
-        result: {
-            description: null,
-            data: [],
-        },
-        paymentMethods: ['Direct Bank Card Payment'],
-    },
-    'action-storyboard-basic': {
-        category: ECategory.story,
-        cover: harmonyImage,
-        href: 'action-storyboard-basic',
-        name: 'Action Storyboard',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo.',
-        duration: '8 weeks',
-        price: '$50/week',
-        isOpen: true,
-        mentor: {
-            photo: pashaPotekhin,
-            name: 'Pasha Potekhin',
-            href: 'pasha-potekhin',
-        },
-        weeks: {
-            description: null,
-            data: [],
-        },
-        software: 'Toon Boom Storyboard 20 or above',
-        requirements: {
-            description: null,
-            data: [],
-        },
-        result: {
-            description: null,
-            data: [],
-        },
-        paymentMethods: ['Direct Bank Card Payment'],
-    },
-    'harmony-design-basic': {
-        category: ECategory.design,
-        cover: harmonyImage,
-        href: 'harmony-design-basic',
-        name: 'Harmony Design',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo.',
-        duration: '8 weeks',
-        price: '$50/week',
-        isOpen: false,
-        mentor: {
-            photo: irinaGolina,
-            name: 'Irina Golina',
-            href: 'irina-golina',
-        },
-        weeks: {
-            description: null,
-            data: [],
-        },
-        software: 'Toon Boom Harmony 20 or above',
-        requirements: {
-            description: null,
-            data: [],
-        },
-        result: {
-            description: null,
-            data: [],
-        },
-        paymentMethods: ['Direct Bank Card Payment'],
-    },
-    'harmony-rigging-basic': {
-        category: ECategory.rigging,
-        cover: harmonyImage,
-        href: 'harmony-rigging-basic',
-        name: 'Harmony Rigging',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo.',
-        duration: '8 weeks',
-        price: '$50/week',
-        isOpen: false,
-        mentor: {
-            photo: svetlanaCherepanova,
-            name: 'Svetlana Cherepanova',
-            href: 'svetlana-cherepanova',
-        },
-        weeks: {
-            description: null,
-            data: [],
-        },
-        software: 'Toon Boom Harmony 20 or above',
-        requirements: {
-            description: null,
-            data: [],
-        },
-        result: {
-            description: null,
-            data: [],
-        },
-        paymentMethods: ['Direct Bank Card Payment'],
-    },
-    'harmony-compositing-basic': {
-        category: ECategory.compositing,
-        cover: harmonyImage,
-        href: 'harmony-compositing-basic',
-        name: 'Harmony Compositing',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo.',
-        duration: '8 weeks',
-        price: '$50/week',
-        isOpen: false,
-        mentor: {
-            photo: marinaIpatova,
-            name: 'Marina Ipatova',
-            href: 'marina-ipatova',
-        },
-        weeks: {
-            description: null,
-            data: [],
-        },
-        software: 'Toon Boom Harmony 20 or above',
-        requirements: {
-            description: null,
-            data: [],
-        },
-        result: {
-            description: null,
-            data: [],
-        },
-        paymentMethods: ['Direct Bank Card Payment'],
-    },
 };
 export const classes_ru: TClass = {
     'harmony-animation-basic': {
@@ -342,156 +192,6 @@ export const classes_ru: TClass = {
         },
         paymentMethods: ['PayPal', 'Банковский перевод'],
     },
-    'ai-animation-basic': {
-        category: ECategory_ru.aiAnimation,
-        cover: harmonyImage,
-        href: 'ai-animation-basic',
-        name: 'AI Animation',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo.',
-        duration: '8 weeks',
-        price: '$50/week',
-        isOpen: false,
-        mentor: {
-            photo: tatianaSimonova,
-            name: 'Татьяна Симонова',
-            href: 'tatiana-simonova',
-        },
-        weeks: {
-            description: null,
-            data: [],
-        },
-        software: 'Toon Boom Harmony 20 or above',
-        requirements: {
-            description: null,
-            data: [],
-        },
-        result: {
-            description: null,
-            data: [],
-        },
-        paymentMethods: ['Direct Bank Card Payment'],
-    },
-    'action-storyboard-basic': {
-        category: ECategory_ru.story,
-        cover: harmonyImage,
-        href: 'action-storyboard-basic',
-        name: 'Action Storyboard',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo.',
-        duration: '8 weeks',
-        price: '$50/week',
-        isOpen: true,
-        mentor: {
-            photo: pashaPotekhin,
-            name: 'Паша Потехин',
-            href: 'pasha-potekhin',
-        },
-        weeks: {
-            description: null,
-            data: [],
-        },
-        software: 'Toon Boom Storyboard 20 or above',
-        requirements: {
-            description: null,
-            data: [],
-        },
-        result: {
-            description: null,
-            data: [],
-        },
-        paymentMethods: ['Direct Bank Card Payment'],
-    },
-    'harmony-design-basic': {
-        category: ECategory_ru.design,
-        cover: harmonyImage,
-        href: 'harmony-design-basic',
-        name: 'Harmony Design',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo.',
-        duration: '8 weeks',
-        price: '$50/week',
-        isOpen: false,
-        mentor: {
-            photo: irinaGolina,
-            name: 'Ирина Голина',
-            href: 'irina-golina',
-        },
-        weeks: {
-            description: null,
-            data: [],
-        },
-        software: 'Toon Boom Harmony 20 or above',
-        requirements: {
-            description: null,
-            data: [],
-        },
-        result: {
-            description: null,
-            data: [],
-        },
-        paymentMethods: ['Direct Bank Card Payment'],
-    },
-    'harmony-rigging-basic': {
-        category: ECategory_ru.rigging,
-        cover: harmonyImage,
-        href: 'harmony-rigging-basic',
-        name: 'Harmony Rigging',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo.',
-        duration: '8 weeks',
-        price: '$50/week',
-        isOpen: false,
-        mentor: {
-            photo: svetlanaCherepanova,
-            name: 'Светлана Черепанова',
-            href: 'svetlana-cherepanova',
-        },
-        weeks: {
-            description: null,
-            data: [],
-        },
-        software: 'Toon Boom Harmony 20 or above',
-        requirements: {
-            description: null,
-            data: [],
-        },
-        result: {
-            description: null,
-            data: [],
-        },
-        paymentMethods: ['Direct Bank Card Payment'],
-    },
-    'harmony-compositing-basic': {
-        category: ECategory_ru.compositing,
-        cover: harmonyImage,
-        href: 'harmony-compositing-basic',
-        name: 'Harmony Compositing',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo.',
-        duration: '8 weeks',
-        price: '$50/week',
-        isOpen: false,
-        mentor: {
-            photo: marinaIpatova,
-            name: 'Марина Ипатова',
-            href: 'marina-ipatova',
-        },
-        weeks: {
-            description: null,
-            data: [],
-        },
-        software: 'Toon Boom Harmony 20 or above',
-        requirements: {
-            description: null,
-            data: [],
-        },
-        result: {
-            description: null,
-            data: [],
-        },
-        paymentMethods: ['Direct Bank Card Payment'],
-    },
 };
 
 export const courses: IList = {
@@ -508,94 +208,6 @@ export const courses: IList = {
             {
                 level: EClass.basic,
                 href: 'harmony-animation-basic',
-            },
-        ],
-    },
-    'ai-animation': {
-        cover: harmonyImage,
-        name: 'AI Animation',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo.',
-        mentor: {
-            name: 'Tatiana Simonova',
-            photo: tatianaSimonova,
-        },
-        classes: [
-            {
-                level: EClass.basic,
-                href: 'ai-animation-basic',
-            },
-        ],
-    },
-    'action-storyboard': {
-        cover: harmonyImage,
-        name: 'Action Storyboard',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo.',
-        mentor: {
-            name: 'Pasha Potekhin',
-            photo: pashaPotekhin,
-        },
-        classes: [
-            {
-                level: EClass.basic,
-                href: 'action-storyboard-basic',
-            },
-        ],
-    },
-    'harmony-design': {
-        cover: harmonyImage,
-        name: 'Harmony Design',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo.',
-        mentor: {
-            name: 'Irina Golina',
-            photo: irinaGolina,
-        },
-        classes: [
-            {
-                level: EClass.basic,
-                href: 'harmony-design-basic',
-            },
-            {
-                level: EClass.advanced,
-                href: 'harmony-design-advanced',
-            },
-            {
-                level: EClass.expert,
-                href: 'harmony-design-expert',
-            },
-        ],
-    },
-    'harmony-rigging': {
-        cover: harmonyImage,
-        name: 'Harmony Rigging',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo.',
-        mentor: {
-            name: 'Svetlana Cherepanova',
-            photo: svetlanaCherepanova,
-        },
-        classes: [
-            {
-                level: EClass.basic,
-                href: 'harmony-rigging-basic',
-            },
-        ],
-    },
-    'harmony-compositing': {
-        cover: harmonyImage,
-        name: 'Harmony Compositing',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo.',
-        mentor: {
-            name: 'Marina Ipatova',
-            photo: marinaIpatova,
-        },
-        classes: [
-            {
-                level: EClass.basic,
-                href: 'harmony-compositing-basic',
             },
         ],
     },
@@ -617,181 +229,81 @@ export const courses_ru: IList = {
             },
         ],
     },
-    'ai-animation': {
-        cover: harmonyImage,
-        name: 'AI Animation',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo.',
-        mentor: {
-            name: 'Татьяна Симонова',
-            photo: tatianaSimonova,
-        },
-        classes: [
-            {
-                level: EClass_ru.basic,
-                href: 'ai-animation-basic',
-            },
-        ],
-    },
-    'action-storyboard': {
-        cover: harmonyImage,
-        name: 'Action Storyboard',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo.',
-        mentor: {
-            name: 'Паша Потехин',
-            photo: pashaPotekhin,
-        },
-        classes: [
-            {
-                level: EClass_ru.basic,
-                href: 'action-storyboard-basic',
-            },
-        ],
-    },
-    'harmony-design': {
-        cover: harmonyImage,
-        name: 'Harmony Design',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo.',
-        mentor: {
-            name: 'Ирина Голина',
-            photo: irinaGolina,
-        },
-        classes: [
-            {
-                level: EClass_ru.basic,
-                href: 'harmony-design-basic',
-            },
-            {
-                level: EClass_ru.advanced,
-                href: 'harmony-design-advanced',
-            },
-            {
-                level: EClass_ru.expert,
-                href: 'harmony-design-expert',
-            },
-        ],
-    },
-    'harmony-rigging': {
-        cover: harmonyImage,
-        name: 'Harmony Rigging',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo.',
-        mentor: {
-            name: 'Светлана Черепанова',
-            photo: svetlanaCherepanova,
-        },
-        classes: [
-            {
-                level: EClass_ru.basic,
-                href: 'harmony-rigging-basic',
-            },
-        ],
-    },
-    'harmony-compositing': {
-        cover: harmonyImage,
-        name: 'Harmony Compositing',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo.',
-        mentor: {
-            name: 'Марина Ипатова',
-            photo: marinaIpatova,
-        },
-        classes: [
-            {
-                level: EClass_ru.basic,
-                href: 'harmony-compositing-basic',
-            },
-        ],
-    },
 };
 
 export const categories: ICategory[] = [
     {
         id: 1,
         category: 'Animation',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo. Nulla at aliquet felis. Maecenas consectetur vitae leo porttitor hendrerit. Nunc pretium augue quis viverra interdum. Mauris auctor pulvinar ligula.',
+        description: null,
         courses: [courses['harmony-animation']],
     },
     {
         id: 2,
         category: 'Story',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo. Nulla at aliquet felis. Maecenas consectetur vitae leo porttitor hendrerit. Nunc pretium augue quis viverra interdum. Mauris auctor pulvinar ligula.',
-        courses: [courses['action-storyboard']],
+        description: null,
+        courses: [],
     },
     {
         id: 3,
         category: 'Design',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo. Nulla at aliquet felis. Maecenas consectetur vitae leo porttitor hendrerit. Nunc pretium augue quis viverra interdum. Mauris auctor pulvinar ligula.',
-        courses: [courses['harmony-design']],
+        description: null,
+        courses: [],
     },
     {
         id: 4,
         category: 'Rigging',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo. Nulla at aliquet felis. Maecenas consectetur vitae leo porttitor hendrerit. Nunc pretium augue quis viverra interdum. Mauris auctor pulvinar ligula.',
-        courses: [courses['harmony-rigging']],
+        description: null,
+        courses: [],
     },
     {
         id: 5,
         category: 'Compositing',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo. Nulla at aliquet felis. Maecenas consectetur vitae leo porttitor hendrerit. Nunc pretium augue quis viverra interdum. Mauris auctor pulvinar ligula.',
-        courses: [courses['harmony-compositing']],
+        description: null,
+        courses: [],
     },
     {
         id: 6,
         category: 'AI Animation',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo. Nulla at aliquet felis. Maecenas consectetur vitae leo porttitor hendrerit. Nunc pretium augue quis viverra interdum. Mauris auctor pulvinar ligula.',
-        courses: [courses['ai-animation']],
+        description: null,
+        courses: [],
     },
 ];
 export const categories_ru: ICategory[] = [
     {
         id: 1,
         category: 'Анимация',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo. Nulla at aliquet felis. Maecenas consectetur vitae leo porttitor hendrerit. Nunc pretium augue quis viverra interdum. Mauris auctor pulvinar ligula.',
+        description: null,
         courses: [courses_ru['harmony-animation']],
     },
     {
         id: 2,
         category: 'Стори',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo. Nulla at aliquet felis. Maecenas consectetur vitae leo porttitor hendrerit. Nunc pretium augue quis viverra interdum. Mauris auctor pulvinar ligula.',
-        courses: [courses_ru['action-storyboard']],
+        description: null,
+        courses: [],
     },
     {
         id: 3,
         category: 'Дизайн',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo. Nulla at aliquet felis. Maecenas consectetur vitae leo porttitor hendrerit. Nunc pretium augue quis viverra interdum. Mauris auctor pulvinar ligula.',
-        courses: [courses_ru['harmony-design']],
+        description: null,
+        courses: [],
     },
     {
         id: 4,
         category: 'Риггинг',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo. Nulla at aliquet felis. Maecenas consectetur vitae leo porttitor hendrerit. Nunc pretium augue quis viverra interdum. Mauris auctor pulvinar ligula.',
-        courses: [courses_ru['harmony-rigging']],
+        description: null,
+        courses: [],
     },
     {
         id: 5,
         category: 'Композитинг',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo. Nulla at aliquet felis. Maecenas consectetur vitae leo porttitor hendrerit. Nunc pretium augue quis viverra interdum. Mauris auctor pulvinar ligula.',
-        courses: [courses_ru['harmony-compositing']],
+        description: null,
+        courses: [],
     },
     {
         id: 6,
         category: 'ИИ Анимация',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a neque sed lacus auctor eleifend ac tincidunt orci. Aenean in felis vehicula, gravida tellus vitae, hendrerit leo. Nulla at aliquet felis. Maecenas consectetur vitae leo porttitor hendrerit. Nunc pretium augue quis viverra interdum. Mauris auctor pulvinar ligula.',
-        courses: [courses_ru['ai-animation']],
+        description: null,
+        courses: [],
     },
 ];

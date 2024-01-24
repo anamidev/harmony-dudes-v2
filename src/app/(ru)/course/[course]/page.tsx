@@ -84,7 +84,9 @@ export default function Course_ru({ params }: { params: { course: string } }) {
                     ))}
                 </ul>
             ) : (
-                <p className="text-center">К этому курсу нет требований. Можно сразу начинать!</p>
+                <p className="text-center">
+                    К этому курсу нет предварительных требований. Можно сразу начинать!
+                </p>
             )}
 
             {/* schedule */}
@@ -110,23 +112,23 @@ export default function Course_ru({ params }: { params: { course: string } }) {
             )}
 
             {/* result */}
-            <h2 className="page-header">Почему стоит пройти этот курс?</h2>
-            {currentClass.result.description ? (
-                <p className="mx-auto max-w-5xl whitespace-pre-line">
-                    {currentClass.result.description}
-                </p>
+            {currentClass.result.description || currentClass.result.data.length !== 0 ? (
+                <>
+                    <h2 className="page-header">Почему стоит пройти этот курс?</h2>
+                    {currentClass.result.description ? (
+                        <p className="mx-auto max-w-5xl whitespace-pre-line">
+                            {currentClass.result.description}
+                        </p>
+                    ) : null}
+                    {currentClass.result.data.length !== 0 ? (
+                        <ul className="mx-auto w-full max-w-5xl list-inside list-disc">
+                            {currentClass.result.data.map((item) => (
+                                <li key={item}>{item}</li>
+                            ))}
+                        </ul>
+                    ) : null}
+                </>
             ) : null}
-            {currentClass.result.data.length !== 0 ? (
-                <ul className="mx-auto w-full max-w-5xl list-inside list-disc">
-                    {currentClass.result.data.map((item) => (
-                        <li key={item}>{item}</li>
-                    ))}
-                </ul>
-            ) : (
-                <p className="text-center">
-                    Вы получите глубокие знания и обретете уверенность в себе!
-                </p>
-            )}
 
             <div className="mx-auto flex w-full max-w-2xl flex-col items-center gap-5 rounded-2xl bg-emerald-500/[0.2] p-10">
                 {currentClass.isOpen ? (
@@ -135,7 +137,7 @@ export default function Course_ru({ params }: { params: { course: string } }) {
                     </div>
                 ) : null}
 
-                <p className='text-xl'>Отправьте заявку и начните курс</p>
+                <p className="text-xl">Отправьте заявку и начните курс</p>
 
                 <div className="flex flex-col gap-5 md:w-full md:flex-row md:justify-around">
                     <button className="button-lg-orange">Частный курс</button>
