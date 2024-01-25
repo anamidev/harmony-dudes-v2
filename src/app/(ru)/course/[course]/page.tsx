@@ -34,7 +34,11 @@ export default function Course_ru({ params }: { params: { course: string } }) {
             <h1 className={"text-center font-['Rubik_Dirt'] text-2xl md:text-4xl"}>
                 {currentClass.name}
             </h1>
-            <h2 className={'page-header'}>Ментор: {currentClass.mentor.name}</h2>
+            <h2 className={'page-header'}>
+                {currentClass.mentors.length > 1 ? <>Менторы: </> : <>Ментор: </>}
+                {currentClass.mentors.map((mentor) => mentor.name).join(', ')}
+            </h2>
+
             <p className="mx-auto max-w-5xl whitespace-pre-line">{currentClass.description}</p>
 
             {/* short info */}

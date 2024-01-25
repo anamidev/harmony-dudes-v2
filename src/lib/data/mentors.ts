@@ -153,8 +153,13 @@ export const mentors_ru: IList = {
         contacts: [{ id: 1, href: 'https://t.me/Igs40', type: ContactType.telegram }],
         courses: [
             {
-                name: 'Основы анимации',
+                name: 'Анимация в Toon Boom Harmony',
                 propName: 'harmony-animation',
+                category: ECategory_ru.animation,
+            },
+            {
+                name: 'Paperless Animation',
+                propName: 'paperless-animation',
                 category: ECategory_ru.animation,
             },
         ],
@@ -199,7 +204,7 @@ export const mentors_ru: IList = {
         courses: [],
     },
     'marina-ipatova': {
-        categories: [],
+        categories: ['Анимация'],
         photo: marinaIpatova,
         href: 'marina-ipatova',
         name: 'Марина Ипатова',
@@ -213,7 +218,13 @@ export const mentors_ru: IList = {
             { id: 1, href: 'https://t.me/Mip888art', type: ContactType.telegram },
             { id: 2, href: 'mip888art@gmail.com', type: ContactType.email },
         ],
-        courses: [],
+        courses: [
+            {
+                name: 'Анимация в Toon Boom Harmony',
+                propName: 'harmony-animation',
+                category: ECategory_ru.animation,
+            },
+        ],
     },
     'tatiana-simonova': {
         categories: ['ИИ Анимация'],
