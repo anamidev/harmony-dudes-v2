@@ -34,7 +34,10 @@ export default function Course({ params }: { params: { course: string } }) {
             <h1 className={"text-center font-['Rubik_Dirt'] text-2xl md:text-4xl"}>
                 {currentClass.name}
             </h1>
-            <h2 className={'page-header'}>Mentor: {currentClass.mentor.name}</h2>
+            <h2 className={'page-header'}>
+                {currentClass.mentors.length > 1 ? <>Mentors: </> : <>Mentor: </>}
+                {currentClass.mentors.map((mentor) => mentor.name).join(', ')}
+            </h2>
             <p className="mx-auto max-w-5xl whitespace-pre-line">{currentClass.description}</p>
 
             {/* short info */}
@@ -137,7 +140,7 @@ export default function Course({ params }: { params: { course: string } }) {
                     </div>
                 ) : null}
 
-                <p className='text-xl'>Send your application and start this course</p>
+                <p className="text-xl">Send your application and start this course</p>
 
                 <div className="flex flex-col gap-5 md:w-full md:flex-row md:justify-around">
                     <button className="button-lg-orange">Private course</button>
