@@ -17,7 +17,7 @@ export default function About() {
 
             {/* mentors */}
             <h2 className="page-header">Наши менторы</h2>
-            <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
+            <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-12 lg:grid-cols-2">
                 {mentorsList_ru.map((item) => (
                     <li key={item.id}>
                         <Mentor_ru mentor={item.info} />

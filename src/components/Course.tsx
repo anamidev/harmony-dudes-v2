@@ -10,12 +10,12 @@ export default function Course({ course }: { course: ICourse }) {
             {/* <Badge isVisible={course.isOpen ?? false} /> */}
 
             {/* image */}
-            <div className="relative h-52 w-full rounded-tl-2xl rounded-tr-2xl bg-white/[0.1]">
+            <div className="relative h-52 w-full rounded-tl-2xl rounded-tr-2xl bg-white/[0.87]">
                 <Image
                     src={course.cover}
                     alt={course.name + ' cover'}
                     fill
-                    className="object-contain"
+                    className="object-cover"
                 />
             </div>
 
@@ -54,7 +54,7 @@ export default function Course({ course }: { course: ICourse }) {
                         {course.classes.map((courseClass) => (
                             <li key={courseClass.href}>
                                 <Link
-                                    className="block cursor-pointer rounded-lg bg-[#ca8a04]/[0.7] px-2 py-2 text-center hover:bg-[#ca8a04]/[1]"
+                                    className="block cursor-pointer rounded-lg bg-[#ca8a04]/[0.7] px-2 py-2 text-center transition hover:bg-[#ca8a04]/[1]"
                                     href={'/en/course/' + courseClass.href}
                                 >
                                     {courseClass.level}

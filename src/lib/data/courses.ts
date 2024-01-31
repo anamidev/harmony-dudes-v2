@@ -5,6 +5,11 @@ import irinaGolina from '@/assets/images/mentors/Irina_Golina.jpg';
 import marinaIpatova from '@/assets/images/mentors/Marina_Ipatova.jpg';
 import svetlanaCherepanova from '@/assets/images/mentors/Svetlana_Cherepanova.jpg';
 import tatianaSimonova from '@/assets/images/mentors/Tatiana_Simonova.jpg';
+import adobeAnimateAnimation from '@/assets/images/advices/adobe-animate-animation.png';
+import backgroundDesign from '@/assets/images/advices/background-design.png';
+import harmonyAnimation from '@/assets/images/advices/harmony-animation.png';
+import harmonyForTeensAnimation from '@/assets/images/advices/harmony-for-teens-animation.png';
+import paperlessAnimation from '@/assets/images/advices/paperless-animation.png';
 
 type TClass = {
     [key: string]: IClass;
@@ -17,12 +22,20 @@ enum EClass {
     advanced = 'Advanced',
     expert = 'Expert',
     professional = 'Professional',
+    partOne = 'Part 1',
+    partTwo = 'Part 2',
+    partThree = 'Part 3',
+    partFour = 'Part 4',
 }
 enum EClass_ru {
     basic = 'Класс 1',
     advanced = 'Класс 2',
     expert = 'Класс 3',
     professional = 'Класс 4',
+    partOne = 'Блок 1',
+    partTwo = 'Блок 2',
+    partThree = 'Блок 3',
+    partFour = 'Блок 4',
 }
 
 export enum ECategory {
@@ -148,7 +161,7 @@ export const classes: TClass = {
 export const classes_ru: TClass = {
     'harmony-animation-basic': {
         category: ECategory_ru.animation,
-        cover: harmonyImage,
+        cover: harmonyAnimation,
         href: 'harmony-animation-basic',
         name: 'Анимация в Toon Boom Harmony, 1 класс',
         description:
@@ -199,7 +212,7 @@ export const classes_ru: TClass = {
     },
     'harmony-animation-advanced': {
         category: ECategory_ru.animation,
-        cover: harmonyImage,
+        cover: harmonyAnimation,
         href: 'harmony-animation-advanced',
         name: 'Анимация в Toon Boom Harmony, 2 класс',
         description:
@@ -254,7 +267,7 @@ export const classes_ru: TClass = {
     },
     'harmony-animation-expert': {
         category: ECategory_ru.animation,
-        cover: harmonyImage,
+        cover: harmonyAnimation,
         href: 'harmony-animation-expert',
         name: 'Анимация в Toon Boom Harmony, 3 класс',
         description:
@@ -305,7 +318,7 @@ export const classes_ru: TClass = {
     },
     'harmony-animation-professional': {
         category: ECategory_ru.animation,
-        cover: harmonyImage,
+        cover: harmonyAnimation,
         href: 'harmony-animation-professional',
         name: 'Анимация в Toon Boom Harmony, 4 класс',
         description:
@@ -365,7 +378,7 @@ export const classes_ru: TClass = {
     },
     'paperless-animation-basic': {
         category: ECategory_ru.animation,
-        cover: harmonyImage,
+        cover: paperlessAnimation,
         href: 'paperless-animation-basic',
         name: 'Paperless animation, 1 класс',
         description:
@@ -409,6 +422,488 @@ export const classes_ru: TClass = {
         },
         paymentMethods: ['Перевод на карту', 'PayPal', 'crypto wallet'],
     },
+    'paperless-animation-advanced': {
+        category: ECategory_ru.animation,
+        cover: paperlessAnimation,
+        href: 'paperless-animation-advanced',
+        name: 'Paperless animation, 2 класс',
+        description:
+            'Курс предназначен для того, что получить новые знания в области механики тела. Этот курс включает в общей сложности 12 видеоуроков и 12 интерактивных встреч с преподавателем. По мере обучения будут затороны различные стили анимации, от суперкартуна до боевиков. Каждую неделю вы будете получать свежые знания от профессионально, работающих в индустрии. Приготовьтесь усовершенствовать свою технику и глубже раскрыть творческий потенциал Toon Boom Harmony!',
+        duration: '3 месяца',
+        price: '20 500 ₽ в месяц',
+        isOpen: true,
+        mentors: [
+            {
+                photo: irinaGolina,
+                name: 'Ирина Голина-Сагателиан',
+                href: 'irina-golina',
+            },
+        ],
+        weeks: {
+            description: null,
+            data: [
+                'Введение в механику тела.',
+                'От скетча к анимации',
+                'Динамика движения. Создание эффектных скетчей ',
+                'Система переиспользования различных элементов',
+                'Планирование и организация анимационного процесса',
+                'Динамика сцены борьбы. Создание динамичного шота.',
+                'Работа с фонами и пространством в Toon Boom Harmony',
+                'Внедрение в работу нескольких принципов анимации с 8 по 13 пункт',
+                'Ключевые кадры, как сделать сильную позу?',
+                'Curved vs. Straight Animation',
+                'Полишинг анатомии. Второстепенные движения.',
+                'Работа над портфолио ',
+            ],
+        },
+        software: 'Toon Boom Harmony Premium 17',
+        requirements: {
+            description: 'Курс подойдет для тех, кто уже имеет навыки работы в Toon Boom Harmony',
+            data: [
+                'прием на курс осуществляется при наличии портфолио, если студент до этого не проходил 1 класс',
+                'наличие компьютера с Windows 10',
+                'стабильный интернет',
+                'планшет',
+            ],
+        },
+        result: {
+            description:
+                'После прохождения курса студент улучшит качество рисванной персонажной анимации и анимации животных, научится работать с 3D пространством и камерой и изучит механику тела персонажа. Соберет портфолио на основе лучших работ, кототорое поможет при устройстве на работу в анимационную 2D студию и может продолжить обучение в третьем классе, посвященному работе с эмоциями и актерской игре',
+            data: [],
+        },
+        paymentMethods: ['Перевод на карту', 'PayPal', 'crypto wallet'],
+    },
+    'paperless-animation-expert': {
+        category: ECategory_ru.animation,
+        cover: paperlessAnimation,
+        href: 'paperless-animation-expert',
+        name: 'Paperless animation, 3 класс',
+        description:
+            'Курс разработан для того, чтобы изучить основные принципы работы с эмоциями и актерской игрой в анимации, используя все возможности техники paperless animation. Этот курс включает в общей сложности 12 видеоуроков и 12 интерактивных встреч с преподавателем. Он позволяет сконцентрироваться на основных моментах работы с чувствами и эмоциями. Если вы стремитесь улучшить свои навыки лицевой анимации в профессиональных целях, например, обновить портфолио или болеее детально изучить работу с антропоморфными существами, рисуя их, этот курс идеально вам подойдет.  ',
+        duration: '3 месяца',
+        price: '21 500 ₽ в месяц',
+        isOpen: false,
+        mentors: [
+            {
+                photo: irinaGolina,
+                name: 'Ирина Голина-Сагателиан',
+                href: 'irina-golina',
+            },
+        ],
+        weeks: {
+            description: null,
+            data: [
+                'Эмоции.',
+                'Эмоции.',
+                'Монолог. Rough Animation.',
+                'Монолог. KeyPoses.',
+                'Монолог. Secondary Actions.',
+                'Монолог. In-betweens.',
+                'Антропоморф.',
+                'Стиль Тартаковского.',
+                'Работа с камерой.',
+                'Композиция.',
+                'Ткани и их свойства. Часть 1.',
+                'Ткани и их взаимодействие. Часть 2.',
+            ],
+        },
+        software: 'Toon Boom Harmony Premium 17',
+        requirements: {
+            description: 'Курс подойдет для тех, кто уже имеет навыки работы в Toon Boom Harmony',
+            data: [
+                'прием на курс осуществляется при наличии портфолио, если студент до этого не проходил 2 класс',
+                'наличие компьютера с Windows 10',
+                'стабильный интернет',
+                'планшет',
+            ],
+        },
+        result: {
+            description:
+                'После прохождения курса студент улучшит знания в работе с эмоциями, липсингами и актерской игре, научится передавать основные чувства и эмоции изрителю. Соберет профессиональное портфолио на основе лучших работ, кототорое поможет при устройстве на работу в анимационную 2D студию и может продолжить обучение в четвертом классе, посвященному работе над собственной небольшой сценкой, с использованием различных эффектов, анимации животных и людей',
+            data: [],
+        },
+        paymentMethods: ['Перевод на карту', 'PayPal', 'crypto wallet'],
+    },
+    'paperless-animation-professional': {
+        category: ECategory_ru.animation,
+        cover: paperlessAnimation,
+        href: 'paperless-animation-professional',
+        name: 'Paperless animation, 4 класс',
+        description:
+            'Курс предназначен для того, чтобы обучится профессиональному подходу в создании собственого короткого мультфильма. Этот курс включает в общей сложности 12 видеоуроков и 12 интерактивных встреч с преподавателем. Он идеально подходит для людей, которые уже имеют опыт работы в Toon Boom Harmony и крепкие знания в области анимации в технике paperless animation. На протяжении всего курса вы будете закреплять полученные ранее материалы, добавляя новые знания из профессиональной студийной работы и пейплайна. Научитесь правильно организовывать весь процесс создания собственного короткого мультфильма с нуля. ',
+        duration: '3 месяца',
+        price: '22 500 ₽ в месяц',
+        isOpen: false,
+        mentors: [
+            {
+                photo: irinaGolina,
+                name: 'Ирина Голина-Сагателиан',
+                href: 'irina-golina',
+            },
+        ],
+        weeks: {
+            description: null,
+            data: [
+                'Videoboard. Движение камеры.',
+                'Профессия «Layout-Backgrounder».',
+                'Профессия «Keyposer».',
+                'Профессия «Clean-up Artist».',
+                'Digital Animation.',
+                'Effects Animation.',
+                'Анимация воды.',
+                'Анимация огня.',
+                'Анимация птиц.',
+                'Дополнительная подготовка.',
+                'Дополнительная подготовка.',
+                'Дополнительная подготовка, создание шоурила.',
+            ],
+        },
+        software: 'Toon Boom Harmony Premium 17',
+        requirements: {
+            description: 'Курс подойдет для тех, кто уже имеет навыки работы в Toon Boom Harmony',
+            data: [
+                'прием на курс осуществляется при наличии портфолио, если студент до этого не проходил 3 класс',
+                'наличие компьютера с Windows 10',
+                'стабильный интернет',
+                'планшет',
+            ],
+        },
+        result: {
+            description:
+                'После прохождения курса студент закрепит полученные ранее знания  в работе с персонажной анимацией и на основе собственной небольшой истории соберет достойные работы в портфолио. ',
+            data: [],
+        },
+        paymentMethods: ['Перевод на карту', 'PayPal', 'crypto wallet'],
+    },
+    'adobe-animate-animation-basic': {
+        category: ECategory_ru.animation,
+        cover: adobeAnimateAnimation,
+        href: 'adobe-animate-animation-basic',
+        name: 'Сartoon animation Adobe Animate, 1 класс',
+        description:
+            'Курс предназначен для того, чтобы изучить разнообразные аспекты анимации Cut-out. Вы научитесь эффективно подготавливать материалы и персонажей к работе, используя векторные линии. Мы обучим вас техникам работы, позволяющим сохранять высокое качество анимации при максимальной скорости выполнения. Вы узнаете, на что следует делать акцент в процессе работы. Этот курс включает в общей сложности 12 видеоуроков и 12 интерактивных встреч с преподавателем. В ходе курса будут рассмотрены различные направления, в которых используется анимации, созданная в Adobe Animate: игровая индустрия, интернет-проекты и телесериалы. Мы рассмотрим различные техники и стили в рамках Cut-out, в будущем, это позволит  вам расширить свой кругозор и выбрать наиболее интересное направление для дальнейшего изучения.',
+        duration: '3 месяца',
+        price: '19 500 ₽ в месяц',
+        isOpen: false,
+        mentors: [
+            {
+                photo: irinaGolina,
+                name: 'Ирина Голина-Сагателиан',
+                href: 'irina-golina',
+            },
+        ],
+        weeks: {
+            description: null,
+            data: [
+                'Введение в курс.',
+                '12 принципов анимации. Введение в Adobe Animate. Виды дизайна персонажей и анимации . Ключевые моменты при анимации в Adobe Animate.',
+                'Рисуем в Animate линии, формы, силуэты и позы. Планирование в Animate. Ключевые моменты (памятка).',
+                'Рисуем руки в Adobe Animate. Растяжение и сжатие в программе . Adobe Animate: реклама, кино, сериалы.',
+                'Регистрационные точки. Процесс запаздывания деталей в анимации. Эффект деформации деталей.',
+                'Анимация Cartoon, как создается, ее стилистика. Походка в Adobe Animate.',
+                'Ошибки анимации в мультфильмах. Нестандартная походка в Adobe Animate.',
+                'Нестандартные персонажи. Анимируем Goofy Chars. Глаза и выражения лица в Adobe Animate.',
+                'Clean up. Работа с линиями в анимации. Диалог.',
+                'Morf во флеш-анимации. Как сделать эффекты в Adobe Animate.',
+                'Overlap и Hold - растягивание движения (запоздание) и остановка. Эффекты в Adobe Animate.',
+                'Комбинация двух стилей Cutouts & Classic animation Система работы Easy In/ Easy out. Как улучшить перекладную анимацию.',
+            ],
+        },
+        software: 'Adobe Animate 2020',
+        requirements: {
+            description: 'Курс подойдет для новичков',
+            data: ['наличие компьютера с Windows 10', 'стабильный интернет', 'планшет'],
+        },
+        result: {
+            description:
+                'После прохождения курса студент соберет свое первое портфолио в картунной стилистике, познакомится с основными базовыми инструментами, необходимыми для работы в Abode Animate и может продолжить обучение во втором классе по анимации, посвященному механике тела',
+            data: [],
+        },
+        paymentMethods: ['Перевод на карту', 'PayPal', 'crypto wallet'],
+    },
+    'adobe-animate-animation-advanced': {
+        category: ECategory_ru.animation,
+        cover: adobeAnimateAnimation,
+        href: 'adobe-animate-animation-advanced',
+        name: 'Сartoon animation Adobe Animate, 2 класс',
+        description:
+            'Курс предназначен для того, чтобы обучится механике тела с использованием Cut-out. Вы научитесь эффективно подготавливать материалы и комплексных персонажей к работе, используя современные студийные подходы Этот курс включает в общей сложности 12 видеоуроков и 12 интерактивных встреч с преподавателем. В ходе курса вы сможете сконцентрироваться на механике тела и различных второстепенных движениях, придающих яркость и уникальность вашей анимации. Если вы стремитесь улучшить свои навыки анимации в профессиональных целях, например, устроиться на работу в отрасли или создать впечатляющее портфолио, этот курс идеально вам подойдет.',
+        duration: '2 месяца',
+        price: '20 500 ₽ в месяц',
+        isOpen: false,
+        mentors: [
+            {
+                photo: irinaGolina,
+                name: 'Ирина Голина-Сагателиан',
+                href: 'irina-golina',
+            },
+        ],
+        weeks: {
+            description: null,
+            data: [
+                'Концепция создания игр в Adobe Animate. Анимация для презентаций.',
+                'Работа с Shape-twine. Анимация фонов в Adobe Animate.',
+                'Работа с камерой. Игры в Adobe Animate.',
+                'Правило работы с планами. Супер-крупный план. (Extreme Close up). Подготовка анимации для Android и Apple.',
+                'Работа на фрилансе. Работа в студиях. Опыт работы. Коммуникация в студиях.',
+                'Создание графики в игре и вопросы по движению камеры. План построения графики игры. Дизайн объекта.',
+                'Детальная проработка дизайна объекта. Детальная проработка дизайна. Как создавать материалы. Роль аниматора в индустрии игр. Создание дизайна объекта.',
+                'Анимация рук в Adobe Animate. Структура руки. Анализ построения руки. Рука в форме круга. Силуэт руки.',
+            ],
+        },
+        software: 'Adobe Animate 2020',
+        requirements: {
+            description: 'Курс подойдет для тех, кто уже имеет навыки работы в Adobe Animate',
+            data: [
+                'прием на курс осуществляется при наличии портфолио, если студент до этого не проходил 1 класс',
+                'наличие компьютера с Windows 10',
+                'стабильный интернет',
+                'планшет',
+            ],
+        },
+        result: {
+            description:
+                'После прохождения курса студент улучшит качество персонажной анимации, изучит механику тела. Соберет портфолио на основе лучших работ, кототорое поможет при устройстве на работу в анимационную 2D студию и может продолжить обучение в третьем классе, посвященному работе с эмоциями и актерской игре',
+            data: [],
+        },
+        paymentMethods: ['Перевод на карту', 'PayPal', 'crypto wallet'],
+    },
+    'adobe-animate-animation-expert': {
+        category: ECategory_ru.animation,
+        cover: adobeAnimateAnimation,
+        href: 'adobe-animate-animation-expert',
+        name: 'Сartoon animation Adobe Animate, 3 класс',
+        description:
+            'Курс предназначен для того, чтобы обучится лицевой анимации и актерской игре, используя современные подходы в Cut-out. Вы научитесь передавать чувства и эмоции, понятные зрителю, усиливая их и дорабатывая, с использованием современных студийных подходов. Этот курс включает в общей сложности 12 видеоуроков и 12 интерактивных встреч с преподавателем. В ходе курса вы сможете сконцентрироваться на актерской игре и отыгрышах.  Если вы стремитесь улучшить свои навыки анимации в профессиональных целях, например, устроиться на работу в отрасли или создать впечатляющее портфолио, этот курс идеально вам подойдет.',
+        duration: '3 месяца',
+        price: '21 500 ₽ в месяц',
+        isOpen: true,
+        mentors: [
+            {
+                photo: irinaGolina,
+                name: 'Ирина Голина-Сагателиан',
+                href: 'irina-golina',
+            },
+        ],
+        weeks: {
+            description: null,
+            data: [
+                'Введение в курс.',
+                'Правильное деление персонажа, правильный timing, анимация под звук.',
+                'Правильное деление персонажа, правильный timing, анимация под звук.',
+                'Позы при диалоге. Overshoots. Breakdowns.',
+                'Как делать персонажа более мягким. В чем разница между Snap Animation и Cartoon Animation',
+                'Как работать с персонажами с утрированной анатомией.',
+                'Как применять сжатие и растяжение на персонаже и при этом не потерять форму.',
+                'Почему Animate наиболее удобная программа для Super Cartoon анимации.',
+                'Продвинутая механика движения.',
+                'Bouncing hips, Shape change, lead and follow.',
+                'Polish Body Mech.',
+                'Фабрика сериалов.',
+            ],
+        },
+        software: 'Adobe Animate 2020',
+        requirements: {
+            description: 'Курс подойдет для тех, кто уже имеет навыки работы в Adobe Animate',
+            data: [
+                'прием на курс осуществляется при наличии портфолио, если студент до этого не проходил 2 класс',
+                'наличие компьютера с Windows 10',
+                'стабильный интернет',
+                'планшет',
+            ],
+        },
+        result: {
+            description:
+                'После прохождения курса студент улучшит знания в работе с эмоциями, липсингами и актерской игре, научится передавать основные чувства и эмоции изрителю. Соберет профессиональное портфолио на основе лучших работ, кототорое поможет при устройстве на работу в анимационную 2D студию ',
+            data: [],
+        },
+        paymentMethods: ['Перевод на карту', 'PayPal', 'crypto wallet'],
+    },
+    'background-design-partone': {
+        category: ECategory_ru.design,
+        cover: backgroundDesign,
+        href: 'background-design-basic',
+        name: 'Дизайн фонов окружения. Блок 1. Город, растительность и ландшафты',
+        description: null,
+        duration: '3 месяца',
+        price: '20 000 ₽ в месяц',
+        isOpen: false,
+        mentors: [
+            {
+                photo: irinaGolina,
+                name: 'Ирина Голина-Сагателиан',
+                href: 'irina-golina',
+            },
+        ],
+        weeks: {
+            description: null,
+            data: [
+                'Shape and Space (монохормный набросок).',
+                'Form, перспектива.',
+                'Текстура.',
+                'Светотень.',
+                'Цвет.',
+                'Основы.',
+                'Композиция. Как придать рисунку глубину.',
+                'Освещение и цвет. Придаём рисунку характер.',
+                'Освещение и цвет. Техника работы.',
+                'Способы прорисовки. Практика.',
+                'Практика.',
+                'Практика и доработка.',
+            ],
+        },
+        software: 'Adobe Photoshop 2020',
+        requirements: {
+            description:
+                'Блок подойдет как для новичков, желающих научится разрабатывать дизайны фонов, так и для работающих профессионалов, желающих улучшить свои навыки и прокачать портфолио',
+            data: ['наличие компьютера с Windows 10', 'стабильный интернет', 'планшет'],
+        },
+        result: {
+            description:
+                'После завершения курса студент получит понимание, как приступать к визуальной разработке окружения растительности и ландшафтов. Научится основам разработке локаций городского типа, объединенных общей темой и стилем, а также – работе с тоном, цветом и светом. Соберет 2 качественные работы, которые можно будет положить в свое портфолио',
+            data: [],
+        },
+        paymentMethods: ['Перевод на карту', 'PayPal', 'crypto wallet'],
+    },
+    'background-design-parttwo': {
+        category: ECategory_ru.design,
+        cover: backgroundDesign,
+        href: 'background-design-advanced',
+        name: 'Дизайн фонов окружения. Блок 2. Постройки и здания, дизайн интерьера и внутренних помещений',
+        description: null,
+        duration: '3 месяца',
+        price: '20 000 ₽ в месяц',
+        isOpen: false,
+        mentors: [
+            {
+                photo: irinaGolina,
+                name: 'Ирина Голина-Сагателиан',
+                href: 'irina-golina',
+            },
+        ],
+        weeks: {
+            description: null,
+            data: [
+                'Наружный дизайн.',
+                'Перспектива.',
+                'Способ работы.',
+                'Проработка деталей.',
+                'Композиция цветом.',
+                'Хороший дизайн.',
+                'Проработка деталей.',
+                'Перспектива.',
+                'Работа с цветом.',
+                'Текстуры.',
+                'Практика.',
+                'Практика и доработка.',
+            ],
+        },
+        software: 'Adobe Photoshop 2020',
+        requirements: {
+            description:
+                'Блок подойдет как для новичков, желающих научится разрабатывать дизайны фонов, так и для работающих профессионалов, желающих улучшить свои навыки и прокачать портфолио',
+            data: ['наличие компьютера с Windows 10', 'стабильный интернет', 'планшет'],
+        },
+        result: {
+            description:
+                'После завершения курса студент получит понимание, как приступать к визуальной разработке интерьеров и экстерьеров. Научится основам разработке различных построек и зданий, объединенных общей темой и стилем, а также – работе с тоном, цветом и светом. Соберет 2 качественные работы, которые можно будет положить в свое портфолио',
+            data: [],
+        },
+        paymentMethods: ['Перевод на карту', 'PayPal', 'crypto wallet'],
+    },
+    'background-design-partthree': {
+        category: ECategory_ru.design,
+        cover: backgroundDesign,
+        href: 'background-design-expert',
+        name: 'Дизайн фонов окружения. Блок 3. Транспорт и средства передвижения. Скалы и пещеры',
+        description: null,
+        duration: '3 месяца',
+        price: '20 000 ₽ в месяц',
+        isOpen: false,
+        mentors: [
+            {
+                photo: irinaGolina,
+                name: 'Ирина Голина-Сагателиан',
+                href: 'irina-golina',
+            },
+        ],
+        weeks: {
+            description: null,
+            data: [
+                'Средства передвижения. Часть 1.',
+                'Средства передвижения. Часть 2.',
+                'Как создать дизайн на века.',
+                'Цвет.',
+                'Текстура vs Детализация',
+                'Пещеры. Часть 1.',
+                'Пещеры. Часть 2.',
+                'Свет.',
+                'Цвет и покраска, текстуры.',
+                'Цвет и покраска, текстуры. Практика.',
+                'Практика.',
+                'Практика и доработка.',
+            ],
+        },
+        software: 'Adobe Photoshop 2020',
+        requirements: {
+            description:
+                'Блок подойдет как для новичков, желающих научится разрабатывать дизайны фонов, так и для работающих профессионалов, желающих улучшить свои навыки и прокачать портфолио',
+            data: ['наличие компьютера с Windows 10', 'стабильный интернет', 'планшет'],
+        },
+        result: {
+            description:
+                'После завершения курса студент получит понимание, как приступать к визуальной разработке транспортных средств, как подходить к поиску референсов и сборку необходимых материалов. Научится основам разработке локаций скалистых мест и пещер, объединенных общей темой и стилем, а также – работе с тоном, цветом и светом. Соберет 2 качественные работы, которые можно будет положить в свое портфолио',
+            data: [],
+        },
+        paymentMethods: ['Перевод на карту', 'PayPal', 'crypto wallet'],
+    },
+    'harmony-for-teens-animation-basic': {
+        category: ECategory_ru.animation,
+        cover: harmonyForTeensAnimation,
+        href: 'harmony-for-teens-animation-basic',
+        name: 'Курс по анимации в Toon Boom Harmony для подростков',
+        description:
+            'Курс разработан специально для новичков, желающих попробовать работу аниматора и создать свою первую небольшую работу. Этот курс включает в общей сложности 12 видеоуроков и 12 интерактивных встреч с преподавателем. Он дает всестороннее введение в программное обеспечение и обучает эффективно использовать основные инструменты. Курс разработан таким образом, что во время учебного процесса вы погрузитесь в захватывающий мир анимации и будете использовать в работе любимых персонажей из аниме и популярных мультфильмов. ',
+        duration: '3 месяца',
+        price: '15 000 ₽ в месяц',
+        isOpen: false,
+        mentors: [
+            {
+                photo: marinaIpatova,
+                name: 'Марина Ипатова',
+                href: 'marina-ipatova',
+            },
+        ],
+        weeks: {
+            description: null,
+            data: [
+                'Введение. Знакомство с программой. Общая информация про инструменты Toon Boom Harmony. Рисуем 5 разных эмоций.',
+                'Отработка поз и прочистка 5 эмоций. Изучение инструментов, необходимых для рисования. ',
+                'Разрабатываем собственного персонажа, учимся адаптировать риги для работы. Изучаем modelsheet.',
+                'Создаем свой собственный боковой риг персонажа. Подготовка к походке.',
+                'Учимся делать походку персонажей, изучаем ключевые позы.',
+                'Изучаем деформеры и пеги, создаем свой небольшой риг.',
+                'Тренируем арки и делаем прыжок персонажа.Разбираемся что такое сквош и стрейч.',
+                'Самостоятельно собираем риг в 3/4 и делаем отрисовку базовых ртов.',
+                'На примере любимого аниме персонажа ищем хороший реф и рисуем скетчевую анимацию короткой эмоциональной сценки.',
+                'Изучаем работу с камерой и фонами.',
+                'Изучаем эффекты, светяшки, тени если необходимо, усиливаем сцену.',
+                'Учимся делать рендеры в разных форматах под ютуб, под разные соц сети, как оформить свой пост, даем готовые шаблоны и хештеги. ',
+            ],
+        },
+        software: 'Toon Boom Harmony Premium 17',
+        requirements: {
+            description:
+                'Курс подойдет для новичков, желающих на примере любимых персонажей из аниме и популярных мультфильмов получить начальные знания в Toon Boom Harmony',
+            data: ['наличие компьютера с Windows 10', 'стабильный интернет', 'планшет'],
+        },
+        result: {
+            description:
+                'После завершения курса студент приобретет навыки и знания, необходимые для создания небольших простых сценок. Этот курс идеально подойдет тем, кто хочет узнать как создаются мультфильмы, но пока не оприделился с профессией. В рамках курса мы рассмотрим и отрисовку, риги и анимацию, эффекты и сборку сцены, тем самым вы сможете попробовать себя в нескольких профессиях и узнать работают крупные студии.',
+            data: [],
+        },
+        paymentMethods: ['Перевод на карту', 'PayPal', 'crypto wallet'],
+    },
 };
 
 export const courses: IList = {
@@ -433,7 +928,7 @@ export const courses: IList = {
 };
 export const courses_ru: IList = {
     'harmony-animation': {
-        cover: harmonyImage,
+        cover: harmonyAnimation,
         name: 'Анимация в Toon Boom Harmony',
         description:
             'Развивайтесь быстрее благодаря экспертным карьерным консультациям и наставничеству!\n\nУзнайте, что нужно, чтобы стать профессиональным 2D-аниматором! В этом комплексном курсе по 2.5D-анимации вы узнаете, как использовать Toon Boom Harmony для создания анимации персонажей в строгом стиле с нуля, и будете шаг за шагом получать руководство от профессионалов отрасли, которые работали над культовыми анимационными фильмами и телешоу.',
@@ -467,7 +962,7 @@ export const courses_ru: IList = {
         ],
     },
     'paperless-animation': {
-        cover: harmonyImage,
+        cover: paperlessAnimation,
         name: 'Paperless animation',
         description: 'Комплексный курс по Paperless анимации',
         mentors: [
@@ -492,6 +987,74 @@ export const courses_ru: IList = {
             {
                 level: EClass_ru.professional,
                 href: 'paperless-animation-professional',
+            },
+        ],
+    },
+    'adobe-animate-animation': {
+        cover: adobeAnimateAnimation,
+        name: 'Сartoon animation Adobe Animate',
+        description: 'Комплексный курс по Сartoon анимации в Adobe Animate',
+        mentors: [
+            {
+                name: 'Ирина Голина',
+                photo: irinaGolina,
+            },
+        ],
+        classes: [
+            {
+                level: EClass_ru.basic,
+                href: 'adobe-animate-animation-basic',
+            },
+            {
+                level: EClass_ru.advanced,
+                href: 'adobe-animate-animation-advanced',
+            },
+            {
+                level: EClass_ru.expert,
+                href: 'adobe-animate-animation-expert',
+            },
+        ],
+    },
+    'background-design': {
+        cover: backgroundDesign,
+        name: 'Дизайн фонов окружения',
+        description: 'Комплексный курс по дизайну фонов окружения',
+        mentors: [
+            {
+                name: 'Ирина Голина',
+                photo: irinaGolina,
+            },
+        ],
+        classes: [
+            {
+                level: EClass_ru.partOne,
+                href: 'background-design-partone',
+            },
+            {
+                level: EClass_ru.partTwo,
+                href: 'background-design-parttwo',
+            },
+            {
+                level: EClass_ru.partThree,
+                href: 'background-design-partthree',
+            },
+        ],
+    },
+    'harmony-for-teens-animation': {
+        cover: harmonyForTeensAnimation,
+        name: 'Курс по анимации в Toon Boom Harmony для подростков',
+        description:
+            'Курс разработан специально для новичков, желающих попробовать работу аниматора и создать свою первую небольшую работу. Этот курс включает в общей сложности 12 видеоуроков и 12 интерактивных встреч с преподавателем. Он дает всестороннее введение в программное обеспечение и обучает эффективно использовать основные инструменты. Курс разработан таким образом, что во время учебного процесса вы погрузитесь в захватывающий мир анимации и будете использовать в работе любимых персонажей из аниме и популярных мультфильмов. ',
+        mentors: [
+            {
+                name: 'Марина Ипатова',
+                photo: marinaIpatova,
+            },
+        ],
+        classes: [
+            {
+                level: EClass_ru.basic,
+                href: 'harmony-for-teens-animation-basic',
             },
         ],
     },
@@ -528,29 +1091,34 @@ export const categories: ICategory[] = [
         description: null,
         courses: [],
     },
-    {
-        id: 6,
-        category: 'AI Animation',
-        description: null,
-        courses: [],
-    },
+    // {
+    //     id: 6,
+    //     category: 'AI Animation',
+    //     description: null,
+    //     courses: [],
+    // },
 ];
 export const categories_ru: ICategory[] = [
     {
         id: 1,
         category: 'Анимация',
         description: null,
-        courses: [courses_ru['harmony-animation'], courses_ru['paperless-animation']],
+        courses: [
+            courses_ru['harmony-animation'],
+            courses_ru['paperless-animation'],
+            courses_ru['adobe-animate-animation'],
+            courses_ru['harmony-for-teens-animation'],
+        ],
     },
     {
         id: 2,
-        category: 'Стори',
+        category: 'Дизайн',
         description: null,
-        courses: [],
+        courses: [courses_ru['background-design']],
     },
     {
         id: 3,
-        category: 'Дизайн',
+        category: 'Стори',
         description: null,
         courses: [],
     },
@@ -566,10 +1134,10 @@ export const categories_ru: ICategory[] = [
         description: null,
         courses: [],
     },
-    {
-        id: 6,
-        category: 'ИИ Анимация',
-        description: null,
-        courses: [],
-    },
+    // {
+    //     id: 6,
+    //     category: 'ИИ Анимация',
+    //     description: null,
+    //     courses: [],
+    // },
 ];

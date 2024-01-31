@@ -139,7 +139,7 @@ export const mentors: IList = {
 };
 export const mentors_ru: IList = {
     'irina-golina': {
-        categories: ['Анимация'],
+        categories: ['Анимация', 'Дизайн'],
         photo: irinaGolina,
         href: 'irina-golina',
         name: 'Ирина Голина',
@@ -161,6 +161,16 @@ export const mentors_ru: IList = {
                 name: 'Paperless Animation',
                 propName: 'paperless-animation',
                 category: ECategory_ru.animation,
+            },
+            {
+                name: 'Сartoon animation Adobe Animate',
+                propName: 'adobe-animate-animation',
+                category: ECategory_ru.animation,
+            },
+            {
+                name: 'Дизайн фонов окружения',
+                propName: 'background-design',
+                category: ECategory_ru.design,
             },
         ],
     },
@@ -224,6 +234,11 @@ export const mentors_ru: IList = {
                 propName: 'harmony-animation',
                 category: ECategory_ru.animation,
             },
+            {
+                name: 'Курс по анимации в Toon Boom Harmony для подростков',
+                propName: 'harmony-for-teens-animation',
+                category: ECategory_ru.animation,
+            },
         ],
     },
     'tatiana-simonova': {
@@ -247,12 +262,12 @@ export const mentorsList: IMentorsList[] = [
     { id: 2, info: mentors['svetlana-cherepanova'] },
     { id: 3, info: mentors['pasha-potekhin'] },
     { id: 4, info: mentors['marina-ipatova'] },
-    { id: 5, info: mentors['tatiana-simonova'] },
+    // { id: 5, info: mentors['tatiana-simonova'] },
 ];
 export const mentorsList_ru: IMentorsList[] = [
     { id: 1, info: mentors_ru['irina-golina'] },
     { id: 2, info: mentors_ru['svetlana-cherepanova'] },
     { id: 3, info: mentors_ru['pasha-potekhin'] },
     { id: 4, info: mentors_ru['marina-ipatova'] },
-    { id: 5, info: mentors_ru['tatiana-simonova'] },
+    // { id: 5, info: mentors_ru['tatiana-simonova'] },
 ];

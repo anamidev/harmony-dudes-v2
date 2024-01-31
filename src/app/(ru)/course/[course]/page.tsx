@@ -1,6 +1,7 @@
 import { classes_ru } from '@/lib/data/courses';
 import Link from 'next/link';
 import EmailToClipboard_ru from '@/components/EmailToClipboard_ru';
+import Image from 'next/image';
 
 export async function generateStaticParams() {
     const paths: { course: string }[] = [];
@@ -28,7 +29,14 @@ export default function Course_ru({ params }: { params: { course: string } }) {
     ) : (
         <section className="page-layout">
             {/* cover */}
-            <div className="mx-auto h-60 w-full max-w-[480px] bg-white/[0.1] md:h-96 md:max-w-full"></div>
+            <div className="relative mx-auto h-60 w-full max-w-[480px] bg-white/[0.87] md:h-[480px] md:max-w-full">
+                <Image
+                    alt={currentClass.name + ' cover'}
+                    src={currentClass.cover}
+                    fill
+                    className="object-cover"
+                />
+            </div>
 
             {/* name */}
             <h1 className={"text-center font-['Rubik_Dirt'] text-2xl md:text-4xl"}>
@@ -101,7 +109,7 @@ export default function Course_ru({ params }: { params: { course: string } }) {
                 </p>
             ) : null}
             {currentClass.weeks.data.length !== 0 ? (
-                <ul className="mx-auto flex max-w-5xl flex-col gap-5 whitespace-pre-line">
+                <ul className="mx-auto flex w-full max-w-5xl flex-col gap-5 whitespace-pre-line">
                     {currentClass.weeks.data.map((week, index) => (
                         <li key={week}>
                             <h3 className="text-lg underline decoration-dotted">
