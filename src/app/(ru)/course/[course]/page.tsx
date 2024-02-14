@@ -51,34 +51,52 @@ export default function Course_ru({ params }: { params: { course: string } }) {
 
             {/* short info */}
             <div className="flex flex-col items-center gap-5 rounded-2xl bg-emerald-500/[0.2] p-10">
-                {currentClass.isOpen ? (
+                {currentClass.isOpen.individual || currentClass.isOpen.group ? (
                     <div className="rounded-2xl bg-emerald-500 px-4 py-2 uppercase">
                         Открыт набор
                     </div>
                 ) : null}
 
-                <div className="flex flex-col justify-center gap-10 md:flex-row">
-                    <div>
-                        <h2 className="text-lg">Длительность</h2>
-                        <p className="">{currentClass.duration}</p>
-                    </div>
-                    <div>
-                        <h2 className="text-lg">Цена</h2>
-                        <p className="">{currentClass.price}</p>
-                    </div>
+                <div className="flex flex-col justify-between gap-10 md:flex-row">
                     <div>
                         <h2 className="text-lg">Способы оплаты</h2>
                         <p className="">{currentClass.paymentMethods.join(', ')}</p>
+                    </div>
+                    <div>
+                        <h2 className="text-lg">Длительность</h2>
+                        <p className="">{currentClass.duration}</p>
                     </div>
                     <div>
                         <h2 className="text-lg">Софт</h2>
                         <p className="">{currentClass.software}</p>
                     </div>
                 </div>
+            </div>
 
-                <div className="flex flex-col gap-5 md:w-full md:flex-row md:justify-around">
-                    <button className="button-lg-orange">Частный курс</button>
-                    <button className="button-lg-orange">Групповой курс</button>
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                <div className="flex flex-col items-center gap-5 rounded-2xl bg-emerald-500/[0.2] p-10">
+                    <div>
+                        <h2 className="text-lg">Цена</h2>
+                        <p className="">{currentClass.price.individual}</p>
+                    </div>
+                    <button
+                        className="button-lg-orange w-full max-w-[396px]"
+                        disabled={!currentClass.isOpen.individual}
+                    >
+                        Индивидуально
+                    </button>
+                </div>
+                <div className="flex flex-col items-center gap-5 rounded-2xl bg-emerald-500/[0.2] p-10">
+                    <div>
+                        <h2 className="text-lg">Цена</h2>
+                        <p className="">{currentClass.price.group}</p>
+                    </div>
+                    <button
+                        className="button-lg-orange w-full max-w-[396px]"
+                        disabled={!currentClass.isOpen.group}
+                    >
+                        Групповое
+                    </button>
                 </div>
             </div>
 
@@ -143,7 +161,7 @@ export default function Course_ru({ params }: { params: { course: string } }) {
             ) : null}
 
             <div className="mx-auto flex w-full max-w-2xl flex-col items-center gap-5 rounded-2xl bg-emerald-500/[0.2] p-10">
-                {currentClass.isOpen ? (
+                {currentClass.isOpen.individual || currentClass.isOpen.group ? (
                     <div className="rounded-2xl bg-emerald-500 px-4 py-2 uppercase">
                         Открыт набор
                     </div>
@@ -152,8 +170,18 @@ export default function Course_ru({ params }: { params: { course: string } }) {
                 <p className="text-xl">Отправьте заявку и начните курс</p>
 
                 <div className="flex flex-col gap-5 md:w-full md:flex-row md:justify-around">
-                    <button className="button-lg-orange">Частный курс</button>
-                    <button className="button-lg-orange">Групповой курс</button>
+                <button
+                        className="button-lg-orange w-full max-w-[396px]"
+                        disabled={!currentClass.isOpen.individual}
+                    >
+                        Индивидуально
+                    </button>
+                    <button
+                        className="button-lg-orange w-full max-w-[396px]"
+                        disabled={!currentClass.isOpen.group}
+                    >
+                        Групповое
+                    </button>
                 </div>
             </div>
 

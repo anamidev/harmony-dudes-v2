@@ -26,18 +26,18 @@
     }
 
     .button-sm-purple {
-        @apply cursor-pointer rounded-lg bg-[#ac46b6]/[0.7] px-4 py-2 transition hover:bg-[#ac46b6]/[1];
+        @apply cursor-pointer rounded-lg bg-[#ac46b6]/[0.7] px-4 py-2 transition hover:bg-[#ac46b6]/[1] disabled:cursor-not-allowed disabled:bg-[#777]/[0.45] disabled:text-[#bbb];
     }
     .button-sm-orange {
-        @apply cursor-pointer rounded-lg bg-[#ca8a04]/[0.7] px-4 py-2 transition hover:bg-[#ca8a04]/[1];
+        @apply cursor-pointer rounded-lg bg-[#ca8a04]/[0.7] px-4 py-2 transition hover:bg-[#ca8a04]/[1] disabled:cursor-not-allowed disabled:bg-[#777]/[0.45] disabled:text-[#bbb];
     }
 
     .button-lg-purple {
-        @apply cursor-pointer rounded-lg bg-[#ac46b6]/[0.7] px-8 py-4 transition hover:bg-[#ac46b6]/[1];
+        @apply cursor-pointer rounded-lg bg-[#ac46b6]/[0.7] px-8 py-4 transition hover:bg-[#ac46b6]/[1] disabled:cursor-not-allowed disabled:bg-[#777]/[0.45] disabled:text-[#bbb];
     }
     .button-lg-orange {
-        @apply cursor-pointer rounded-lg bg-[#ca8a04]/[0.7] px-8 py-4 transition hover:bg-[#ca8a04]/[1];
-    }
+        @apply cursor-pointer rounded-lg bg-[#ca8a04]/[0.7] px-8 py-4 transition hover:bg-[#ca8a04]/[1] disabled:cursor-not-allowed disabled:bg-[#777]/[0.45] disabled:text-[#bbb];
+    }   
 }
 
 body {

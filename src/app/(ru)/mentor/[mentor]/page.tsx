@@ -47,6 +47,18 @@ export default function Mentor({ params }: { params: { mentor: string } }) {
                         {currentMentor.name}
                     </h1>
                     <h2 className={'text-center text-xl md:text-2xl'}>{currentMentor.jobTitle}</h2>
+                    <div className="flex justify-center gap-2 pt-2">
+                        {currentMentor.software.map((soft, index) => (
+                            <Image
+                                src={soft}
+                                alt="Software"
+                                aria-disabled
+                                key={index}
+                                width={32}
+                                height={32}
+                            />
+                        ))}
+                    </div>
                 </div>
                 {/* character image */}
                 <div className="hidden h-48 w-48 rounded-full md:block"></div>
@@ -79,6 +91,36 @@ export default function Mentor({ params }: { params: { mentor: string } }) {
 
             {/* introduction video */}
             {/* <div className="mx-auto h-60 w-full max-w-[480px] bg-white/[0.1] md:h-96 md:w-full md:max-w-[720px]"></div> */}
+            {currentMentor.introVideo ? (
+                <div>
+                    <div
+                        style={{
+                            position: 'relative',
+                            paddingTop: '350px',
+                            overflow: 'hidden',
+                            maxWidth: '624px',
+                            maxHeight: '360px',
+                            marginLeft: 'auto',
+                            marginRight: 'auto',
+                        }}
+                    >
+                        <iframe
+                            src={currentMentor.introVideo}
+                            allowFullScreen={true}
+                            allow="autoplay; fullscreen; picture-in-picture"
+                            width={'960'}
+                            height={'569'}
+                            style={{
+                                position: 'absolute',
+                                top: 0,
+                                left: 0,
+                                width: '100%',
+                                height: '100%',
+                            }}
+                        />
+                    </div>
+                </div>
+            ) : null}
 
             <h3 className="page-header">Курсы ментора</h3>
             {currentMentor.courses.length !== 0 ? (

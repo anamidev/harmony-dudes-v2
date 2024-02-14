@@ -54,10 +54,6 @@ export default function Course({ params }: { params: { course: string } }) {
                         <p className="">{currentClass.duration}</p>
                     </div>
                     <div>
-                        <h2 className="text-lg">Price</h2>
-                        <p className="">{currentClass.price}</p>
-                    </div>
-                    <div>
                         <h2 className="text-lg">Payment methods</h2>
                         <p className="">{currentClass.paymentMethods.join(', ')}</p>
                     </div>

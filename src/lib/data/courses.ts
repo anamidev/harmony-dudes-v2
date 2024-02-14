@@ -11,12 +11,19 @@ import harmonyAnimation from '@/assets/images/advices/harmony-animation.png';
 import harmonyForTeensAnimation from '@/assets/images/advices/harmony-for-teens-animation.png';
 import paperlessAnimation from '@/assets/images/advices/paperless-animation.png';
 
+import harmony from '@/assets/harmony.png';
+import harmony_blue from '@/assets/harmony_blue.png';
+import storyboardPro from '@/assets/svg/storyboardPro.svg';
+import adobeAnimate from '@/assets/svg/adobeAnimate.svg';
+import adobePhotoshop from '@/assets/svg/adobePhotoshop.svg';
+
 type TClass = {
     [key: string]: IClass;
 };
 type IList = {
     [key: string]: ICourse;
 };
+
 enum EClass {
     basic = 'Basic',
     advanced = 'Advanced',
@@ -28,10 +35,10 @@ enum EClass {
     partFour = 'Part 4',
 }
 enum EClass_ru {
-    basic = 'Класс 1',
-    advanced = 'Класс 2',
-    expert = 'Класс 3',
-    professional = 'Класс 4',
+    basic = 'Базовый',
+    advanced = 'Продвинутый',
+    expert = 'Эксперт',
+    professional = 'Профессионал',
     partOne = 'Блок 1',
     partTwo = 'Блок 2',
     partThree = 'Блок 3',
@@ -61,8 +68,14 @@ export interface IClass {
     href: string;
     description: string | null;
     duration: string;
-    price: string;
-    isOpen: boolean;
+    price: {
+        individual: string | null;
+        group: string | null;
+    };
+    isOpen: {
+        individual: boolean;
+        group: boolean;
+    };
     cover: StaticImageData;
     mentors: {
         photo: StaticImageData;
@@ -86,6 +99,8 @@ export interface IClass {
 }
 export interface ICourse {
     name: string;
+    category: ECategory | ECategory_ru;
+    softwareLogo: StaticImageData;
     description: string;
     cover: StaticImageData;
     mentors: {
@@ -105,16 +120,22 @@ export interface ICategory {
 }
 
 export const classes: TClass = {
-    'harmony-animation-basic': {
+    'rigged-animation-basic': {
         category: ECategory.animation,
         cover: harmonyImage,
-        href: 'harmony-animation-basic',
+        href: 'rigged-animation-basic',
         name: '2.5D Toon Boom Harmony. Animation foundations',
         description:
             "Progress faster with expert career advisory and mentorship!\n\nDiscover what it takes to become a professional 2D animator! In this comprehensive 2.5D animation course, you'll learn how to use Toon Boom Harmony to create rigged style character animations from scratch, and be guided step by step by industry professionals who have worked on iconic animated films and TV shows.",
         duration: '12 weeks',
-        price: '19,500 ₽ per month',
-        isOpen: false,
+        price: {
+            individual: '$70',
+            group: '19,500 ₽ per month',
+        },
+        isOpen: {
+            individual: false,
+            group: false,
+        },
         mentors: [
             {
                 photo: irinaGolina,
@@ -159,16 +180,22 @@ export const classes: TClass = {
     },
 };
 export const classes_ru: TClass = {
-    'harmony-animation-basic': {
+    'rigged-animation-basic': {
         category: ECategory_ru.animation,
         cover: harmonyAnimation,
-        href: 'harmony-animation-basic',
-        name: 'Анимация в Toon Boom Harmony, 1 класс',
+        href: 'rigged-animation-basic',
+        name: 'Rigged animation, 1 класс',
         description:
             'Курс разработан специально для новичков,  и тех, кто нуждается в изучении нового популярного софта. Этот курс включает в общей сложности 12 видеоуроков и 12 интерактивных встреч с преподавателем.  Он дает всестороннее введение в программное обеспечение и научит эффективно использовать основные инструменты. Курс разработан таким образом, что во время учебного процесса вы погрузитесь в захватывающий мир профессиональной анимации и будете использовать в работе любимых персонажей из мультфильмов. К концу курса вы приобретете навыки и знания, необходимые для создания крутого и яркого портфолио. Независимо от того, являетесь ли вы новичком в программном обеспечении или просто хотите улучшить свои навыки, этот курс — идеально подойдет для вас, а наши опытыные преподаватели помогут разобраться во всем!',
         duration: '3 месяца',
-        price: '19 500 ₽ в месяц',
-        isOpen: true,
+        price: {
+            individual: '$70 за урок',
+            group: '19 500 ₽ в месяц',
+        },
+        isOpen: {
+            individual: true,
+            group: true,
+        },
         mentors: [
             {
                 photo: irinaGolina,
@@ -210,16 +237,22 @@ export const classes_ru: TClass = {
         },
         paymentMethods: ['Перевод на карту', 'PayPal', 'crypto wallet'],
     },
-    'harmony-animation-advanced': {
+    'rigged-animation-advanced': {
         category: ECategory_ru.animation,
         cover: harmonyAnimation,
-        href: 'harmony-animation-advanced',
-        name: 'Анимация в Toon Boom Harmony, 2 класс',
+        href: 'rigged-animation-advanced',
+        name: 'Rigged animation, 2 класс',
         description:
             'Курс предназначен для того, чтобы поднять ваши знаний в анимации персонажей на новый уровень, обучая вас передовым концепциям и методам в Toon Boom Harmony.  Этот курс включает в общей сложности 16 видеоуроков и 16 интерактивных встреч с преподавателем. Он идеально подходит для людей, которые уже имеют некоторый опыт работы в Toon Boom Harmony и базовые знания в области анимации. На протяжении всего курса вы погрузитесь в тонкости анимации персонажей, научитесь эффективно применять передовые принципы и методы. Если вы стремитесь улучшить свои навыки анимации в профессиональных целях, например, устроиться на работу в отрасли или создать впечатляющее портфолио, этот курс идеально вам подойдет. Хотя этот курс предполагает базовое понимание программного обеспечения, он предоставит вам необходимые инструменты и знания для дальнейшего развития ваших анимационных способностей в Toon Boom Harmony. Приготовьтесь исследовать захватывающий мир продвинутой анимации персонажей!',
         duration: '4 месяца',
-        price: '20 500 ₽ в месяц',
-        isOpen: true,
+        price: {
+            individual: '$70 за урок',
+            group: '20 500 ₽ в месяц',
+        },
+        isOpen: {
+            individual: true,
+            group: true,
+        },
         mentors: [
             {
                 photo: irinaGolina,
@@ -265,16 +298,22 @@ export const classes_ru: TClass = {
         },
         paymentMethods: ['Перевод на карту', 'PayPal', 'crypto wallet'],
     },
-    'harmony-animation-expert': {
+    'rigged-animation-expert': {
         category: ECategory_ru.animation,
         cover: harmonyAnimation,
-        href: 'harmony-animation-expert',
-        name: 'Анимация в Toon Boom Harmony, 3 класс',
+        href: 'rigged-animation-expert',
+        name: 'Rigged animation, 3 класс',
         description:
             'Курс разработан для того, чтобы изучить основные принципы работы с эмоциями и актерской игрой в анимации. Этот курс включает в общей сложности 12 видеоуроков и 12 интерактивных встреч с преподавателем. Он позволяет сконцентрироваться на более тонких моментах лицевой анимации, и донести до зрителя чувства и эмоции персонажа. На курсе также будет уделено особое внимание полишу анимации, работе с движением волосы, одежды. Если вы стремитесь улучшить свои навыки лицевой анимации в профессиональных целях, например, обновить портфолио или болеее детально изучить работу с антропоморфными существами, этот курс идеально вам подойдет.  ',
         duration: '3 месяца',
-        price: '21 500 ₽ в месяц',
-        isOpen: true,
+        price: {
+            individual: '$70 за урок',
+            group: '21 500 ₽ в месяц',
+        },
+        isOpen: {
+            individual: true,
+            group: true,
+        },
         mentors: [
             {
                 photo: irinaGolina,
@@ -316,16 +355,22 @@ export const classes_ru: TClass = {
         },
         paymentMethods: ['Перевод на карту', 'PayPal', 'crypto wallet'],
     },
-    'harmony-animation-professional': {
+    'rigged-animation-professional': {
         category: ECategory_ru.animation,
         cover: harmonyAnimation,
-        href: 'harmony-animation-professional',
-        name: 'Анимация в Toon Boom Harmony, 4 класс',
+        href: 'rigged-animation-professional',
+        name: 'Rigged animation, 4 класс',
         description:
             'Курс предназначен для того, чтобы обучится профессиональному подходу в создании собственного мультфильма, и поднять ваши знаний в анимации персонажей на новый уровень, обучая вас передовым концепциям и методам в Toon Boom Harmony.  Этот курс включает в общей сложности 16 видеоуроков и 16 интерактивных встреч с преподавателем. Он идеально подходит для людей, которые уже имеют опыт работы в Toon Boom Harmony и крепкие знания в области анимации. На протяжении всего курса вы будете закреплять полученные ранее материалы, добавляя новые знания из профессиональной студийной работы и пейплайна. Научитесь правильно организовывать весь процесс создания мобственного короткого мультфильма с нуля. Если вы стремитесь улучшить свои навыки анимации в профессиональных целях, например, создать свой собственный короткий метр или сериал, этот курс идеально вам подойдет. ',
         duration: '4 месяца',
-        price: '22 500 ₽ в месяц',
-        isOpen: true,
+        price: {
+            individual: '$70 за урок',
+            group: '22 500 ₽ в месяц',
+        },
+        isOpen: {
+            individual: true,
+            group: true,
+        },
         mentors: [
             {
                 photo: irinaGolina,
@@ -384,8 +429,14 @@ export const classes_ru: TClass = {
         description:
             'Курс предназначен для изучения различий между традиционными методами анимации и современной техникой paperless animation. Этот курс включает в общей сложности 12 видеоуроков и 12 интерактивных встреч с преподавателем. Он предназначен как для новичков в анимации, так и для тех, кто уже обладает некоторыми классическими знаниями, но хочет узнать больше о современных технологиях и стилях анимации. Многие анимационные студии и продюсерские компании перешли на paperless animation. Обучение paperless animation соответствует отраслевым стандартам, что делает вас более адаптируемыми и готовыми к профессиональному росту. Рaperless animation позволяет создавать широкий спектр стилей: от традиционной рисованной анимации до более изысканного цифрового стиля. s',
         duration: '3 месяца',
-        price: '19 500 ₽ в месяц',
-        isOpen: false,
+        price: {
+            individual: '$70 за урок',
+            group: '19 500 ₽ в месяц',
+        },
+        isOpen: {
+            individual: false,
+            group: false,
+        },
         mentors: [
             {
                 photo: irinaGolina,
@@ -430,8 +481,14 @@ export const classes_ru: TClass = {
         description:
             'Курс предназначен для того, что получить новые знания в области механики тела. Этот курс включает в общей сложности 12 видеоуроков и 12 интерактивных встреч с преподавателем. По мере обучения будут затороны различные стили анимации, от суперкартуна до боевиков. Каждую неделю вы будете получать свежые знания от профессионально, работающих в индустрии. Приготовьтесь усовершенствовать свою технику и глубже раскрыть творческий потенциал Toon Boom Harmony!',
         duration: '3 месяца',
-        price: '20 500 ₽ в месяц',
-        isOpen: true,
+        price: {
+            individual: '$70 за урок',
+            group: '20 500 ₽ в месяц',
+        },
+        isOpen: {
+            individual: true,
+            group: true,
+        },
         mentors: [
             {
                 photo: irinaGolina,
@@ -481,8 +538,14 @@ export const classes_ru: TClass = {
         description:
             'Курс разработан для того, чтобы изучить основные принципы работы с эмоциями и актерской игрой в анимации, используя все возможности техники paperless animation. Этот курс включает в общей сложности 12 видеоуроков и 12 интерактивных встреч с преподавателем. Он позволяет сконцентрироваться на основных моментах работы с чувствами и эмоциями. Если вы стремитесь улучшить свои навыки лицевой анимации в профессиональных целях, например, обновить портфолио или болеее детально изучить работу с антропоморфными существами, рисуя их, этот курс идеально вам подойдет.  ',
         duration: '3 месяца',
-        price: '21 500 ₽ в месяц',
-        isOpen: false,
+        price: {
+            individual: '$70 за урок',
+            group: '21 500 ₽ в месяц',
+        },
+        isOpen: {
+            individual: false,
+            group: false,
+        },
         mentors: [
             {
                 photo: irinaGolina,
@@ -532,8 +595,14 @@ export const classes_ru: TClass = {
         description:
             'Курс предназначен для того, чтобы обучится профессиональному подходу в создании собственого короткого мультфильма. Этот курс включает в общей сложности 12 видеоуроков и 12 интерактивных встреч с преподавателем. Он идеально подходит для людей, которые уже имеют опыт работы в Toon Boom Harmony и крепкие знания в области анимации в технике paperless animation. На протяжении всего курса вы будете закреплять полученные ранее материалы, добавляя новые знания из профессиональной студийной работы и пейплайна. Научитесь правильно организовывать весь процесс создания собственного короткого мультфильма с нуля. ',
         duration: '3 месяца',
-        price: '22 500 ₽ в месяц',
-        isOpen: false,
+        price: {
+            individual: '$70 за урок',
+            group: '22 500 ₽ в месяц',
+        },
+        isOpen: {
+            individual: false,
+            group: false,
+        },
         mentors: [
             {
                 photo: irinaGolina,
@@ -575,16 +644,22 @@ export const classes_ru: TClass = {
         },
         paymentMethods: ['Перевод на карту', 'PayPal', 'crypto wallet'],
     },
-    'adobe-animate-animation-basic': {
+    'cartoon-animation-basic': {
         category: ECategory_ru.animation,
         cover: adobeAnimateAnimation,
-        href: 'adobe-animate-animation-basic',
-        name: 'Сartoon animation Adobe Animate, 1 класс',
+        href: 'cartoon-animation-basic',
+        name: 'Сartoon animation, 1 класс',
         description:
             'Курс предназначен для того, чтобы изучить разнообразные аспекты анимации Cut-out. Вы научитесь эффективно подготавливать материалы и персонажей к работе, используя векторные линии. Мы обучим вас техникам работы, позволяющим сохранять высокое качество анимации при максимальной скорости выполнения. Вы узнаете, на что следует делать акцент в процессе работы. Этот курс включает в общей сложности 12 видеоуроков и 12 интерактивных встреч с преподавателем. В ходе курса будут рассмотрены различные направления, в которых используется анимации, созданная в Adobe Animate: игровая индустрия, интернет-проекты и телесериалы. Мы рассмотрим различные техники и стили в рамках Cut-out, в будущем, это позволит  вам расширить свой кругозор и выбрать наиболее интересное направление для дальнейшего изучения.',
         duration: '3 месяца',
-        price: '19 500 ₽ в месяц',
-        isOpen: false,
+        price: {
+            individual: '$70 за урок',
+            group: '19 500 ₽ в месяц',
+        },
+        isOpen: {
+            individual: false,
+            group: false,
+        },
         mentors: [
             {
                 photo: irinaGolina,
@@ -621,16 +696,22 @@ export const classes_ru: TClass = {
         },
         paymentMethods: ['Перевод на карту', 'PayPal', 'crypto wallet'],
     },
-    'adobe-animate-animation-advanced': {
+    'cartoon-animation-advanced': {
         category: ECategory_ru.animation,
         cover: adobeAnimateAnimation,
-        href: 'adobe-animate-animation-advanced',
-        name: 'Сartoon animation Adobe Animate, 2 класс',
+        href: 'cartoon-animation-advanced',
+        name: 'Сartoon animation, 2 класс',
         description:
             'Курс предназначен для того, чтобы обучится механике тела с использованием Cut-out. Вы научитесь эффективно подготавливать материалы и комплексных персонажей к работе, используя современные студийные подходы Этот курс включает в общей сложности 12 видеоуроков и 12 интерактивных встреч с преподавателем. В ходе курса вы сможете сконцентрироваться на механике тела и различных второстепенных движениях, придающих яркость и уникальность вашей анимации. Если вы стремитесь улучшить свои навыки анимации в профессиональных целях, например, устроиться на работу в отрасли или создать впечатляющее портфолио, этот курс идеально вам подойдет.',
         duration: '2 месяца',
-        price: '20 500 ₽ в месяц',
-        isOpen: false,
+        price: {
+            individual: '$70 за урок',
+            group: '20 500 ₽ в месяц',
+        },
+        isOpen: {
+            individual: false,
+            group: false,
+        },
         mentors: [
             {
                 photo: irinaGolina,
@@ -668,16 +749,22 @@ export const classes_ru: TClass = {
         },
         paymentMethods: ['Перевод на карту', 'PayPal', 'crypto wallet'],
     },
-    'adobe-animate-animation-expert': {
+    'cartoon-animation-expert': {
         category: ECategory_ru.animation,
         cover: adobeAnimateAnimation,
-        href: 'adobe-animate-animation-expert',
-        name: 'Сartoon animation Adobe Animate, 3 класс',
+        href: 'cartoon-animation-expert',
+        name: 'Сartoon animation, 3 класс',
         description:
             'Курс предназначен для того, чтобы обучится лицевой анимации и актерской игре, используя современные подходы в Cut-out. Вы научитесь передавать чувства и эмоции, понятные зрителю, усиливая их и дорабатывая, с использованием современных студийных подходов. Этот курс включает в общей сложности 12 видеоуроков и 12 интерактивных встреч с преподавателем. В ходе курса вы сможете сконцентрироваться на актерской игре и отыгрышах.  Если вы стремитесь улучшить свои навыки анимации в профессиональных целях, например, устроиться на работу в отрасли или создать впечатляющее портфолио, этот курс идеально вам подойдет.',
         duration: '3 месяца',
-        price: '21 500 ₽ в месяц',
-        isOpen: true,
+        price: {
+            individual: '$70 за урок',
+            group: '21 500 ₽ в месяц',
+        },
+        isOpen: {
+            individual: true,
+            group: true,
+        },
         mentors: [
             {
                 photo: irinaGolina,
@@ -726,8 +813,14 @@ export const classes_ru: TClass = {
         name: 'Дизайн фонов окружения. Блок 1. Город, растительность и ландшафты',
         description: null,
         duration: '3 месяца',
-        price: '20 000 ₽ в месяц',
-        isOpen: false,
+        price: {
+            individual: '$70 за урок',
+            group: '20 000 ₽ в месяц',
+        },
+        isOpen: {
+            individual: false,
+            group: false,
+        },
         mentors: [
             {
                 photo: irinaGolina,
@@ -772,8 +865,14 @@ export const classes_ru: TClass = {
         name: 'Дизайн фонов окружения. Блок 2. Постройки и здания, дизайн интерьера и внутренних помещений',
         description: null,
         duration: '3 месяца',
-        price: '20 000 ₽ в месяц',
-        isOpen: false,
+        price: {
+            individual: '$70 за урок',
+            group: '20 000 ₽ в месяц',
+        },
+        isOpen: {
+            individual: false,
+            group: false,
+        },
         mentors: [
             {
                 photo: irinaGolina,
@@ -818,8 +917,14 @@ export const classes_ru: TClass = {
         name: 'Дизайн фонов окружения. Блок 3. Транспорт и средства передвижения. Скалы и пещеры',
         description: null,
         duration: '3 месяца',
-        price: '20 000 ₽ в месяц',
-        isOpen: false,
+        price: {
+            individual: '$70 за урок',
+            group: '20 000 ₽ в месяц',
+        },
+        isOpen: {
+            individual: false,
+            group: false,
+        },
         mentors: [
             {
                 photo: irinaGolina,
@@ -857,16 +962,22 @@ export const classes_ru: TClass = {
         },
         paymentMethods: ['Перевод на карту', 'PayPal', 'crypto wallet'],
     },
-    'harmony-for-teens-animation-basic': {
+    'for-teens-animation-basic': {
         category: ECategory_ru.animation,
         cover: harmonyForTeensAnimation,
-        href: 'harmony-for-teens-animation-basic',
-        name: 'Курс по анимации в Toon Boom Harmony для подростков',
+        href: 'for-teens-animation-basic',
+        name: 'Курс по анимации для подростков',
         description:
             'Курс разработан специально для новичков, желающих попробовать работу аниматора и создать свою первую небольшую работу. Этот курс включает в общей сложности 12 видеоуроков и 12 интерактивных встреч с преподавателем. Он дает всестороннее введение в программное обеспечение и обучает эффективно использовать основные инструменты. Курс разработан таким образом, что во время учебного процесса вы погрузитесь в захватывающий мир анимации и будете использовать в работе любимых персонажей из аниме и популярных мультфильмов. ',
         duration: '3 месяца',
-        price: '15 000 ₽ в месяц',
-        isOpen: false,
+        price: {
+            individual: '$70 за урок',
+            group: '15 000 ₽ в месяц',
+        },
+        isOpen: {
+            individual: false,
+            group: false,
+        },
         mentors: [
             {
                 photo: marinaIpatova,
@@ -907,9 +1018,11 @@ export const classes_ru: TClass = {
 };
 
 export const courses: IList = {
-    'harmony-animation': {
+    'rigged-animation': {
         cover: harmonyImage,
         name: '2.5D Toon Boom Harmony. Animation foundations',
+        category: ECategory.animation,
+        softwareLogo: harmony_blue,
         description:
             "Progress faster with expert career advisory and mentorship!\n\nDiscover what it takes to become a professional 2D animator! In this comprehensive 2.5D animation course, you'll learn how to use Toon Boom Harmony to create rigged style character animations from scratch, and be guided step by step by industry professionals who have worked on iconic animated films and TV shows.",
         mentors: [
@@ -927,47 +1040,51 @@ export const courses: IList = {
     },
 };
 export const courses_ru: IList = {
-    'harmony-animation': {
+    'rigged-animation': {
         cover: harmonyAnimation,
-        name: 'Анимация в Toon Boom Harmony',
+        name: 'Rigged animation',
+        category: ECategory_ru.animation,
+        softwareLogo: harmony_blue,
         description:
             'Развивайтесь быстрее благодаря экспертным карьерным консультациям и наставничеству!\n\nУзнайте, что нужно, чтобы стать профессиональным 2D-аниматором! В этом комплексном курсе по 2.5D-анимации вы узнаете, как использовать Toon Boom Harmony для создания анимации персонажей в строгом стиле с нуля, и будете шаг за шагом получать руководство от профессионалов отрасли, которые работали над культовыми анимационными фильмами и телешоу.',
         mentors: [
             {
-                name: 'Ирина Голина',
+                name: 'И. Голина',
                 photo: irinaGolina,
             },
             {
                 photo: marinaIpatova,
-                name: 'Марина Ипатова',
+                name: 'М. Ипатова',
             },
         ],
         classes: [
             {
                 level: EClass_ru.basic,
-                href: 'harmony-animation-basic',
+                href: 'rigged-animation-basic',
             },
             {
                 level: EClass_ru.advanced,
-                href: 'harmony-animation-advanced',
+                href: 'rigged-animation-advanced',
             },
             {
                 level: EClass_ru.expert,
-                href: 'harmony-animation-expert',
+                href: 'rigged-animation-expert',
             },
             {
                 level: EClass_ru.professional,
-                href: 'harmony-animation-professional',
+                href: 'rigged-animation-professional',
             },
         ],
     },
     'paperless-animation': {
         cover: paperlessAnimation,
         name: 'Paperless animation',
+        category: ECategory_ru.animation,
+        softwareLogo: harmony_blue,
         description: 'Комплексный курс по Paperless анимации',
         mentors: [
             {
-                name: 'Ирина Голина',
+                name: 'И. Голина',
                 photo: irinaGolina,
             },
         ],
@@ -990,13 +1107,15 @@ export const courses_ru: IList = {
             },
         ],
     },
-    'adobe-animate-animation': {
+    'cartoon-animation': {
         cover: adobeAnimateAnimation,
-        name: 'Сartoon animation Adobe Animate',
+        name: 'Сartoon animation',
+        category: ECategory_ru.animation,
+        softwareLogo: adobeAnimate,
         description: 'Комплексный курс по Сartoon анимации в Adobe Animate',
         mentors: [
             {
-                name: 'Ирина Голина',
+                name: 'И. Голина',
                 photo: irinaGolina,
             },
         ],
@@ -1017,11 +1136,13 @@ export const courses_ru: IList = {
     },
     'background-design': {
         cover: backgroundDesign,
-        name: 'Дизайн фонов окружения',
+        name: 'Дизайн фонов',
+        category: ECategory_ru.design,
+        softwareLogo: adobePhotoshop,
         description: 'Комплексный курс по дизайну фонов окружения',
         mentors: [
             {
-                name: 'Ирина Голина',
+                name: 'И. Голина',
                 photo: irinaGolina,
             },
         ],
@@ -1040,21 +1161,23 @@ export const courses_ru: IList = {
             },
         ],
     },
-    'harmony-for-teens-animation': {
+    'for-teens-animation': {
         cover: harmonyForTeensAnimation,
-        name: 'Курс по анимации в Toon Boom Harmony для подростков',
+        name: 'Курс по анимации для подростков',
+        category: ECategory_ru.animation,
+        softwareLogo: harmony_blue,
         description:
             'Курс разработан специально для новичков, желающих попробовать работу аниматора и создать свою первую небольшую работу. Этот курс включает в общей сложности 12 видеоуроков и 12 интерактивных встреч с преподавателем. Он дает всестороннее введение в программное обеспечение и обучает эффективно использовать основные инструменты. Курс разработан таким образом, что во время учебного процесса вы погрузитесь в захватывающий мир анимации и будете использовать в работе любимых персонажей из аниме и популярных мультфильмов. ',
         mentors: [
             {
-                name: 'Марина Ипатова',
+                name: 'М. Ипатова',
                 photo: marinaIpatova,
             },
         ],
         classes: [
             {
                 level: EClass_ru.basic,
-                href: 'harmony-for-teens-animation-basic',
+                href: 'for-teens-animation-basic',
             },
         ],
     },
@@ -1065,7 +1188,7 @@ export const categories: ICategory[] = [
         id: 1,
         category: 'Animation',
         description: null,
-        courses: [courses['harmony-animation']],
+        courses: [courses['rigged-animation']],
     },
     {
         id: 2,
@@ -1104,10 +1227,10 @@ export const categories_ru: ICategory[] = [
         category: 'Анимация',
         description: null,
         courses: [
-            courses_ru['harmony-animation'],
+            courses_ru['rigged-animation'],
             courses_ru['paperless-animation'],
-            courses_ru['adobe-animate-animation'],
-            courses_ru['harmony-for-teens-animation'],
+            courses_ru['cartoon-animation'],
+            courses_ru['for-teens-animation'],
         ],
     },
     {

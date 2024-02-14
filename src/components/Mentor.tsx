@@ -22,33 +22,51 @@ export default function Mentor({ mentor }: { mentor: IMentor }) {
                 <p>{mentor.currentStudio}</p>
                 <h5 className="pt-2 text-xl">Projects worked on</h5>
                 <p>{mentor.projectsWorkedOn}</p>
-                <div className="flex flex-wrap items-center gap-2 pt-2">
-                    <h5 className="text-xl">Categories:</h5>
-                    {mentor.categories.map((cat) => (
-                        <p
-                            key={cat}
-                            className="rounded-lg bg-[#ac46b6]/[0.7] px-4 py-2"
-                        >
-                            {cat}
-                        </p>
-                    ))}
-                </div>
+
+                {mentor.categories.length !== 0 ? (
+                    <>
+                        <h5 className="pt-2 text-xl">Categories:</h5>
+                        <div className="flex flex-wrap items-center gap-2">
+                            {/* {mentor.categories.map((cat) => (
+                                <p
+                                    key={cat}
+                                    className="text-[#ffad00]"
+                                >
+                                    {cat}
+                                </p>
+                            ))} */}
+                            <p className="text-lg text-[#ffad00]">{mentor.categories.join(', ')}</p>
+                        </div>
+                    </>
+                ) : null}
+
                 <h5 className="pt-2 text-xl">Mentor's Courses</h5>
-                <ul className="flex flex-wrap gap-2">
-                    {mentor.courses.map((course) => (
-                        <li
-                            key={course.name}
-                            className="button-sm-orange"
-                        >
-                            <Link
-                                href={'/en#' + course.category}
-                                className="block"
+                {mentor.courses.length !== 0 ? (
+                    <ul className="flex flex-col gap-2">
+                        {mentor.courses.map((course) => (
+                            <li
+                                key={course.name}
+                                className="relative flex items-center gap-2"
                             >
-                                {course.name}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
+                                <Image
+                                    src={course.softwareLogo}
+                                    alt={course.name}
+                                    width={32}
+                                    height={32}
+                                />
+                                <Link
+                                    href={'/#' + course.category}
+                                    className="button-sm-orange inline-block"
+                                >
+                                    {course.name}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                ) : (
+                    <p className="text-[#ffad00]">Opening soon</p>
+                )}
+
                 {/* <div className="flex grow items-end justify-center pt-2">
                     <Link href={'/en/mentor/' + mentor.href}>
                         <button className="button-lg-orange">Read more</button>

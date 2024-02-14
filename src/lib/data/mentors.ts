@@ -6,6 +6,13 @@ import svetlanaCherepanova from '@/assets/images/mentors/Svetlana_Cherepanova.jp
 import tatianaSimonova from '@/assets/images/mentors/Tatiana_Simonova.jpg';
 import { ECategory, ECategory_ru } from './courses';
 
+import harmony from '@/assets/harmony.png';
+import harmony_blue from '@/assets/harmony_blue.png';
+import storyboardPro from '@/assets/svg/storyboardPro.svg';
+import storyboardPro_clean from '@/assets/svg/storyboardPro_clean.svg';
+import adobeAnimate from '@/assets/svg/adobeAnimate.svg';
+import adobePhotoshop from '@/assets/svg/adobePhotoshop.svg';
+
 type IList = {
     [key: string]: IMentor;
 };
@@ -25,6 +32,7 @@ export interface IMentor {
     photo: StaticImageData;
     href: string;
     name: string;
+    software: StaticImageData[] | never[];
     introVideo: string | null;
     jobTitle: string;
     description: string;
@@ -36,6 +44,7 @@ export interface IMentor {
               name: string;
               propName: string;
               category: ECategory | ECategory_ru;
+              softwareLogo: StaticImageData;
           }[]
         | never[];
 }
@@ -50,6 +59,7 @@ export const mentors: IList = {
         photo: irinaGolina,
         href: 'irina-golina',
         name: 'Irina Golina',
+        software: [],
         jobTitle: 'Art-Director',
         introVideo: null,
         description:
@@ -61,8 +71,9 @@ export const mentors: IList = {
         courses: [
             {
                 name: '2.5D Toon Boom Harmony. Animation foundations',
-                propName: 'harmony-animation',
+                propName: 'rigged-animation',
                 category: ECategory.animation,
+                softwareLogo: harmony,
             },
         ],
     },
@@ -71,6 +82,7 @@ export const mentors: IList = {
         photo: svetlanaCherepanova,
         href: 'svetlana-cherepanova',
         name: 'Svetlana Cherepanova',
+        software: [],
         jobTitle: 'Senior Rigger',
         introVideo: null,
         description:
@@ -96,6 +108,7 @@ export const mentors: IList = {
         photo: pashaPotekhin,
         href: 'pasha-potekhin',
         name: 'Pasha Potekhin',
+        software: [],
         jobTitle: 'Story Artist',
         introVideo: null,
         description:
@@ -110,6 +123,7 @@ export const mentors: IList = {
         photo: marinaIpatova,
         href: 'marina-ipatova',
         name: 'Marina Ipatova',
+        software: [],
         jobTitle: 'Compositing Artist',
         introVideo: null,
         description:
@@ -127,6 +141,7 @@ export const mentors: IList = {
         photo: tatianaSimonova,
         href: 'tatiana-simonova',
         name: 'Tatiana Simonova',
+        software: [],
         jobTitle: 'Rigger',
         introVideo: null,
         description:
@@ -143,8 +158,9 @@ export const mentors_ru: IList = {
         photo: irinaGolina,
         href: 'irina-golina',
         name: 'Ирина Голина',
+        software: [harmony, adobeAnimate, adobePhotoshop],
         jobTitle: 'Арт-Директор',
-        introVideo: null,
+        introVideo: 'https://player.vimeo.com/video/912968508?h=0b058c3699',
         description:
             'Профессионал с огромным опытом в создании paperless и гибридной 2Д анимации в Toon Boom Harmony. Обладатель премий за достижения в области анимации и дизайна фонов, в том числе Annie, Ammy, и Leo Awards',
         currentStudio: 'Wildbrain',
@@ -153,24 +169,28 @@ export const mentors_ru: IList = {
         contacts: [{ id: 1, href: 'https://t.me/Igs40', type: ContactType.telegram }],
         courses: [
             {
-                name: 'Анимация в Toon Boom Harmony',
-                propName: 'harmony-animation',
+                name: 'Rigged animation',
+                propName: 'rigged-animation',
                 category: ECategory_ru.animation,
+                softwareLogo: harmony,
             },
             {
                 name: 'Paperless Animation',
                 propName: 'paperless-animation',
                 category: ECategory_ru.animation,
+                softwareLogo: harmony,
             },
             {
-                name: 'Сartoon animation Adobe Animate',
-                propName: 'adobe-animate-animation',
+                name: 'Сartoon animation',
+                propName: 'cartoon-animation',
                 category: ECategory_ru.animation,
+                softwareLogo: adobeAnimate,
             },
             {
-                name: 'Дизайн фонов окружения',
+                name: 'Дизайн фонов',
                 propName: 'background-design',
                 category: ECategory_ru.design,
+                softwareLogo: adobePhotoshop,
             },
         ],
     },
@@ -179,8 +199,9 @@ export const mentors_ru: IList = {
         photo: svetlanaCherepanova,
         href: 'svetlana-cherepanova',
         name: 'Светлана Черепанова',
+        software: [],
         jobTitle: 'Синьор Риггер',
-        introVideo: null,
+        introVideo: 'https://player.vimeo.com/video/913029039?h=7207b85726',
         description:
             'Супервайзер отдела риггинга, специалист по композу в Toon Boom Harmony, 2D аниматор',
         currentStudio: 'Toonbox, Riki, Melnitsa',
@@ -204,6 +225,7 @@ export const mentors_ru: IList = {
         photo: pashaPotekhin,
         href: 'pasha-potekhin',
         name: 'Паша Потехин',
+        software: [storyboardPro_clean],
         jobTitle: 'Стори Артист',
         introVideo: null,
         description:
@@ -218,8 +240,9 @@ export const mentors_ru: IList = {
         photo: marinaIpatova,
         href: 'marina-ipatova',
         name: 'Марина Ипатова',
+        software: [harmony],
         jobTitle: 'Композитинг Артист',
-        introVideo: null,
+        introVideo: 'https://player.vimeo.com/video/912968732?h=bfc78f2f37',
         description:
             'Синьор аниматор гибридной 2Д анимации в Toon Boom Harmony. Риггер по персонажам и пропсам',
         currentStudio: 'Toonbox',
@@ -230,14 +253,16 @@ export const mentors_ru: IList = {
         ],
         courses: [
             {
-                name: 'Анимация в Toon Boom Harmony',
-                propName: 'harmony-animation',
+                name: 'Rigged animation',
+                propName: 'rigged-animation',
                 category: ECategory_ru.animation,
+                softwareLogo: harmony,
             },
             {
-                name: 'Курс по анимации в Toon Boom Harmony для подростков',
-                propName: 'harmony-for-teens-animation',
+                name: 'Курс по анимации для подростков',
+                propName: 'for-teens-animation',
                 category: ECategory_ru.animation,
+                softwareLogo: harmony,
             },
         ],
     },
@@ -246,6 +271,7 @@ export const mentors_ru: IList = {
         photo: tatianaSimonova,
         href: 'tatiana-simonova',
         name: 'Татьяна Симонова',
+        software: [],
         jobTitle: 'Риггер',
         introVideo: null,
         description:
