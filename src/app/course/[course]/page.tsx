@@ -48,6 +48,8 @@ export default function Course_ru({ params }: { params: { course: string } }) {
             </h2>
 
             <p className="mx-auto max-w-5xl whitespace-pre-line">{currentClass.description}</p>
+            {/* includes the class */}
+            <div className="line-through"></div>
 
             {/* short info */}
             <div className="flex flex-col items-center gap-5 rounded-2xl bg-emerald-500/[0.2] p-10">
@@ -74,25 +76,45 @@ export default function Course_ru({ params }: { params: { course: string } }) {
             </div>
 
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                <div className="flex flex-col items-center gap-5 rounded-2xl bg-emerald-500/[0.2] p-10">
+                <div className="flex flex-col gap-5 rounded-2xl bg-emerald-500/[0.2] p-10">
                     <div>
-                        <h2 className="text-lg">Цена</h2>
+                        <h2 className="text-lg font-bold">Цена</h2>
                         <p className="">{currentClass.price.individual}</p>
                     </div>
+                    {currentClass.price.individualPromo ? (
+                        <div className="grow">
+                            <h2 className="text-lg font-bold">Промо</h2>
+                            <p
+                                dangerouslySetInnerHTML={{
+                                    __html: currentClass.price.individualPromo,
+                                }}
+                            ></p>
+                        </div>
+                    ) : null}
                     <button
-                        className="button-lg-orange w-full max-w-[396px]"
+                        className="button-lg-orange w-full max-w-[396px] mx-auto"
                         disabled={!currentClass.isOpen.individual}
                     >
                         Индивидуально
                     </button>
                 </div>
-                <div className="flex flex-col items-center gap-5 rounded-2xl bg-emerald-500/[0.2] p-10">
+                <div className="flex flex-col gap-5 rounded-2xl bg-emerald-500/[0.2] p-10">
                     <div>
-                        <h2 className="text-lg">Цена</h2>
+                        <h2 className="text-lg font-bold">Цена</h2>
                         <p className="">{currentClass.price.group}</p>
                     </div>
+                    {currentClass.price.groupPromo ? (
+                        <div className="grow">
+                            <h2 className="text-lg font-bold">Промо</h2>
+                            <p
+                                dangerouslySetInnerHTML={{
+                                    __html: currentClass.price.groupPromo,
+                                }}
+                            ></p>
+                        </div>
+                    ) : null}
                     <button
-                        className="button-lg-orange w-full max-w-[396px]"
+                        className="button-lg-orange w-full max-w-[396px] mx-auto"
                         disabled={!currentClass.isOpen.group}
                     >
                         Групповое
@@ -170,7 +192,7 @@ export default function Course_ru({ params }: { params: { course: string } }) {
                 <p className="text-xl">Отправьте заявку и начните курс</p>
 
                 <div className="flex flex-col gap-5 md:w-full md:flex-row md:justify-around">
-                <button
+                    <button
                         className="button-lg-orange w-full max-w-[396px]"
                         disabled={!currentClass.isOpen.individual}
                     >

@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { useState } from 'react';
 import Language from './Language';
-import RunningText_ru from './RunningText_ru';
 import { ECategory_ru } from '@/lib/data/courses';
 
 export default function Header() {
