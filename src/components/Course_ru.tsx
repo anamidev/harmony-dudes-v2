@@ -49,36 +49,9 @@ export default function Course_ru({ course }: { course: ICourse }) {
 
             {/* body */}
             <div className="flex grow flex-col gap-3 p-3">
-                {/* <h4 className="self-center text-center text-xl">{course.name}</h4>
-                {course.mentors.map((mentor) => (
-                    <div
-                        key={mentor.name}
-                        className="flex flex-wrap items-center justify-center gap-2"
-                    >
-                        <Image
-                            alt={mentor.name + ' photo'}
-                            src={mentor.photo}
-                            className="h-8 w-8 rounded-full"
-                        />
-                        <h5 className="self-center text-xl">{mentor.name}</h5>
-                    </div>
-                ))} */}
-                <h4 className="text-lg font-bold">{course.title}</h4>
-                <p className="grow">{course.description}</p>
+                <h4 className="text-center text-lg font-bold">{course.title}</h4>
+                <p className="grow text-justify">{course.description}</p>
                 <div className="justify-self-end">
-                    {/* <div className="grid grid-cols-2 pb-4">
-                        <div>
-                            <h5 className="text-lg">Длительность</h5>
-                            <p>{course.duration}</p>
-                        </div>
-                        <div>
-                            <h5 className="text-lg">Цена</h5>
-                            <p>{course.price}</p>
-                        </div>
-                    </div>
-                    <Link href={'/course/' + course.href}>
-                        <div className="button-lg-orange text-center">Узнать больше</div>
-                    </Link> */}
                     <ul className="grid grid-rows-4 gap-2">
                         {course.classes.map((courseClass) =>
                             courseClass.href ? (

@@ -1,6 +1,6 @@
 {
   "name": "harmony-dudes-v2-ts",
-  "version": "0.9.5",
+  "version": "0.9.6",
   "private": true,
   "scripts": {
     "dev": "next dev",

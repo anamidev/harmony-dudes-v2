@@ -67,7 +67,7 @@ export default function Mentor({ params }: { params: { mentor: string } }) {
             {/* short info */}
             <div className="mx-auto flex max-w-2xl flex-col gap-6">
                 <div>
-                    <p className="">{currentMentor.description}</p>
+                    <p className="text-justify">{currentMentor.description}</p>
                 </div>
                 <div>
                     <h3 className="text-xl">Текущая студия</h3>

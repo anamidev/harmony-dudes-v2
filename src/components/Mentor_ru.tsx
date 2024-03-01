@@ -17,7 +17,7 @@ export default function Mentor({ mentor }: { mentor: IMentor }) {
                 </div>
                 <h3 className="self-center text-2xl">{mentor.name}</h3>
                 <h4 className="self-center text-[#cfcfcf]">{mentor.jobTitle}</h4>
-                <p className="self-center">{mentor.description}</p>
+                <p className="self-center text-justify">{mentor.description}</p>
                 <h5 className="pt-2 text-xl">Текущая студия</h5>
                 <p>{mentor.currentStudio}</p>
                 <h5 className="pt-2 text-xl">Проекты</h5>

@@ -47,7 +47,9 @@ export default function Course_ru({ params }: { params: { course: string } }) {
                 {currentClass.mentors.map((mentor) => mentor.name).join(', ')}
             </h2>
 
-            <p className="mx-auto max-w-5xl whitespace-pre-line">{currentClass.description}</p>
+            <p className="mx-auto max-w-5xl whitespace-pre-line text-justify">
+                {currentClass.description}
+            </p>
             {/* includes the class */}
             <div className="line-through"></div>
 
@@ -92,7 +94,7 @@ export default function Course_ru({ params }: { params: { course: string } }) {
                         </div>
                     ) : null}
                     <button
-                        className="button-lg-orange w-full max-w-[396px] mx-auto"
+                        className="button-lg-orange mx-auto w-full max-w-[396px]"
                         disabled={!currentClass.isOpen.individual}
                     >
                         Индивидуально
@@ -114,7 +116,7 @@ export default function Course_ru({ params }: { params: { course: string } }) {
                         </div>
                     ) : null}
                     <button
-                        className="button-lg-orange w-full max-w-[396px] mx-auto"
+                        className="button-lg-orange mx-auto w-full max-w-[396px]"
                         disabled={!currentClass.isOpen.group}
                     >
                         Групповое
@@ -123,9 +125,9 @@ export default function Course_ru({ params }: { params: { course: string } }) {
             </div>
 
             {/* requirements */}
-            <h2 className={'page-header'}>Требования</h2>
+            <h2 className="page-header">Требования</h2>
             {currentClass.requirements.description ? (
-                <p className="mx-auto max-w-5xl whitespace-pre-line">
+                <p className="mx-auto max-w-5xl whitespace-pre-line text-justify">
                     {currentClass.requirements.description}
                 </p>
             ) : null}
@@ -168,7 +170,7 @@ export default function Course_ru({ params }: { params: { course: string } }) {
                 <>
                     <h2 className="page-header">Почему стоит пройти этот курс?</h2>
                     {currentClass.result.description ? (
-                        <p className="mx-auto max-w-5xl whitespace-pre-line">
+                        <p className="mx-auto max-w-5xl whitespace-pre-line text-justify">
                             {currentClass.result.description}
                         </p>
                     ) : null}
@@ -209,7 +211,7 @@ export default function Course_ru({ params }: { params: { course: string } }) {
 
             {/* help section */}
             <h2 className="page-header">Нужна помощь?</h2>
-            <p className="mx-auto max-w-xl text-center">
+            <p className="mx-auto max-w-xl text-justify">
                 Если у вас есть какие-либо вопросы или вам нужна помощь с оплатой, пожалуйста,
                 обратитесь в нашу службу поддержки. Мы здесь, чтобы помочь.
             </p>

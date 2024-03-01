@@ -7,7 +7,7 @@ export default function About() {
         <section className="page-layout snap-y snap-y scroll-mt-10">
             {/* intro */}
             <h1 className="page-header">Кто мы?</h1>
-            <p>
+            <p className="text-justify">
                 Привет, ребятки! Мы - профи Toon Boom Harmony и настоящие фанаты анимации! Нас
                 завораживает искусство оживления персонажей и создания историй, и мы можем научить
                 этому вас. Наша неутомимая страсть к каждому пикселю анимационного процесса
