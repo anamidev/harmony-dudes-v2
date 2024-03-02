@@ -13,6 +13,7 @@ export const metadata: Metadata = {
         images: ['https://i.ibb.co/5RRqvSC/harmony-dudes-og.png'],
         card: 'summary_large_image',
         title: 'Harmony Dudes',
+        site: 'https://harmonydudes.com',
         description:
             'Harmony Dudes - консультации, менторство, мастерклассы и стримы от профессионалов анимационной индустрии',
     },
@@ -25,6 +26,7 @@ export const metadata: Metadata = {
             },
         ],
         title: 'Harmony Dudes',
+        siteName: 'Harmony Dudes',
         description:
             'Harmony Dudes - консультации, менторство, мастерклассы и стримы от профессионалов анимационной индустрии',
         url: 'https://harmonydudes.com',
