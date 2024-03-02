@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     metadataBase: new URL('https://harmonydudes.com'),
     title: 'Harmony Dudes',
     description:
-        'Мастер-классы, стримы и консультации от профессионалов анимационной индустрии',
+        'Harmony Dudes - консультации, менторство, мастерклассы и стримы от профессионалов анимационной индустрии',
     twitter: {
         images: [
             'https://media.discordapp.net/attachments/1053094319583662161/1144730825506684959/harmony_dudes_og.png?width=1299&height=667',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'Harmony Dudes',
         description:
-            'Мастер-классы, стримы и консультации от профессионалов анимационной индустрии',
+            'Harmony Dudes - консультации, менторство, мастерклассы и стримы от профессионалов анимационной индустрии',
     },
     openGraph: {
         images: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         ],
         title: 'Harmony Dudes',
         description:
-            'Мастер-классы, стримы и консультации от профессионалов анимационной индустрии',
+            'Harmony Dudes - консультации, менторство, мастерклассы и стримы от профессионалов анимационной индустрии',
         url: 'https://harmonydudes.com',
     },
 };

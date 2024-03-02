@@ -93,12 +93,22 @@ export default function Course_ru({ params }: { params: { course: string } }) {
                             ></p>
                         </div>
                     ) : null}
-                    <button
-                        className="button-lg-orange mx-auto w-full max-w-[396px]"
-                        disabled={!currentClass.isOpen.individual}
-                    >
-                        Индивидуально
-                    </button>
+                    {currentClass.isOpen.individual && currentClass.applicationLink ? (
+                        <Link
+                            href={currentClass.applicationLink}
+                            target="_blank"
+                            className="button-lg-orange w-full max-w-[396px] text-center uppercase"
+                        >
+                            Индивидуально
+                        </Link>
+                    ) : (
+                        <button
+                            className="button-lg-orange w-full max-w-[396px] text-center uppercase"
+                            disabled={true}
+                        >
+                            Индивидуально
+                        </button>
+                    )}
                 </div>
                 <div className="flex flex-col gap-5 rounded-2xl bg-emerald-500/[0.2] p-10">
                     <div>
@@ -115,12 +125,22 @@ export default function Course_ru({ params }: { params: { course: string } }) {
                             ></p>
                         </div>
                     ) : null}
-                    <button
-                        className="button-lg-orange mx-auto w-full max-w-[396px]"
-                        disabled={!currentClass.isOpen.group}
-                    >
-                        Групповое
-                    </button>
+                    {currentClass.isOpen.group && currentClass.applicationLink ? (
+                        <Link
+                            href={currentClass.applicationLink}
+                            target="_blank"
+                            className="button-lg-orange w-full max-w-[396px] text-center uppercase"
+                        >
+                            Групповое
+                        </Link>
+                    ) : (
+                        <button
+                            className="button-lg-orange w-full max-w-[396px] text-center uppercase"
+                            disabled={true}
+                        >
+                            Групповое
+                        </button>
+                    )}
                 </div>
             </div>
 
@@ -194,18 +214,39 @@ export default function Course_ru({ params }: { params: { course: string } }) {
                 <p className="text-xl">Отправьте заявку и начните курс</p>
 
                 <div className="flex flex-col gap-5 md:w-full md:flex-row md:justify-around">
-                    <button
-                        className="button-lg-orange w-full max-w-[396px]"
-                        disabled={!currentClass.isOpen.individual}
-                    >
-                        Индивидуально
-                    </button>
-                    <button
-                        className="button-lg-orange w-full max-w-[396px]"
-                        disabled={!currentClass.isOpen.group}
-                    >
-                        Групповое
-                    </button>
+                    {currentClass.isOpen.individual && currentClass.applicationLink ? (
+                        <Link
+                            href={currentClass.applicationLink}
+                            target="_blank"
+                            className="button-lg-orange w-full max-w-[396px] text-center uppercase"
+                        >
+                            Индивидуально
+                        </Link>
+                    ) : (
+                        <button
+                            className="button-lg-orange w-full max-w-[396px] text-center uppercase"
+                            disabled={true}
+                        >
+                            Индивидуально
+                        </button>
+                    )}
+
+                    {currentClass.isOpen.group && currentClass.applicationLink ? (
+                        <Link
+                            href={currentClass.applicationLink}
+                            target="_blank"
+                            className="button-lg-orange w-full max-w-[396px] text-center uppercase"
+                        >
+                            Групповое
+                        </Link>
+                    ) : (
+                        <button
+                            className="button-lg-orange w-full max-w-[396px] text-center uppercase"
+                            disabled={true}
+                        >
+                            Групповое
+                        </button>
+                    )}
                 </div>
             </div>
 

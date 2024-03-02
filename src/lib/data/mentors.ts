@@ -57,6 +57,7 @@ export const mentors_ru: IList = {
         software: [harmony, adobeAnimate, adobePhotoshop],
         jobTitle: 'Art-Director',
         introVideo: 'https://player.vimeo.com/video/912968508?h=0b058c3699',
+        // introVideo: 'https://onedrive.live.com/embed?resid=8EA7105337AC7F0E%213714563&authkey=!AKMVJXp-4GoQ9Jo',
         description:
             'Профессионал с огромным опытом в создании paperless и гибридной 2Д анимации в Toon Boom Harmony. Обладатель премий за достижения в области анимации и дизайна фонов, в том числе Annie, Ammy, и Leo Awards',
         currentStudio: 'Wildbrain',
@@ -98,6 +99,7 @@ export const mentors_ru: IList = {
         software: [],
         jobTitle: 'Senior Rigger',
         introVideo: 'https://player.vimeo.com/video/913029039?h=7207b85726',
+        // introVideo: 'https://onedrive.live.com/embed?resid=8EA7105337AC7F0E%213702490&authkey=!AK_RcA8awdIEBCI',
         description:
             'Супервайзер отдела риггинга, специалист по композу в Toon Boom Harmony, 2D аниматор',
         currentStudio: 'Toonbox, Riki, Melnitsa',
@@ -124,6 +126,7 @@ export const mentors_ru: IList = {
         software: [harmony],
         jobTitle: 'Compositing Artist',
         introVideo: 'https://player.vimeo.com/video/912968732?h=bfc78f2f37',
+        // introVideo: 'https://onedrive.live.com/embed?resid=8EA7105337AC7F0E%213713704&authkey=!AAZmJMwI3VNH5qg',
         description:
             'Синьор аниматор гибридной 2Д анимации в Toon Boom Harmony. Риггер по персонажам и пропсам',
         currentStudio: 'Toonbox',

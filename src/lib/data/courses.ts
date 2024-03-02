@@ -38,6 +38,7 @@ export interface IClass {
     href: string;
     description: string | null;
     duration: string;
+    applicationLink: string | null;
     price: {
         individual: string | null;
         individualPromo: string | null;
@@ -99,6 +100,7 @@ export const classes_ru: TClass = {
         cover: harmonyAnimation,
         href: 'basic-rigged-animation',
         name: 'Basic Rigged Animation',
+        applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfEbOEz7FCa0sHjZGUi28sUV8J_BUPbEun8m82yLSBb7orqMA/viewform',
         mentors: [
             {
                 photo: irinaGolina,
@@ -160,6 +162,7 @@ export const classes_ru: TClass = {
         cover: harmonyAnimation,
         href: 'advanced-rigged-animation',
         name: 'Advanced Rigged Animation',
+        applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfEbOEz7FCa0sHjZGUi28sUV8J_BUPbEun8m82yLSBb7orqMA/viewform',
         description:
             'Блок улучшит ваши навыки анимации персонажей в Toon Boom Harmony , предоставив 16 видео уроков и 16 встреч с преподавателем. Подходит для тех, кто уже знаком с Harmony и базовой анимацией. Вы погрузитесь в тонкости и передовые методы анимации персонажей. Идеально для развития профессиональных навыков и создания впечатляющего портфолио. Предполагается базовое знание программы, но блок даст вам инструменты для дальнейшего развития в Harmony. Готовьтесь к захватывающему погружению в мир продвинутой анимации персонажей!',
         duration: '4 месяца',
@@ -225,6 +228,7 @@ export const classes_ru: TClass = {
         cover: harmonyAnimation,
         href: 'professional-rigged-animation',
         name: 'Professional Rigged Animation',
+        applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfEbOEz7FCa0sHjZGUi28sUV8J_BUPbEun8m82yLSBb7orqMA/viewform',
         description:
             'Блок обучает основам эмоциональной игры и лицевой анимации в анимации через 12 видеоуроков и 12 интерактивных занятий. Мы сосредоточимся на тонкостях лицевой анимации, чтобы передать чувства персонажа. Внимание уделяется полировке анимации, включая работу с движением волос и одежды. Подходит для тех, кто хочет улучшить навыки лицевой анимации в профессиональных целях или изучить работу с антропоморфными персонажами.',
         duration: '3 месяца',
@@ -286,6 +290,7 @@ export const classes_ru: TClass = {
         cover: harmonyAnimation,
         href: 'rigged-animation-project',
         name: 'Rigged Animation Project',
+        applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfEbOEz7FCa0sHjZGUi28sUV8J_BUPbEun8m82yLSBb7orqMA/viewform',
         description:
             'Блок разработан для углубленного изучения создания проектов в Toon Boom Harmony. Включает 16 видеоуроков и 16 онлайн встреч с преподавателем. Предназначен для опытных пользователей Harmony, помогает усовершенствовать навыки и освоить Harmony Studio pipeline. Вы научитесь создавать собственные мультфильмы с нуля, включая профессиональную организацию процесса. Идеален для тех, кто стремится создать короткометражный фильм или сериал и подготовиться к работе на крупных проектах.',
         duration: '4 месяца',
@@ -356,6 +361,7 @@ export const classes_ru: TClass = {
         cover: paperlessAnimation,
         href: 'basic-paperless-animation',
         name: 'Basic Paperless Animation',
+        applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfEbOEz7FCa0sHjZGUi28sUV8J_BUPbEun8m82yLSBb7orqMA/viewform',
         description:
             'Блок предназначен для исследования различий между традиционными методами анимации и современной техникой paperless.Состоит из 12 видеоуроков и 12 онлайн встреч с преподавателем.  Подходит как для новичков так  и тех, кто уже обладает определёнными классическими знаниями, но желает расширить свои навыки в современных технологиях и стилях анимации. Обучение paperless соответствует стандартам отрасли, что делает вас более адаптивными и готовыми к профессиональному росту, так как многие анимационные студии и продюсерские компании перешли на paperless. Эта техника открывает возможности для создания широкого спектра стилей, Action, Super Cartoon, Traditional, Anime and more.',
         duration: '3 месяца',
@@ -412,6 +418,7 @@ export const classes_ru: TClass = {
         cover: paperlessAnimation,
         href: 'advanced-paperless-animation',
         name: 'Advanced Paperless Animation',
+        applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfEbOEz7FCa0sHjZGUi28sUV8J_BUPbEun8m82yLSBb7orqMA/viewform',
         description:
             'Тема блока: Механика тела. Блок предназначен для тех, кто уже обладает определёнными навыками в области paperless animation и желает создавать более сложные анимации, а также углубиться в изучение action cartoon и super cartoon. Включает в себя работу в трёхмерном пространстве и создание динамичных сцен. Блок состоит из 12 видеоуроков и 12 онлайн встреч с преподавателем. Приготовьтесь усовершенствовать свою технику и глубже раскрыть творческий потенциал Toon Boom Harmony!',
         duration: '3 месяца',
@@ -473,6 +480,7 @@ export const classes_ru: TClass = {
         cover: paperlessAnimation,
         href: 'professional-paperless-animation',
         name: 'Professional Paperless Animation',
+        applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfEbOEz7FCa0sHjZGUi28sUV8J_BUPbEun8m82yLSBb7orqMA/viewform',
         description:
             'Блок разработан для того, чтобы изучить основные принципы работы с эмоциями и актерской игрой в анимации, используя все возможности техники paperless animation. Состоит из 12 видеоуроков и 12 встреч с преподавателем. Помогает улучшить навыки лицевой анимации и работу с антропоморфными существами. Мы также сосредотачиваемся на интеракции между персонажами и учимся полушовать свои работы подымая их на более высокий уровень.',
         duration: '3 месяца',
@@ -534,6 +542,7 @@ export const classes_ru: TClass = {
         cover: paperlessAnimation,
         href: 'paperless-animation-project',
         name: 'Paperless Animation Project',
+        applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfEbOEz7FCa0sHjZGUi28sUV8J_BUPbEun8m82yLSBb7orqMA/viewform',
         description:
             'Блок предназначен для того, чтобы обучить профессиональному подходу к созданию собственного короткого мультфильма. Он состоит из 12 видеоуроков и 12 онлайн встреч с преподавателем. Этот курс идеально подходит для людей, уже имеющих опыт работы в paperless. В течение всего курса вы будете закреплять полученные ранее знания, добавляя новые материалы из профессионального студийного опыта и пейплайна. Вы научитесь правильно организовывать весь процесс создания собственного короткого мультфильма с нуля. Под руководством профессиональных аниматоров с многолетним опытом, вы также изучите принципы биологии, психологии и анатомии, когда будете оживлять людей и четвероногих существ в 2,5D пространстве.',
         duration: '3 месяца',
@@ -595,6 +604,7 @@ export const classes_ru: TClass = {
         cover: adobeAnimateAnimation,
         href: 'basic-cartoon-animation',
         name: 'Basic Cartoon Animation',
+        applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfEbOEz7FCa0sHjZGUi28sUV8J_BUPbEun8m82yLSBb7orqMA/viewform',
         description:
             'Блок предназначен для изучения разнообразных аспектов анимации Cut-out. Вы научитесь эффективно подготавливать материалы и персонажей к работе, используя векторные линии. Мы обучим вас техникам работы, позволяющим сохранять высокое качество анимации при максимальной скорости выполнения. Вы узнаете, на что следует делать акцент в процессе работы. Блок включает в себя 12 видеоуроков и 12 онлайн встреч с преподавателем. В ходе обычения будут рассмотрены различные направления, в которых используется анимация, созданная в Adobe Animate: игровая индустрия, интернет-проекты и телесериалы. Мы также рассмотрим различные техники и стили в рамках Cut-out. В будущем, это позволит вам расширить свой кругозор и выбрать наиболее интересное направление для дальнейшего изучения.',
         duration: '3 месяца',
@@ -651,6 +661,7 @@ export const classes_ru: TClass = {
         cover: adobeAnimateAnimation,
         href: 'advanced-cartoon-animation',
         name: 'Advanced Сartoon Animation',
+        applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfEbOEz7FCa0sHjZGUi28sUV8J_BUPbEun8m82yLSBb7orqMA/viewform',
         description:
             'Блок предназначен для того, чтобы обучится лицевой анимации и актерской игре, используя современные подходы в Cut-out. Вы научитесь передавать чувства и эмоции, понятные зрителю, усиливая их и дорабатывая, с использованием современных студийных подходов. Этот блок включает в общей сложности 12 видеоуроков и 12 интерактивных встреч с преподавателем. В ходе обучения вы сможете сконцентрироваться на актерской игре и липсинге.  Если вы стремитесь улучшить свои навыки анимации в профессиональных целях, например, устроиться на работу в отрасли или создать впечатляющее портфолио, этот блок идеально вам подойдет.',
         duration: '3 месяца',
@@ -712,6 +723,7 @@ export const classes_ru: TClass = {
         cover: adobeAnimateAnimation,
         href: 'professional-cartoon-animation',
         name: 'Professional Сartoon Animation',
+        applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfEbOEz7FCa0sHjZGUi28sUV8J_BUPbEun8m82yLSBb7orqMA/viewform',
         description:
             'Блок предназначен для того, чтобы изучить механику тела с использованием Cut-out. Вы научитесь эффективно подготавливать материалы и создавать комплексных персонажей, используя современные студийные подходы. Блок состоит ис 12 видеоуроков и 12 онлайн встреч с преподавателем. В ходе блока вы сможете сконцентрироваться на механике тела и различных второстепенных движениях, которые придадут яркость и уникальность вашей анимации. Если вы стремитесьуглубиться в изучение утрированных стилей анимации этот блок именно для вас.',
         duration: '3 месяца',
@@ -773,6 +785,7 @@ export const classes_ru: TClass = {
         cover: backgroundDesign,
         href: 'basic-environmental-design',
         name: 'Basic Environmental Design',
+        applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfEbOEz7FCa0sHjZGUi28sUV8J_BUPbEun8m82yLSBb7orqMA/viewform',
         description:
             'Цель этого блока - дать студентам инструменты для создания дизайна необычных мест. Блок состоит ис 12 видеоуроков и 12 онлайн встреч с преподавателем. Блок будет серьезным исследованием проектирования пространства, ландшафта и архитектуры, а также составления презентационного искусства, чтобы наилучшим образом передать настроение и историю каждого местоположения.',
         duration: '3 месяца',
@@ -830,6 +843,7 @@ export const classes_ru: TClass = {
         cover: backgroundDesign,
         href: 'advanced-environmental-design',
         name: 'Advanced Environmental Design',
+        applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfEbOEz7FCa0sHjZGUi28sUV8J_BUPbEun8m82yLSBb7orqMA/viewform',
         description:
             'Этот блок раскрывает, как архитектура может стать гораздо больше, чем просто построенным пространством. Блок состоит ис 12 видеоуроков и 12 онлайн встреч с преподавателем.Вы узнаете, как через принципы языка формы и дизайна можно выразить характер и историю людей, находящихся в этом пространстве. Обсудим, как создать эмоциональную глубину и ощущение истории, чтобы ваша архитектурная работа стала не только функциональной, но уникальной и вдохновляющей.',
         duration: '3 месяца',
@@ -887,6 +901,7 @@ export const classes_ru: TClass = {
         cover: backgroundDesign,
         href: 'professional-environmental-design',
         name: 'Professional Environmental Design',
+        applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfEbOEz7FCa0sHjZGUi28sUV8J_BUPbEun8m82yLSBb7orqMA/viewform',
         description:
             'Развивая навыки визуальной коммуникации, важно не только понимать основные принципы, но и уметь придавать своим работам глубину и убедительность через детализацию и проработку деталей. Подбор деталей, освещения и текстурирование – это ключевые инструменты, которые помогут вам донести ваше сообщение до аудитории с большей эффективностью. Проработка деталей играет важную роль в создании новый миров, так как она делает работу более привлекательной и убедительной для зрителя. Благодаря детализации, ваша работа будет выглядеть более профессионально и привлечет больше внимания к вашему проекту.',
         duration: '3 месяца',
