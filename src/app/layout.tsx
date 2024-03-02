@@ -5,14 +5,12 @@ import Footer from '@/components/Footer';
 import ToTop from '@/components/ToTop';
 
 export const metadata: Metadata = {
-    metadataBase: new URL('https://harmonydudes.com'),
     title: 'Harmony Dudes',
     description:
         'Harmony Dudes - консультации, менторство, мастерклассы и стримы от профессионалов анимационной индустрии',
+    metadataBase: new URL('https://harmonydudes.com'),
     twitter: {
-        images: [
-            'https://media.discordapp.net/attachments/1053094319583662161/1144730825506684959/harmony_dudes_og.png?width=1299&height=667',
-        ],
+        images: ['https://i.ibb.co/5RRqvSC/harmony-dudes-og.png'],
         card: 'summary_large_image',
         title: 'Harmony Dudes',
         description:
@@ -21,7 +19,7 @@ export const metadata: Metadata = {
     openGraph: {
         images: [
             {
-                url: 'https://media.discordapp.net/attachments/1053094319583662161/1144730825506684959/harmony_dudes_og.png?width=1299&height=667',
+                url: 'https://i.ibb.co/5RRqvSC/harmony-dudes-og.png',
                 width: 1299,
                 height: 667,
             },
