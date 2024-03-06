@@ -124,11 +124,11 @@ export const mentors_ru: IList = {
         href: 'marina-ipatova',
         name: 'Marina Ipatova',
         software: [harmony],
-        jobTitle: 'Compositing Artist',
+        jobTitle: 'Lead Animator & Rigger',
         introVideo: 'https://player.vimeo.com/video/912968732?h=bfc78f2f37',
         // introVideo: 'https://onedrive.live.com/embed?resid=8EA7105337AC7F0E%213713704&authkey=!AAZmJMwI3VNH5qg',
         description:
-            'Синьор аниматор гибридной 2Д анимации в Toon Boom Harmony. Риггер по персонажам и пропсам',
+            'Лид аниматор гибридной 2Д анимации в Toon Boom Harmony. Риггер по персонажам и пропсам',
         currentStudio: 'Toonbox',
         projectsWorkedOn: 'Take my muffin',
         contacts: [

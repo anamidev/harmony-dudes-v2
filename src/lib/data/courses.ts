@@ -1098,9 +1098,13 @@ export const courses_ru: IList = {
 export const categories_ru: ICategory[] = [
     {
         id: 1,
-        category: 'Story',
+        category: 'Animation',
         description: null,
-        courses: [],
+        courses: [
+            courses_ru['rigged-animation'],
+            courses_ru['paperless-animation'],
+            courses_ru['cartoon-animation'],
+        ],
     },
     {
         id: 2,
@@ -1110,19 +1114,15 @@ export const categories_ru: ICategory[] = [
     },
     {
         id: 3,
-        category: 'Rigging',
+        category: 'Story',
         description: null,
         courses: [],
     },
     {
         id: 4,
-        category: 'Animation',
+        category: 'Rigging',
         description: null,
-        courses: [
-            courses_ru['rigged-animation'],
-            courses_ru['paperless-animation'],
-            courses_ru['cartoon-animation'],
-        ],
+        courses: [],
     },
     {
         id: 5,
