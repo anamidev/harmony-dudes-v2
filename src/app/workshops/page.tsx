@@ -62,7 +62,12 @@ export default function Workshops() {
             </ul>
 
             <div className="text-center">
-                <button className="button-lg-orange">Подать заявку</button>
+                <button
+                    className="button-lg-orange"
+                    disabled={true}
+                >
+                    Подать заявку
+                </button>
             </div>
 
             <h2 className="page-header">Наши счастливые клиенты</h2>

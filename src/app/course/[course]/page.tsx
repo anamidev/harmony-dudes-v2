@@ -256,13 +256,6 @@ export default function Course_ru({ params }: { params: { course: string } }) {
                 Если у вас есть какие-либо вопросы или вам нужна помощь с оплатой, пожалуйста,
                 обратитесь в нашу службу поддержки. Мы здесь, чтобы помочь.
             </p>
-            <div className="text-center text-lg">
-                {/* harmonydudes@gmail.com */}
-                <EmailToClipboard_ru
-                    email="harmonydudes@gmail.com"
-                    classStyle="link-purple"
-                />
-            </div>
         </section>
     );
 }
